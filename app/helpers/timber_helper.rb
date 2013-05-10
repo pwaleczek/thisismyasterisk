@@ -1,0 +1,2 @@
+module TimberHelper
+end

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thisismyasterisk</title>
+  <script type="text/javascript" src="http://localhost:5000/socket.io/socket.io.js"></script>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  
+  <%= requirejs_include_tag "boot" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

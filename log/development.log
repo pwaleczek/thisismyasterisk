@@ -1,0 +1,1789 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-05-09 01:02:22 +0200
+Served asset /rails.png - 200 OK (18ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2013-05-09 01:02:27 +0200
+Processing by Rails::InfoController#properties as */*
+  Rendered inline template (6.3ms)
+Completed 200 OK in 51ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:09:27 +0200
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/pawel/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:11:29 +0200
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/pawel/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:12:14 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (2.3ms)
+Compiled main.css  (44ms)  (pid 1069)
+Compiled application.css  (54ms)  (pid 1069)
+Completed 200 OK in 121ms (Views: 120.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:12:14 +0200
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:12:14 +0200
+Served asset /main.css - 200 OK (2ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:12:14 +0200
+Compiled require.js  (0ms)  (pid 1069)
+Served asset /require.js - 200 OK (89ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-09 18:12:14 +0200
+Compiled boot.js  (0ms)  (pid 1069)
+Served asset /boot - 200 OK (17ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-09 18:12:41 +0200
+Served asset /boot - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:12:44 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:12:44 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:12:44 +0200
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:12:44 +0200
+Served asset /require.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:14:29 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:14:29 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:14:29 +0200
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:14:29 +0200
+Served asset /require.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:14:49 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:14:49 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:14:49 +0200
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:14:49 +0200
+Served asset /require.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:14:50 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:14:50 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:14:50 +0200
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:14:50 +0200
+Served asset /require.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:14:51 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:14:52 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:14:52 +0200
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:14:52 +0200
+Served asset /require.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:14:52 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:14:52 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:14:52 +0200
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:14:52 +0200
+Served asset /require.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:15:37 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:15:37 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:15:37 +0200
+Served asset /main.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:15:37 +0200
+Served asset /require.js - 304 Not Modified (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:16:03 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:16:03 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:16:03 +0200
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:16:03 +0200
+Served asset /require.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:16:20 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 9ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:16:20 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:16:20 +0200
+Served asset /main.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:16:20 +0200
+Served asset /require.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:17:46 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (2.3ms)
+Compiled main.css  (9ms)  (pid 1090)
+Compiled application.css  (19ms)  (pid 1090)
+Compiled application.js  (0ms)  (pid 1090)
+Compiled boot.js  (0ms)  (pid 1090)
+Compiled require.js  (1ms)  (pid 1090)
+Completed 200 OK in 183ms (Views: 182.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-3c4adf3d5d950259ea2f3ec8d2b6164d.css?body=1" for 127.0.0.1 at 2013-05-09 18:17:46 +0200
+Served asset /application-3c4adf3d5d950259ea2f3ec8d2b6164d.css - 200 OK (0ms)
+
+
+Started GET "/assets/main-6776f581a4329e299531e1d52aa59832.css?body=1" for 127.0.0.1 at 2013-05-09 18:17:46 +0200
+Served asset /main-6776f581a4329e299531e1d52aa59832.css - 200 OK (1ms)
+
+
+Started GET "/assets/require-e110a8479eac9f54c53d3de2426e6806.js" for 127.0.0.1 at 2013-05-09 18:17:46 +0200
+Served asset /require-e110a8479eac9f54c53d3de2426e6806.js - 200 OK (0ms)
+
+
+Started GET "/assets/boot-38e842f8ad45604a200eae31fe0fb52c" for 127.0.0.1 at 2013-05-09 18:17:46 +0200
+Served asset /boot-38e842f8ad45604a200eae31fe0fb52c - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/boot-38e842f8ad45604a200eae31fe0fb52c"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/pawel/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:17:47 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-3c4adf3d5d950259ea2f3ec8d2b6164d.css?body=1" for 127.0.0.1 at 2013-05-09 18:17:48 +0200
+Served asset /application-3c4adf3d5d950259ea2f3ec8d2b6164d.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/main-6776f581a4329e299531e1d52aa59832.css?body=1" for 127.0.0.1 at 2013-05-09 18:17:48 +0200
+Served asset /main-6776f581a4329e299531e1d52aa59832.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/require-e110a8479eac9f54c53d3de2426e6806.js" for 127.0.0.1 at 2013-05-09 18:17:48 +0200
+Served asset /require-e110a8479eac9f54c53d3de2426e6806.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/boot-38e842f8ad45604a200eae31fe0fb52c" for 127.0.0.1 at 2013-05-09 18:17:48 +0200
+Served asset /boot-38e842f8ad45604a200eae31fe0fb52c - 404 Not Found (1ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/boot-38e842f8ad45604a200eae31fe0fb52c"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/pawel/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:19:02 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-3c4adf3d5d950259ea2f3ec8d2b6164d.css?body=1" for 127.0.0.1 at 2013-05-09 18:19:02 +0200
+Served asset /application-3c4adf3d5d950259ea2f3ec8d2b6164d.css - 200 OK (0ms)
+
+
+Started GET "/assets/main-6776f581a4329e299531e1d52aa59832.css?body=1" for 127.0.0.1 at 2013-05-09 18:19:02 +0200
+Served asset /main-6776f581a4329e299531e1d52aa59832.css - 200 OK (0ms)
+
+
+Started GET "/assets/require-e110a8479eac9f54c53d3de2426e6806.js" for 127.0.0.1 at 2013-05-09 18:19:02 +0200
+Served asset /require-e110a8479eac9f54c53d3de2426e6806.js - 200 OK (0ms)
+
+
+Started GET "/assets/boot-38e842f8ad45604a200eae31fe0fb52c" for 127.0.0.1 at 2013-05-09 18:19:02 +0200
+Served asset /boot-38e842f8ad45604a200eae31fe0fb52c - 404 Not Found (2ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/boot-38e842f8ad45604a200eae31fe0fb52c"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/pawel/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Served asset /main.css - 200 OK (2ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Served asset /require.js - 200 OK (4ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Served asset /boot - 200 OK (2ms)
+
+
+Started GET "/assets/lib/console/console.js?v=0.1-1368116351520" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Compiled lib/console/console.js  (0ms)  (pid 1094)
+Served asset /lib/console/console.js - 200 OK (108ms)
+
+
+Started GET "/assets/lib/cq/cq.js?v=0.1-1368116351520" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Compiled lib/cq/cq.js  (0ms)  (pid 1094)
+Served asset /lib/cq/cq.js - 200 OK (24ms)
+
+
+Started GET "/assets/utils/utils.js?v=0.1-1368116351520" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Compiled utils/utils.js  (0ms)  (pid 1094)
+Served asset /utils/utils.js - 200 OK (125ms)
+
+
+Started GET "/assets/lib/jquery/jquery.js?v=0.1-1368116351520" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Compiled lib/jquery/jquery.js  (1ms)  (pid 1094)
+Served asset /lib/jquery/jquery.js - 200 OK (26ms)
+
+
+Started GET "/assets/lib/underscore/underscore.js?v=0.1-1368116351520" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Compiled lib/underscore/underscore.js  (0ms)  (pid 1094)
+Served asset /lib/underscore/underscore.js - 200 OK (13ms)
+
+
+Started GET "/assets/lib/backbone/backbone.js?v=0.1-1368116351520" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Compiled lib/backbone/backbone.js  (0ms)  (pid 1094)
+Served asset /lib/backbone/backbone.js - 200 OK (10ms)
+
+
+Started GET "/assets/lib/cq/canvasquery.js?v=0.1-1368116351520" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Compiled lib/cq/canvasquery.js  (0ms)  (pid 1094)
+Served asset /lib/cq/canvasquery.js - 200 OK (69ms)
+
+
+Started GET "/assets/lib/console/console-min.js?v=0.1-1368116351520" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Compiled lib/console/console-min.js  (0ms)  (pid 1094)
+Served asset /lib/console/console-min.js - 200 OK (10ms)
+
+
+Started GET "/assets/lib/jquery/jquery-min.js?v=0.1-1368116351520" for 127.0.0.1 at 2013-05-09 18:19:11 +0200
+Compiled lib/jquery/jquery-min.js  (43ms)  (pid 1094)
+Served asset /lib/jquery/jquery-min.js - 200 OK (58ms)
+
+
+Started GET "/assets/lib/underscore/underscore-min.js?v=0.1-1368116351520" for 127.0.0.1 at 2013-05-09 18:19:12 +0200
+Compiled lib/underscore/underscore-min.js  (0ms)  (pid 1094)
+Served asset /lib/underscore/underscore-min.js - 200 OK (17ms)
+
+
+Started GET "/assets/lib/backbone/backbone-min.js?v=0.1-1368116351520" for 127.0.0.1 at 2013-05-09 18:19:12 +0200
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 1094)
+Served asset /lib/backbone/backbone-min.js - 200 OK (12ms)
+
+
+Started GET "/assets/underscore.js?v=0.1-1368116351520" for 127.0.0.1 at 2013-05-09 18:19:12 +0200
+Served asset /underscore.js - 404 Not Found (3ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/underscore.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/pawel/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:21:23 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:21:23 +0200
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:21:23 +0200
+Served asset /main.css - 200 OK (2ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:21:23 +0200
+Served asset /require.js - 200 OK (4ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Served asset /boot - 200 OK (3ms)
+
+
+Started GET "/assets/lib/console/console.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Served asset /lib/console/console.js - 200 OK (3ms)
+
+
+Started GET "/assets/lib/cq/cq.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Served asset /lib/cq/cq.js - 200 OK (2ms)
+
+
+Started GET "/assets/utils/utils.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Served asset /utils/utils.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/jquery/jquery.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Served asset /lib/jquery/jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/lib/underscore/underscore.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Served asset /lib/underscore/underscore.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/console/console-min.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Served asset /lib/console/console-min.js - 200 OK (4ms)
+
+
+Started GET "/assets/lib/backbone/backbone.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Served asset /lib/backbone/backbone.js - 200 OK (3ms)
+
+
+Started GET "/assets/lib/cq/canvasquery.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Served asset /lib/cq/canvasquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/lib/jquery/jquery-min.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Served asset /lib/jquery/jquery-min.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/underscore/underscore-min.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Compiled lib/underscore/underscore-min.js  (0ms)  (pid 1103)
+Served asset /lib/underscore/underscore-min.js - 200 OK (12ms)
+
+
+Started GET "/assets/lib/backbone/backbone-min.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Served asset /lib/backbone/backbone-min.js - 200 OK (16ms)
+
+
+Started GET "/assets/main.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Compiled main.js  (0ms)  (pid 1103)
+Served asset /main.js - 200 OK (100ms)
+
+
+Started GET "/assets/engine/engine.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Compiled engine/engine.js  (0ms)  (pid 1103)
+Served asset /engine/engine.js - 200 OK (14ms)
+
+
+Started GET "/assets/engine/map.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Compiled engine/map.js  (0ms)  (pid 1103)
+Served asset /engine/map.js - 200 OK (11ms)
+
+
+Started GET "/assets/engine/user.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Compiled engine/user.js  (0ms)  (pid 1103)
+Served asset /engine/user.js - 200 OK (17ms)
+
+
+Started GET "/assets/engine/server.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Compiled engine/server.js  (0ms)  (pid 1103)
+Served asset /engine/server.js - 200 OK (16ms)
+
+
+Started GET "/assets/engine/sprite.js?v=0.1-1368116484137" for 127.0.0.1 at 2013-05-09 18:21:24 +0200
+Compiled engine/sprite.js  (0ms)  (pid 1103)
+Served asset /engine/sprite.js - 200 OK (16ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /require.js - 200 OK (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /main.css - 200 OK (0ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /boot - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /lib/console/console.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /lib/underscore/underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/cq.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /lib/cq/cq.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /lib/jquery/jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/utils/utils.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /utils/utils.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console-min.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /lib/console/console-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /lib/backbone/backbone.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore-min.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /lib/underscore/underscore-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/canvasquery.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /lib/cq/canvasquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery-min.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /lib/jquery/jquery-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone-min.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:51 +0200
+Served asset /lib/backbone/backbone-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/main.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:52 +0200
+Served asset /main.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/engine.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:52 +0200
+Served asset /engine/engine.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/map.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:52 +0200
+Served asset /engine/map.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/user.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:52 +0200
+Served asset /engine/user.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/server.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:52 +0200
+Served asset /engine/server.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/sprite.js?v=0.1-1368116511809" for 127.0.0.1 at 2013-05-09 18:21:52 +0200
+Served asset /engine/sprite.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:27:57 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:27:57 +0200
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:27:57 +0200
+Served asset /main.css - 200 OK (2ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:27:57 +0200
+Served asset /require.js - 200 OK (5ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /boot - 200 OK (2ms)
+
+
+Started GET "/assets/lib/console/console.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /lib/console/console.js - 200 OK (3ms)
+
+
+Started GET "/assets/utils/utils.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /utils/utils.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/cq/cq.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /lib/cq/cq.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/jquery/jquery.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /lib/jquery/jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/lib/underscore/underscore.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /lib/underscore/underscore.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/console/console-min.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /lib/console/console-min.js - 200 OK (4ms)
+
+
+Started GET "/assets/lib/backbone/backbone.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /lib/backbone/backbone.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/cq/canvasquery.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /lib/cq/canvasquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/lib/jquery/jquery-min.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /lib/jquery/jquery-min.js - 200 OK (4ms)
+
+
+Started GET "/assets/lib/underscore/underscore-min.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /lib/underscore/underscore-min.js - 200 OK (4ms)
+
+
+Started GET "/assets/lib/backbone/backbone-min.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /lib/backbone/backbone-min.js - 200 OK (3ms)
+
+
+Started GET "/assets/main.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /main.js - 200 OK (2ms)
+
+
+Started GET "/assets/engine/engine.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /engine/engine.js - 200 OK (2ms)
+
+
+Started GET "/assets/engine/map.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /engine/map.js - 200 OK (32ms)
+
+
+Started GET "/assets/engine/user.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /engine/user.js - 200 OK (2ms)
+
+
+Started GET "/assets/engine/server.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Compiled engine/server.js  (0ms)  (pid 1240)
+Served asset /engine/server.js - 200 OK (8ms)
+
+
+Started GET "/assets/engine/sprite.js?v=0.1-1368116878549" for 127.0.0.1 at 2013-05-09 18:27:58 +0200
+Served asset /engine/sprite.js - 200 OK (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Compiled application.css  (1ms)  (pid 1240)
+Completed 200 OK in 63ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /main.css - 200 OK (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /require.js - 200 OK (0ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /boot - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/cq.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /lib/cq/cq.js - 200 OK (0ms)
+
+
+Started GET "/assets/utils/utils.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /utils/utils.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /lib/console/console.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /lib/jquery/jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /lib/underscore/underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /lib/backbone/backbone.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/canvasquery.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /lib/cq/canvasquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console-min.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /lib/console/console-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery-min.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /lib/jquery/jquery-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore-min.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /lib/underscore/underscore-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone-min.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /lib/backbone/backbone-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/main.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /main.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/engine.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /engine/engine.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/map.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /engine/map.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/user.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /engine/user.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/sprite.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /engine/sprite.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/server.js?v=0.1-1368117113678" for 127.0.0.1 at 2013-05-09 18:31:53 +0200
+Served asset /engine/server.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (47.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (2.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (2.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreatePosts (20130510141056)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "tags" text, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130510141056')[0m
+  [1m[35m (2.9ms)[0m  commit transaction
+Migrating to CreateLabs (20130510141103)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "labs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "tags" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130510141103')[0m
+  [1m[35m (2.4ms)[0m  commit transaction
+Migrating to CreateWorks (20130510141111)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "works" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "tags" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130510141111')[0m
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePosts (20130510141056)
+Migrating to CreateLabs (20130510141103)
+Migrating to CreateWorks (20130510141111)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-10 17:45:37 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (3.7ms)
+Compiled lab.css  (38ms)  (pid 17831)
+Compiled timber.css  (2ms)  (pid 17831)
+Compiled application.css  (60ms)  (pid 17831)
+Completed 200 OK in 148ms (Views: 147.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/lab.css?body=1" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /lab.css - 200 OK (4ms)
+
+
+Started GET "/assets/timber.css?body=1" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /timber.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /main.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /require.js - 304 Not Modified (113ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Compiled boot.js  (0ms)  (pid 17831)
+Served asset /boot - 200 OK (22ms)
+
+
+Started GET "/assets/lib/console/console.js?v=0.1-1368200738307" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /lib/console/console.js - 200 OK (5ms)
+
+
+Started GET "/assets/utils/utils.js?v=0.1-1368200738307" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /utils/utils.js - 200 OK (19ms)
+
+
+Started GET "/assets/lib/cq/cq.js?v=0.1-1368200738307" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /lib/cq/cq.js - 200 OK (6ms)
+
+
+Started GET "/assets/lib/jquery/jquery.js?v=0.1-1368200738307" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /lib/jquery/jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/lib/underscore/underscore.js?v=0.1-1368200738307" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /lib/underscore/underscore.js - 200 OK (3ms)
+
+
+Started GET "/assets/lib/console/console-min.js?v=0.1-1368200738307" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /lib/console/console-min.js - 200 OK (3ms)
+
+
+Started GET "/assets/lib/backbone/backbone.js?v=0.1-1368200738307" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /lib/backbone/backbone.js - 200 OK (5ms)
+
+
+Started GET "/assets/lib/underscore/underscore-min.js?v=0.1-1368200738307" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /lib/underscore/underscore-min.js - 200 OK (9ms)
+
+
+Started GET "/assets/lib/jquery/jquery-min.js?v=0.1-1368200738307" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /lib/jquery/jquery-min.js - 200 OK (7ms)
+
+
+Started GET "/assets/lib/cq/canvasquery.js?v=0.1-1368200738307" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /lib/cq/canvasquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/lib/backbone/backbone-min.js?v=0.1-1368200738307" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Served asset /lib/backbone/backbone-min.js - 200 OK (30ms)
+
+
+Started GET "/assets/main.js?v=0.1-1368200738307" for 127.0.0.1 at 2013-05-10 17:45:38 +0200
+Compiled main.js  (0ms)  (pid 17831)
+Served asset /main.js - 200 OK (18ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/timber.css?body=1" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /timber.css - 200 OK (0ms)
+
+
+Started GET "/assets/lab.css?body=1" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /lab.css - 200 OK (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /main.css - 200 OK (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /require.js - 200 OK (0ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /boot - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console.js?v=0.1-1368200748380" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /lib/console/console.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery.js?v=0.1-1368200748380" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /lib/jquery/jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore.js?v=0.1-1368200748380" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /lib/underscore/underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/cq.js?v=0.1-1368200748380" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /lib/cq/cq.js - 200 OK (0ms)
+
+
+Started GET "/assets/utils/utils.js?v=0.1-1368200748380" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /utils/utils.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone.js?v=0.1-1368200748380" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /lib/backbone/backbone.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console-min.js?v=0.1-1368200748380" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /lib/console/console-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/canvasquery.js?v=0.1-1368200748380" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /lib/cq/canvasquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore-min.js?v=0.1-1368200748380" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /lib/underscore/underscore-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery-min.js?v=0.1-1368200748380" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /lib/jquery/jquery-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone-min.js?v=0.1-1368200748380" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /lib/backbone/backbone-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/main.js?v=0.1-1368200748380" for 127.0.0.1 at 2013-05-10 17:45:48 +0200
+Served asset /main.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 23ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/timber.css?body=1" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /timber.css - 200 OK (0ms)
+
+
+Started GET "/assets/lab.css?body=1" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /lab.css - 200 OK (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /main.css - 200 OK (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /require.js - 200 OK (0ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /boot - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /lib/console/console.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /lib/jquery/jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/cq.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /lib/cq/cq.js - 200 OK (0ms)
+
+
+Started GET "/assets/utils/utils.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /utils/utils.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /lib/underscore/underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /lib/backbone/backbone.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery-min.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /lib/jquery/jquery-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/canvasquery.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /lib/cq/canvasquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console-min.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /lib/console/console-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone-min.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /lib/backbone/backbone-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore-min.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /lib/underscore/underscore-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/underscore.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Served asset /underscore.js - 404 Not Found (6ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/underscore.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /Users/pawel/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/jquery.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:05 +0200
+Compiled jquery.js  (2ms)  (pid 17831)
+Served asset /jquery.js - 200 OK (73ms)
+
+
+Started GET "/assets/main.js?v=0.1-1368200765744" for 127.0.0.1 at 2013-05-10 17:46:06 +0200
+Compiled main.js  (0ms)  (pid 17831)
+Served asset /main.js - 200 OK (7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/lab.css?body=1" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /lab.css - 200 OK (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /main.css - 200 OK (0ms)
+
+
+Started GET "/assets/timber.css?body=1" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /timber.css - 200 OK (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /require.js - 200 OK (0ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /boot - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console.js?v=0.1-1368200819513" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /lib/console/console.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore.js?v=0.1-1368200819513" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Compiled lib/underscore/underscore.js  (0ms)  (pid 17831)
+Served asset /lib/underscore/underscore.js - 200 OK (56ms)
+
+
+Started GET "/assets/lib/jquery/jquery.js?v=0.1-1368200819513" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /lib/jquery/jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/cq.js?v=0.1-1368200819513" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /lib/cq/cq.js - 200 OK (0ms)
+
+
+Started GET "/assets/utils/utils.js?v=0.1-1368200819513" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /utils/utils.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone.js?v=0.1-1368200819513" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /lib/backbone/backbone.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore-min.js?v=0.1-1368200819513" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /lib/underscore/underscore-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console-min.js?v=0.1-1368200819513" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /lib/console/console-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone-min.js?v=0.1-1368200819513" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /lib/backbone/backbone-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/canvasquery.js?v=0.1-1368200819513" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /lib/cq/canvasquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery-min.js?v=0.1-1368200819513" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /lib/jquery/jquery-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?v=0.1-1368200819513" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/main.js?v=0.1-1368200819513" for 127.0.0.1 at 2013-05-10 17:46:59 +0200
+Served asset /main.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/lab.css?body=1" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /lab.css - 200 OK (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /main.css - 200 OK (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /require.js - 200 OK (0ms)
+
+
+Started GET "/assets/timber.css?body=1" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /timber.css - 200 OK (0ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /boot - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /lib/console/console.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /lib/jquery/jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /lib/underscore/underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/cq.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /lib/cq/cq.js - 200 OK (0ms)
+
+
+Started GET "/assets/utils/utils.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /utils/utils.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /lib/backbone/backbone.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console-min.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /lib/console/console-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery-min.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /lib/jquery/jquery-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore-min.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /lib/underscore/underscore-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/canvasquery.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /lib/cq/canvasquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone-min.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /lib/backbone/backbone-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/main.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Compiled main.js  (0ms)  (pid 17831)
+Served asset /main.js - 200 OK (9ms)
+
+
+Started GET "/assets/engine/engine.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /engine/engine.js - 200 OK (28ms)
+
+
+Started GET "/assets/engine/map.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /engine/map.js - 200 OK (12ms)
+
+
+Started GET "/assets/engine/sprite.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /engine/sprite.js - 200 OK (11ms)
+
+
+Started GET "/assets/engine/user.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /engine/user.js - 200 OK (6ms)
+
+
+Started GET "/assets/engine/server.js?v=0.1-1368200868623" for 127.0.0.1 at 2013-05-10 17:47:48 +0200
+Served asset /engine/server.js - 200 OK (24ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/timber.css?body=1" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /timber.css - 200 OK (0ms)
+
+
+Started GET "/assets/lab.css?body=1" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /lab.css - 200 OK (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /main.css - 200 OK (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /require.js - 200 OK (0ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /boot - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/cq.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /lib/cq/cq.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /lib/console/console.js - 200 OK (0ms)
+
+
+Started GET "/assets/utils/utils.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /utils/utils.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /lib/underscore/underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /lib/jquery/jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /lib/backbone/backbone.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore-min.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /lib/underscore/underscore-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console-min.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /lib/console/console-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery-min.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /lib/jquery/jquery-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/canvasquery.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /lib/cq/canvasquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone-min.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:27 +0200
+Served asset /lib/backbone/backbone-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/main.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:28 +0200
+Compiled main.js  (0ms)  (pid 17831)
+Served asset /main.js - 200 OK (10ms)
+
+
+Started GET "/assets/engine/engine.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:28 +0200
+Served asset /engine/engine.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/user.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:28 +0200
+Served asset /engine/user.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/server.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:28 +0200
+Served asset /engine/server.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/map.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:28 +0200
+Served asset /engine/map.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/sprite.js?v=0.1-1368200907815" for 127.0.0.1 at 2013-05-10 17:48:28 +0200
+Served asset /engine/sprite.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/lab.css?body=1" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /lab.css - 200 OK (0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /main.css - 200 OK (0ms)
+
+
+Started GET "/assets/timber.css?body=1" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /timber.css - 200 OK (0ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /require.js - 200 OK (0ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /boot - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /lib/console/console.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /lib/underscore/underscore.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /lib/jquery/jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/cq.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /lib/cq/cq.js - 200 OK (0ms)
+
+
+Started GET "/assets/utils/utils.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /utils/utils.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /lib/backbone/backbone.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/console/console-min.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /lib/console/console-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/jquery/jquery-min.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /lib/jquery/jquery-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/underscore/underscore-min.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /lib/underscore/underscore-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/backbone/backbone-min.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /lib/backbone/backbone-min.js - 200 OK (0ms)
+
+
+Started GET "/assets/lib/cq/canvasquery.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /lib/cq/canvasquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:08 +0200
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/main.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:09 +0200
+Compiled main.js  (0ms)  (pid 17831)
+Served asset /main.js - 200 OK (74ms)
+
+
+Started GET "/assets/engine/engine.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:09 +0200
+Served asset /engine/engine.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/map.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:09 +0200
+Served asset /engine/map.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/user.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:09 +0200
+Served asset /engine/user.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/sprite.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:09 +0200
+Served asset /engine/sprite.js - 200 OK (0ms)
+
+
+Started GET "/assets/engine/server.js?v=0.1-1368201128784" for 127.0.0.1 at 2013-05-10 17:52:09 +0200
+Served asset /engine/server.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/lab.css?body=1" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /lab.css - 200 OK (3ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /main.css - 200 OK (2ms)
+
+
+Started GET "/assets/timber.css?body=1" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /timber.css - 200 OK (2ms)
+
+
+Started GET "/assets/require.js" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /require.js - 200 OK (4ms)
+
+
+Started GET "/assets/boot" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /boot - 200 OK (2ms)
+
+
+Started GET "/assets/lib/console/console.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /lib/console/console.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/underscore/underscore.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /lib/underscore/underscore.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/jquery/jquery.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /lib/jquery/jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/cq/cq.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /lib/cq/cq.js - 200 OK (3ms)
+
+
+Started GET "/assets/utils/utils.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /utils/utils.js - 200 OK (22ms)
+
+
+Started GET "/assets/lib/backbone/backbone.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /lib/backbone/backbone.js - 200 OK (4ms)
+
+
+Started GET "/assets/lib/cq/canvasquery.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /lib/cq/canvasquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/jquery/jquery-min.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /lib/jquery/jquery-min.js - 200 OK (124ms)
+
+
+Started GET "/assets/lib/console/console-min.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /lib/console/console-min.js - 200 OK (3ms)
+
+
+Started GET "/assets/lib/underscore/underscore-min.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /lib/underscore/underscore-min.js - 200 OK (2ms)
+
+
+Started GET "/assets/lib/backbone/backbone-min.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /lib/backbone/backbone-min.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /jquery.js - 200 OK (251ms)
+
+
+Started GET "/assets/main.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /main.js - 200 OK (2ms)
+
+
+Started GET "/assets/engine/engine.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:56 +0200
+Served asset /engine/engine.js - 200 OK (2ms)
+
+
+Started GET "/assets/engine/map.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:57 +0200
+Served asset /engine/map.js - 200 OK (2ms)
+
+
+Started GET "/assets/engine/user.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:57 +0200
+Served asset /engine/user.js - 200 OK (2ms)
+
+
+Started GET "/assets/engine/sprite.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:57 +0200
+Served asset /engine/sprite.js - 200 OK (2ms)
+
+
+Started GET "/assets/engine/server.js?v=0.1-1368201716402" for 127.0.0.1 at 2013-05-10 18:01:57 +0200
+Served asset /engine/server.js - 200 OK (3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
