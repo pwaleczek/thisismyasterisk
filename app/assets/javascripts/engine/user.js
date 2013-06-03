@@ -201,7 +201,7 @@ define([
 			console.log(spriteCanvas.canvas.toDataURL());
 
 			this.spriteImage = spriteCanvas;
-			console.log(this.spriteImage);
+			// console.log(this.spriteImage);
 		},
 		setMoveTarget: function (x, y) {
 			if (Engine.cursorPosition.x >= 0 &&
