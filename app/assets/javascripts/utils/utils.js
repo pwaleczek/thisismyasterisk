@@ -232,7 +232,7 @@ define([
 				var imageName = arguments[0][i];
 				var image = new Image;
 				addLoad(image, imageName);
-				image.src = '/images/' + imageName + '.png';
+				image.src = '/assets/' + imageName + '.png';
 				imageList[imageName] = image;
 			}
 
@@ -250,7 +250,7 @@ define([
 				position.x = Math.pow(1 - t, 2) * points[0][0] + 2 * (1 - t) * t * points[1][0] + Math.pow(t, 2) * points[2][0];
 				position.y = Math.pow(1 - t, 2) * points[0][1] + 2 * (1 - t) * t * points[1][1] + Math.pow(t, 2) * points[2][1];
 			} else {
-				Logger.error('Not enoug points specified, need at least 3.');
+				Logger.error('3 points have to be specified.');
 			}
 			return position;
 		},

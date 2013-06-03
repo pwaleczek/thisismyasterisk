@@ -25,14 +25,14 @@ define([
 		this.movingDirection = 0;
 		this.uid = userId;
 		this.moving = false;
-		this.generateSprites();
+		this.generateSprites(this.color);
 		if(userName !== 'player') Engine.addEntity(this);
-		console.log(this);
+		//console.log(this);
 		return this;
 	};
 
 	User.prototype = {	
-		generateSprites: function () {
+		generateSprites: function (color) {
 			var scale = Engine.scale;
 			var size = Engine.sprite;
 			var sprites = [];
@@ -74,7 +74,7 @@ define([
 				var tcw = cq(3 * size.w, 4 * size.h);
 				tcw.save()
 					// .strokeRect(0, 0, 3 * size.w, 4 * size.h)
-					.strokeStyle("#776c5a")
+					.strokeStyle(color)
 					.lineWidth((scale/8) | 0)
 					.lineCap('round')
 					.lineJoin('round')
@@ -155,7 +155,7 @@ define([
 				var tcw = cq(3 * size.w, 4 * size.h);
 				tcw.save()
 					// .strokeRect(0, 0, 3 * size.w, 4 * size.h)
-					.strokeStyle("#776c5a")
+					.strokeStyle(color)
 					.lineWidth((scale/8) | 0)
 					.lineCap('round')
 					.lineJoin('round')
@@ -174,14 +174,17 @@ define([
 					.moveTo(((_p3.x) * scale) | 0, (_p3.y * scale) | 0)
 					.lineTo(((_p3.x + sqrt3h) * scale) | 0, ((_p3.y - 0.5) * scale) | 0);
 					
-					// if(t<0.5) {
-					// 	tcw.moveTo((sqrt3h * scale) | 0, (2 * scale) | 0);
-					// 	tcw.lineTo((sqrt3 * scale) | 0, (1.5 * scale) | 0);
-					// }
-					//   tcw.moveTo(((_p1.x + sqrt3h) * scale), ((_p1.y - 0.5) * scale) | 0)
-					//   .lineTo(((_p3.x + sqrt3h) * scale) | 0, ((_p3.y - 0.5) * scale) | 0);
-					//   if(t<0.5) tcw.lineTo((sqrt3 * scale) | 0, (1.5 * scale) | 0);
 					
+					tcw.moveTo(0, (1.5 * scale) | 0);
+					tcw.lineTo((sqrt3 * scale) | 0, (1.5 * scale) | 0);
+					
+					tcw.moveTo(((_p1.x + sqrt3h) * scale), ((_p1.y - 0.5) * scale) | 0)
+						.lineTo(((_p3.x + sqrt3h) * scale) | 0, ((_p3.y - 0.5) * scale) | 0);
+						if(t<0.5) tcw.lineTo((sqrt3 * scale) | 0, (1.5 * scale) | 0);
+					
+					// tcw.moveTo(0, (1.5 * scale) | 0)
+					// 	.lineTo((_p2.x * scale) | 0, (_p2.y * scale) | 0);
+
 					if(t>0.45) {
 						tcw.moveTo(0, (1.5 * scale) | 0)
 						.lineTo(((_p2.x + sqrt3h) * scale) | 0, ((_p2.y - 0.5)  * scale) | 0)
@@ -201,35 +204,44 @@ define([
 			console.log(spriteCanvas.canvas.toDataURL());
 
 			this.spriteImage = spriteCanvas;
-			console.log(this.spriteImage);
+			//console.log(this.spriteImage);
 		},
-		setMoveTarget: function (x, y) {
-			if (Engine.cursorPosition.x >= 0 &&
-				 		Engine.cursorPosition.y >= 0 &&
-				 		Engine.cursorPosition.x < Engine.Map.mapData.width &&
-				 		Engine.cursorPosition.y < Engine.Map.mapData.height) {
-				if (!Engine.Map.mapData.data[Engine.cursorPosition.x][Engine.cursorPosition.y]) {
-					
-					this.moveTarget = Engine.getScreenCoordinates(x, y);
-					this.movePath = Utils.aStar.searchPath({x:this.position.x, y:this.position.y}, {x:x, y:y}, Engine.Map.mapData.data);
-					Engine.pathCanvas = cq(Engine.Map.mapData.width * Engine.Map.tw + Engine.Map.tw/2, Engine.Map.mapData.height * 2*Engine.Map.th);
-					for(var p = 0; p < this.movePath.length; p++) {
-						var pos = Engine.getScreenCoordinates(this.movePath[p].x, this.movePath[p].y);
-						Engine.pathCanvas.drawImage(Engine.pathTile, pos.x - Engine.worldOffset.x - Engine.sprite.w/2, pos.y - Engine.worldOffset.y - Engine.sprite.h/2);
-					}
-					this.moveProggres = 1;
-					// this.position.x = this.movePath[this.moveProggres].x;
-					// this.position.y = this.movePath[this.moveProggres].y;
-					// this.position.raw = Engine.getScreenCoordinates(this.position.x, this.position.y);
-					var xDir = (this.movePath[this.moveProggres].x < this.movePath[this.moveProggres+1].x) ? '' : '-';
-					var yDir = (this.movePath[this.moveProggres].y < this.movePath[this.moveProggres+1].y) ? '' : '-';
+		setMoveTarget: function (x, y, remote) {
+			remote = remote || false;
+			Logger.info('setting move target to: ' + x + ', ' + y);
+			if(remote || this.checkTileAvailability()) {
 
-					this.movingDirection = (this.movePath[this.moveProggres].x != this.movePath[this.moveProggres+1].x) ? xDir + 'x' : yDir + 'y';
-					
-					console.log(this.movePath);
-					this.moving = true;
+				this.moveTarget = Engine.getScreenCoordinates(x, y);
+				this.movePath = Utils.aStar.searchPath({x:this.position.x, y:this.position.y}, {x:x, y:y}, Engine.Map.mapData.data);
+				Engine.pathCanvas = cq(Engine.Map.mapData.width * Engine.Map.tw + Engine.Map.tw/2, Engine.Map.mapData.height * 2*Engine.Map.th);
+				for(var p = 0; p < this.movePath.length; p++) {
+					var pos = Engine.getScreenCoordinates(this.movePath[p].x, this.movePath[p].y);
+					Engine.pathCanvas.drawImage(Engine.pathTile, pos.x - Engine.worldOffset.x - Engine.sprite.w/2, pos.y - Engine.worldOffset.y - Engine.sprite.h/2);
 				}
+				this.moveProggres = 1;
+				// this.position.x = this.movePath[this.moveProggres].x;
+				// this.position.y = this.movePath[this.moveProggres].y;
+				// this.position.raw = Engine.getScreenCoordinates(this.position.x, this.position.y);
+				var xDir = (this.movePath[this.moveProggres].x < this.movePath[this.moveProggres+1].x) ? '' : '-';
+				var yDir = (this.movePath[this.moveProggres].y < this.movePath[this.moveProggres+1].y) ? '' : '-';
+
+				this.movingDirection = (this.movePath[this.moveProggres].x != this.movePath[this.moveProggres+1].x) ? xDir + 'x' : yDir + 'y';
+				Server.socket.emit('update_player', {uid: this.uid, target: this.movePath[this.movePath.length - 1] });
+				console.log(this.movePath);
+				this.moving = true;
+			
 			}
+		},
+		
+		checkTileAvailability: function() {
+			if (Engine.cursorPosition.x >= 0 &&
+		 		Engine.cursorPosition.y >= 0 &&
+		 		Engine.cursorPosition.x < Engine.Map.mapData.width &&
+		 		Engine.cursorPosition.y < Engine.Map.mapData.height &&
+		 		(!Engine.Map.mapData.data[Engine.cursorPosition.x][Engine.cursorPosition.y])) {
+		 			return true;
+			}
+			return false;
 		},
 
 		getPosition: function () {
@@ -274,10 +286,10 @@ define([
 
 					this.movingDirection = (this.movePath[this.moveProggres].x != this.movePath[this.moveProggres+1].x) ? xDir + 'x' : yDir + 'y';
 					
-					Server.socket.emit('update_player', {
-		 				uid: Engine.player.uid, 
-		 				position: this.position.raw
-		 			});
+					// Server.socket.emit('update_player', {
+		 		// 		uid: Engine.player.uid, 
+		 		// 		position: this.position.raw
+		 		// 	});
 
 					this.moveProggres++;
 					

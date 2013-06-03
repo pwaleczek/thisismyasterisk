@@ -1,3 +1,17 @@
+
+/*
+	@file: engine.js
+	
+	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
+
+	THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF
+	ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+	IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+	PURPOSE.
+
+	Please see the license.txt file for more information.
+*/
+
 define([
 	'Logger',
 	'Utils',
@@ -18,8 +32,8 @@ define([
 	Engine = {
 		scale: scale,
 		sprite: {
-			w: (sqrt3 * scale) | 0,
-			h: scale
+			w: 38,
+			h: 28
 		},
 		
 		entitiesList: {},
@@ -80,8 +94,11 @@ define([
 			
 			this.Map.load('temp');
 			
-			// this.images = Utils.imagePreloader(['tiles', 'ball'], function () {
-			this.Map.draw();
+			this.images = Utils.imagePreloader(['tiles', 'cube'], function () {
+				_engine.Map.draw();
+				console.log('loaded');
+			});
+			
 			// });
 			this.resize();
 			Server.connect(function (playerUID, users) {
@@ -92,14 +109,14 @@ define([
 				for(var UID in users) {
 					if(users[UID].uid !== playerUID) {
 						var _user = users[UID];
-						console.log(_user);
-						new User('user', _user.uid, _engine.getMapCoordinates(_user.position.x, _user.position.y), _user.color);
+						//console.log(_user);
+						new User('user', _user.uid, _user.position, _user.color);
 					
 					}
 				}
 				_engine.player = new User('player', _player.uid, _player.position, _player.color);
 				//_engine.player.generateSprites();
-				console.log(_player);
+				//console.log(_player);
 				Utils.attachEvent(window, 'blur', function (event) {
 					Logger.info('got Blur event', event);
 					_engine.player.active = false;
@@ -186,7 +203,7 @@ define([
 		//get tile iso position
 		getMapCoordinates: function (x, y) {
 			x = ((2 * (x - this.worldOffset.x) - Map.mapData.width * this.sprite.w) / this.sprite.w);
-			y = (2 * (y - this.worldOffset.y)) / this.sprite.h;
+			y = (2 * (y - this.worldOffset.y)-3) / this.sprite.h ;
 		
 			var mx = Math.round((y + x) / 2) - 1;
 			var my = Math.round((y - x) / 2);
@@ -222,35 +239,13 @@ define([
 			}
 			if(this.player) this.player.render(ctx);
 		},
-		
-		// render_test_cube: function (ctx) {
-		// 	console.log('test_cube');
-		// 	var scale = this.scale;
-
-		// 	ctx.save();
-		// 	ctx.beginPath();
-		// 	ctx.moveTo(0, Math.round(0.5 * scale));
-		// 	ctx.lineTo(0, Math.round(1.5 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3)/2 * scale), Math.round(2 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3) * scale), Math.round(1.5 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3) * scale), Math.round(0.5 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3)/2 * scale), 0);
-		// 	ctx.lineTo(0, Math.round(0.5 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3)/2 * scale), Math.round(1 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3)/2 * scale), Math.round(2 * scale));
-		// 	ctx.moveTo(Math.round(Math.sqrt(3)/2 * scale), Math.round(1 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3) * scale), Math.round(0.5 * scale));
-		// 	ctx.closePath();
-		// 	ctx.stroke();
-		// 	ctx.restore();
-		// },
 
 		renderCursorTile: function (ctx) {
 			if (this.cursorPosition.x >= 0 &&
 			 		this.cursorPosition.y >= 0 &&
 			 		this.cursorPosition.x < Map.mapData.width &&
 			 		this.cursorPosition.y < Map.mapData.height) {
-				if (!this.Map.mapData.data[this.cursorPosition.x][this.cursorPosition.y]) {
+				if (this.Map.mapData.data[this.cursorPosition.y][this.cursorPosition.x]) {
 					var cursor = this.getScreenCoordinates(this.cursorPosition.x, this.cursorPosition.y);
 					ctx.save()
 						.translate(cursor.x - this.sprite.w/2, cursor.y - this.sprite.h/2)
@@ -287,13 +282,16 @@ define([
 				//this.renderPath(this.renderCanvas);
 				//this.renderCanvas.save();
 				//this.renderCanvas.translate(this.worldOffset.x, this.worldOffset.y);
+				this.renderCursorTile(ctx);
+
 				this.renderEntities(ctx);
 				//this.renderCanvas.drawImage(ctx.canvas, this.worldOffset.x, this.worldOffset.y);//this.renderCanvas.restore();
-				this.renderCursorTile(ctx);
+				
 				
 				//this.render_test_cube(this.renderCanvas);
 				//this.renderCanvas.drawImage(this.cursorPositionCanvas.canvas,  this.worldOffset.x, this.worldOffset.y);
-				ctx.font("20pt Arial").fillText(delta, 20, 40);
+				
+				ctx.font("20pt Arial").fillStyle('#fff').fillText(delta, 20, 40);
 				if(this.player) {
 					ctx.font("10pt Arial").fillText('[' + this.player.position.raw.x + ', ' + this.player.position.raw.y + ']', 20, 80);
 				}
