@@ -18,7 +18,7 @@ define([
 				var player = { 
 					uid: localStorage.getItem('asterisk.player.UID'),
 					color: localStorage.getItem('asterisk.player.color') || '#'+((1<<24)*Math.random()|0).toString(16),
-					position: JSON.parse(localStorage.getItem('asterisk.player.position')) || { x: 10, y: 3 }
+					position: JSON.parse(localStorage.getItem('asterisk.player.position')) || { x: 0, y: 26 }
 				}
 				Logger.info(player);
 				_server.socket.emit('player_data', player);
