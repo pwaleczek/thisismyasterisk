@@ -1,0 +1,1620 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:37:10 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 77ms
+
+ActionView::Template::Error (boot.js isn't precompiled):
+    6:   <script type="text/javascript" src="http://localhost:5100/socket.io/socket.io.js"></script>
+    7:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    8:   
+    9:   <%= requirejs_include_tag "boot" %>
+    10:   <%= csrf_meta_tags %>
+    11: </head>
+    12: <body>
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__1229744806847633329_70351936606220'
+  app/controllers/main_controller.rb:5:in `index'
+
+
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:38:13 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (boot.js isn't precompiled):
+    6:   <script type="text/javascript" src="http://localhost:5100/socket.io/socket.io.js"></script>
+    7:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    8:   
+    9:   <%= requirejs_include_tag "boot" %>
+    10:   <%= csrf_meta_tags %>
+    11: </head>
+    12: <body>
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___660123606359048442_70321851404320'
+  app/controllers/main_controller.rb:5:in `index'
+
+
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:42:26 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (boot.js isn't precompiled):
+    6:   <script type="text/javascript" src="http://localhost:5100/socket.io/socket.io.js"></script>
+    7:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    8:   
+    9:   <%= requirejs_include_tag "boot" %>
+    10:   <%= csrf_meta_tags %>
+    11: </head>
+    12: <body>
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__265769474457766118_70141751914780'
+  app/controllers/main_controller.rb:5:in `index'
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:42:29 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (boot.js isn't precompiled):
+    6:   <script type="text/javascript" src="http://localhost:5100/socket.io/socket.io.js"></script>
+    7:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    8:   
+    9:   <%= requirejs_include_tag "boot" %>
+    10:   <%= csrf_meta_tags %>
+    11: </head>
+    12: <body>
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__265769474457766118_70141751914780'
+  app/controllers/main_controller.rb:5:in `index'
+
+
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:43:32 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (boot.js isn't precompiled):
+    6:   <script type="text/javascript" src="http://localhost:5100/socket.io/socket.io.js"></script>
+    7:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= requirejs_include_tag "boot" %>
+    10:   <%= csrf_meta_tags %>
+    11: </head>
+    12: <body>
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__243381604901122013_70103902516520'
+  app/controllers/main_controller.rb:5:in `index'
+
+
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:45:20 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (boot.js isn't precompiled):
+    6:   <script type="text/javascript" src="http://localhost:5100/socket.io/socket.io.js"></script>
+    7:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= requirejs_include_tag "boot" %>
+    10:   <%= csrf_meta_tags %>
+    11: </head>
+    12: <body>
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__2152521083192781087_70280521037280'
+  app/controllers/main_controller.rb:5:in `index'
+
+
+Compiled boot.js  (0ms)  (pid 23301)
+Compiled engine/engine.js  (0ms)  (pid 23301)
+Compiled engine/map.js  (0ms)  (pid 23301)
+Compiled engine/server.js  (0ms)  (pid 23301)
+Compiled engine/sprite.js  (0ms)  (pid 23301)
+Compiled engine/user.js  (0ms)  (pid 23301)
+Compiled lab.js  (0ms)  (pid 23301)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23301)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23301)
+Compiled lib/console/console-min.js  (0ms)  (pid 23301)
+Compiled lib/console/console.js  (0ms)  (pid 23301)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23301)
+Compiled lib/cq/cq.js  (0ms)  (pid 23301)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23301)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23301)
+Compiled lib/require.js  (0ms)  (pid 23301)
+Compiled lib/three/three-min.js  (7ms)  (pid 23301)
+Compiled lib/three/three.js  (0ms)  (pid 23301)
+Compiled lib/underscore/underscore-min.js  (1ms)  (pid 23301)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23301)
+Compiled main.js  (0ms)  (pid 23301)
+Compiled timber.js  (0ms)  (pid 23301)
+Compiled utils/utils.js  (0ms)  (pid 23301)
+Compiled application.js  (169ms)  (pid 23301)
+Compiled almond.js  (0ms)  (pid 23301)
+Compiled require.js  (1ms)  (pid 23301)
+Compiled jquery-ui.js  (6ms)  (pid 23301)
+Compiled jquery-ui.min.js  (29ms)  (pid 23301)
+Compiled jquery.js  (3ms)  (pid 23301)
+Compiled jquery.min.js  (1ms)  (pid 23301)
+Compiled jquery_ujs.js  (0ms)  (pid 23301)
+Compiled boot.js  (0ms)  (pid 23304)
+Compiled engine/engine.js  (0ms)  (pid 23304)
+Compiled engine/map.js  (0ms)  (pid 23304)
+Compiled engine/server.js  (0ms)  (pid 23304)
+Compiled engine/sprite.js  (0ms)  (pid 23304)
+Compiled engine/user.js  (0ms)  (pid 23304)
+Compiled lab.js  (0ms)  (pid 23304)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23304)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23304)
+Compiled lib/console/console-min.js  (0ms)  (pid 23304)
+Compiled lib/console/console.js  (0ms)  (pid 23304)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23304)
+Compiled lib/cq/cq.js  (0ms)  (pid 23304)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23304)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23304)
+Compiled lib/require.js  (0ms)  (pid 23304)
+Compiled lib/three/three-min.js  (5ms)  (pid 23304)
+Compiled lib/three/three.js  (0ms)  (pid 23304)
+Compiled lib/underscore/underscore-min.js  (27ms)  (pid 23304)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23304)
+Compiled main.js  (0ms)  (pid 23304)
+Compiled timber.js  (0ms)  (pid 23304)
+Compiled utils/utils.js  (0ms)  (pid 23304)
+Compiled application.js  (177ms)  (pid 23304)
+Compiled lab.css  (12ms)  (pid 23304)
+Compiled main.css  (1ms)  (pid 23304)
+Compiled timber.css  (1ms)  (pid 23304)
+Compiled application.css  (31ms)  (pid 23304)
+Compiled almond.js  (0ms)  (pid 23304)
+Compiled require.js  (3ms)  (pid 23304)
+Compiled jquery-ui.js  (6ms)  (pid 23304)
+Compiled jquery-ui.min.js  (3ms)  (pid 23304)
+Compiled jquery.js  (4ms)  (pid 23304)
+Compiled jquery.min.js  (1ms)  (pid 23304)
+Compiled jquery_ujs.js  (0ms)  (pid 23304)
+Compiled boot.js  (0ms)  (pid 23304)
+Compiled engine/engine.js  (0ms)  (pid 23304)
+Compiled engine/map.js  (0ms)  (pid 23304)
+Compiled engine/server.js  (0ms)  (pid 23304)
+Compiled engine/sprite.js  (0ms)  (pid 23304)
+Compiled engine/user.js  (0ms)  (pid 23304)
+Compiled lab.js  (0ms)  (pid 23304)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23304)
+Compiled lib/backbone/backbone.js  (25ms)  (pid 23304)
+Compiled lib/console/console-min.js  (0ms)  (pid 23304)
+Compiled lib/console/console.js  (0ms)  (pid 23304)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23304)
+Compiled lib/cq/cq.js  (0ms)  (pid 23304)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23304)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23304)
+Compiled lib/require.js  (0ms)  (pid 23304)
+Compiled lib/three/three-min.js  (5ms)  (pid 23304)
+Compiled lib/three/three.js  (0ms)  (pid 23304)
+Compiled lib/underscore/underscore-min.js  (30ms)  (pid 23304)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23304)
+Compiled main.js  (0ms)  (pid 23304)
+Compiled timber.js  (0ms)  (pid 23304)
+Compiled utils/utils.js  (0ms)  (pid 23304)
+Compiled application.js  (181ms)  (pid 23304)
+Compiled application.js  (0ms)  (pid 23401)
+Compiled almond.js  (0ms)  (pid 23401)
+Compiled require.js  (42ms)  (pid 23401)
+Compiled jquery-ui.js  (8ms)  (pid 23401)
+Compiled jquery-ui.min.js  (3ms)  (pid 23401)
+Compiled jquery.js  (3ms)  (pid 23401)
+Compiled jquery.min.js  (1ms)  (pid 23401)
+Compiled jquery_ujs.js  (0ms)  (pid 23401)
+Compiled application.js  (0ms)  (pid 23404)
+Compiled boot.js  (0ms)  (pid 23404)
+Compiled engine/engine.js  (0ms)  (pid 23404)
+Compiled engine/map.js  (0ms)  (pid 23404)
+Compiled engine/server.js  (0ms)  (pid 23404)
+Compiled engine/sprite.js  (0ms)  (pid 23404)
+Compiled engine/user.js  (0ms)  (pid 23404)
+Compiled lab.js  (0ms)  (pid 23404)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23404)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23404)
+Compiled lib/console/console-min.js  (0ms)  (pid 23404)
+Compiled lib/console/console.js  (0ms)  (pid 23404)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23404)
+Compiled lib/cq/cq.js  (0ms)  (pid 23404)
+Compiled lib/jquery/jquery-min.js  (37ms)  (pid 23404)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23404)
+Compiled lib/require.js  (0ms)  (pid 23404)
+Compiled lib/three/three-min.js  (7ms)  (pid 23404)
+Compiled lib/three/three.js  (0ms)  (pid 23404)
+Compiled lib/underscore/underscore-min.js  (2ms)  (pid 23404)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23404)
+Compiled main.js  (0ms)  (pid 23404)
+Compiled timber.js  (0ms)  (pid 23404)
+Compiled utils/utils.js  (0ms)  (pid 23404)
+Compiled lab.css  (12ms)  (pid 23404)
+Compiled main.css  (2ms)  (pid 23404)
+Compiled timber.css  (1ms)  (pid 23404)
+Compiled application.css  (31ms)  (pid 23404)
+Compiled almond.js  (0ms)  (pid 23404)
+Compiled require.js  (2ms)  (pid 23404)
+Compiled jquery-ui.js  (7ms)  (pid 23404)
+Compiled jquery-ui.min.js  (30ms)  (pid 23463)
+Compiled jquery.js  (3ms)  (pid 23463)
+Compiled jquery.min.js  (1ms)  (pid 23463)
+Compiled jquery_ujs.js  (0ms)  (pid 23463)
+Compiled application.js  (0ms)  (pid 23466)
+Compiled boot.js  (0ms)  (pid 23466)
+Compiled lib/require.js  (0ms)  (pid 23466)
+Compiled main.js  (0ms)  (pid 23466)
+Compiled lab.css  (14ms)  (pid 23466)
+Compiled main.css  (2ms)  (pid 23466)
+Compiled timber.css  (2ms)  (pid 23466)
+Compiled application.css  (34ms)  (pid 23466)
+Compiled require.js  (1ms)  (pid 23466)
+Compiled application.js  (0ms)  (pid 23466)
+Compiled boot.js  (1ms)  (pid 23466)
+Compiled lib/require.js  (0ms)  (pid 23466)
+Compiled main.js  (0ms)  (pid 23466)
+Compiled lab.css  (13ms)  (pid 23466)
+Compiled main.css  (2ms)  (pid 23466)
+Compiled timber.css  (2ms)  (pid 23466)
+Compiled application.css  (37ms)  (pid 23466)
+Compiled require.js  (39ms)  (pid 23466)
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:48:52 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application-b849337b45f73b89501d0c0f2fe1a288.css" for 127.0.0.1 at 2013-06-05 17:48:52 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-b849337b45f73b89501d0c0f2fe1a288.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Started GET "/assets/require-96620328b168cee4ed71ef17826f0455.js" for 127.0.0.1 at 2013-06-05 17:48:52 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/require-96620328b168cee4ed71ef17826f0455.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Compiled engine/engine.js  (0ms)  (pid 23490)
+Compiled engine/map.js  (0ms)  (pid 23490)
+Compiled engine/server.js  (0ms)  (pid 23490)
+Compiled engine/sprite.js  (0ms)  (pid 23490)
+Compiled engine/user.js  (0ms)  (pid 23490)
+Compiled lab.js  (0ms)  (pid 23490)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23490)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23490)
+Compiled lib/console/console-min.js  (0ms)  (pid 23490)
+Compiled lib/console/console.js  (0ms)  (pid 23490)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23490)
+Compiled lib/cq/cq.js  (0ms)  (pid 23490)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23490)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23490)
+Compiled lib/three/three-min.js  (5ms)  (pid 23490)
+Compiled lib/three/three.js  (0ms)  (pid 23490)
+Compiled lib/underscore/underscore-min.js  (0ms)  (pid 23490)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23490)
+Compiled timber.js  (0ms)  (pid 23490)
+Compiled utils/utils.js  (0ms)  (pid 23490)
+Compiled almond.js  (0ms)  (pid 23490)
+Compiled jquery-ui.js  (34ms)  (pid 23490)
+Compiled jquery-ui.min.js  (3ms)  (pid 23490)
+Compiled jquery.js  (3ms)  (pid 23490)
+Compiled jquery.min.js  (27ms)  (pid 23490)
+Compiled jquery_ujs.js  (0ms)  (pid 23490)
+Compiled application.js  (0ms)  (pid 23493)
+Compiled lib/require.js  (0ms)  (pid 23493)
+Compiled lab.css  (11ms)  (pid 23493)
+Compiled main.css  (1ms)  (pid 23493)
+Compiled timber.css  (1ms)  (pid 23493)
+Compiled application.css  (25ms)  (pid 23493)
+Compiled require.js  (1ms)  (pid 23493)
+Compiled application.js  (0ms)  (pid 23493)
+Compiled lib/require.js  (0ms)  (pid 23493)
+Compiled lab.css  (12ms)  (pid 23493)
+Compiled main.css  (1ms)  (pid 23493)
+Compiled timber.css  (1ms)  (pid 23493)
+Compiled application.css  (27ms)  (pid 23493)
+Compiled require.js  (1ms)  (pid 23493)
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:51:07 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (boot.js isn't precompiled):
+    6:   <script type="text/javascript" src="http://localhost:5100/socket.io/socket.io.js"></script>
+    7:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= requirejs_include_tag "boot" %>
+    10:   <%= csrf_meta_tags %>
+    11: </head>
+    12: <body>
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__4057123196502444910_70330725349840'
+  app/controllers/main_controller.rb:5:in `index'
+
+
+Compiled boot.js  (0ms)  (pid 23511)
+Compiled engine/engine.js  (0ms)  (pid 23511)
+Compiled engine/map.js  (0ms)  (pid 23511)
+Compiled engine/server.js  (0ms)  (pid 23511)
+Compiled engine/sprite.js  (0ms)  (pid 23511)
+Compiled engine/user.js  (0ms)  (pid 23511)
+Compiled lab.js  (0ms)  (pid 23511)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23511)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23511)
+Compiled lib/console/console-min.js  (0ms)  (pid 23511)
+Compiled lib/console/console.js  (0ms)  (pid 23511)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23511)
+Compiled lib/cq/cq.js  (0ms)  (pid 23511)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23511)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23511)
+Compiled lib/three/three-min.js  (7ms)  (pid 23511)
+Compiled lib/three/three.js  (0ms)  (pid 23511)
+Compiled lib/underscore/underscore-min.js  (1ms)  (pid 23511)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23511)
+Compiled main.js  (0ms)  (pid 23511)
+Compiled timber.js  (0ms)  (pid 23511)
+Compiled utils/utils.js  (36ms)  (pid 23511)
+Compiled application.js  (227ms)  (pid 23511)
+Compiled almond.js  (0ms)  (pid 23511)
+Compiled jquery-ui.js  (35ms)  (pid 23511)
+Compiled jquery-ui.min.js  (3ms)  (pid 23511)
+Compiled jquery.js  (3ms)  (pid 23511)
+Compiled jquery.min.js  (26ms)  (pid 23511)
+Compiled jquery_ujs.js  (0ms)  (pid 23511)
+Compiled boot.js  (0ms)  (pid 23514)
+Compiled engine/engine.js  (0ms)  (pid 23514)
+Compiled engine/map.js  (0ms)  (pid 23514)
+Compiled engine/server.js  (0ms)  (pid 23514)
+Compiled engine/sprite.js  (0ms)  (pid 23514)
+Compiled engine/user.js  (0ms)  (pid 23514)
+Compiled lab.js  (0ms)  (pid 23514)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23514)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23514)
+Compiled lib/console/console-min.js  (0ms)  (pid 23514)
+Compiled lib/console/console.js  (0ms)  (pid 23514)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23514)
+Compiled lib/cq/cq.js  (0ms)  (pid 23514)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23514)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23514)
+Compiled lib/require.js  (0ms)  (pid 23514)
+Compiled lib/three/three-min.js  (5ms)  (pid 23514)
+Compiled lib/three/three.js  (0ms)  (pid 23514)
+Compiled lib/underscore/underscore-min.js  (27ms)  (pid 23514)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23514)
+Compiled main.js  (0ms)  (pid 23514)
+Compiled timber.js  (0ms)  (pid 23514)
+Compiled utils/utils.js  (0ms)  (pid 23514)
+Compiled application.js  (176ms)  (pid 23514)
+Compiled lab.css  (11ms)  (pid 23514)
+Compiled main.css  (2ms)  (pid 23514)
+Compiled timber.css  (1ms)  (pid 23514)
+Compiled application.css  (28ms)  (pid 23514)
+Compiled require.js  (1ms)  (pid 23514)
+Compiled boot.js  (0ms)  (pid 23514)
+Compiled engine/engine.js  (0ms)  (pid 23514)
+Compiled engine/map.js  (0ms)  (pid 23514)
+Compiled engine/server.js  (1ms)  (pid 23514)
+Compiled engine/sprite.js  (0ms)  (pid 23514)
+Compiled engine/user.js  (0ms)  (pid 23514)
+Compiled lab.js  (0ms)  (pid 23514)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23514)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23514)
+Compiled lib/console/console-min.js  (0ms)  (pid 23514)
+Compiled lib/console/console.js  (0ms)  (pid 23514)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23514)
+Compiled lib/cq/cq.js  (0ms)  (pid 23514)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23514)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23514)
+Compiled lib/require.js  (0ms)  (pid 23514)
+Compiled lib/three/three-min.js  (7ms)  (pid 23514)
+Compiled lib/three/three.js  (0ms)  (pid 23514)
+Compiled lib/underscore/underscore-min.js  (1ms)  (pid 23514)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23514)
+Compiled main.js  (0ms)  (pid 23514)
+Compiled timber.js  (0ms)  (pid 23514)
+Compiled utils/utils.js  (0ms)  (pid 23514)
+Compiled application.js  (239ms)  (pid 23514)
+Compiled lab.css  (12ms)  (pid 23514)
+Compiled main.css  (1ms)  (pid 23514)
+Compiled timber.css  (1ms)  (pid 23514)
+Compiled application.css  (27ms)  (pid 23514)
+Compiled require.js  (1ms)  (pid 23514)
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:51:57 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (boot.js isn't precompiled):
+    6:   <script type="text/javascript" src="http://localhost:5100/socket.io/socket.io.js"></script>
+    7:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= requirejs_include_tag "boot" %>
+    10:   <%= csrf_meta_tags %>
+    11: </head>
+    12: <body>
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__2818428145871094059_70327769086420'
+  app/controllers/main_controller.rb:5:in `index'
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:51:59 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (boot.js isn't precompiled):
+    6:   <script type="text/javascript" src="http://localhost:5100/socket.io/socket.io.js"></script>
+    7:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= requirejs_include_tag "boot" %>
+    10:   <%= csrf_meta_tags %>
+    11: </head>
+    12: <body>
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__2818428145871094059_70327769086420'
+  app/controllers/main_controller.rb:5:in `index'
+
+
+Compiled almond.js  (0ms)  (pid 23530)
+Compiled jquery-ui.js  (7ms)  (pid 23530)
+Compiled jquery-ui.min.js  (2ms)  (pid 23530)
+Compiled jquery.js  (3ms)  (pid 23530)
+Compiled jquery.min.js  (1ms)  (pid 23530)
+Compiled jquery_ujs.js  (0ms)  (pid 23530)
+Compiled boot.js  (0ms)  (pid 23533)
+Compiled engine/engine.js  (0ms)  (pid 23533)
+Compiled engine/map.js  (0ms)  (pid 23533)
+Compiled engine/server.js  (0ms)  (pid 23533)
+Compiled engine/sprite.js  (0ms)  (pid 23533)
+Compiled engine/user.js  (0ms)  (pid 23533)
+Compiled lab.js  (0ms)  (pid 23533)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23533)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23533)
+Compiled lib/console/console-min.js  (0ms)  (pid 23533)
+Compiled lib/console/console.js  (0ms)  (pid 23533)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23533)
+Compiled lib/cq/cq.js  (0ms)  (pid 23533)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23533)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23533)
+Compiled lib/require.js  (0ms)  (pid 23533)
+Compiled lib/three/three-min.js  (6ms)  (pid 23533)
+Compiled lib/three/three.js  (0ms)  (pid 23533)
+Compiled lib/underscore/underscore-min.js  (31ms)  (pid 23533)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23533)
+Compiled main.js  (0ms)  (pid 23533)
+Compiled timber.js  (0ms)  (pid 23533)
+Compiled utils/utils.js  (0ms)  (pid 23533)
+Compiled application.js  (179ms)  (pid 23533)
+Compiled lab.css  (12ms)  (pid 23533)
+Compiled main.css  (1ms)  (pid 23533)
+Compiled timber.css  (1ms)  (pid 23533)
+Compiled application.css  (24ms)  (pid 23533)
+Compiled require.js  (1ms)  (pid 23533)
+Compiled boot.js  (0ms)  (pid 23533)
+Compiled engine/engine.js  (0ms)  (pid 23533)
+Compiled engine/map.js  (0ms)  (pid 23533)
+Compiled engine/server.js  (0ms)  (pid 23533)
+Compiled engine/sprite.js  (0ms)  (pid 23533)
+Compiled engine/user.js  (0ms)  (pid 23533)
+Compiled lab.js  (0ms)  (pid 23533)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23533)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23533)
+Compiled lib/console/console-min.js  (0ms)  (pid 23533)
+Compiled lib/console/console.js  (0ms)  (pid 23533)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23533)
+Compiled lib/cq/cq.js  (0ms)  (pid 23533)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23533)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23533)
+Compiled lib/require.js  (0ms)  (pid 23533)
+Compiled lib/three/three-min.js  (7ms)  (pid 23533)
+Compiled lib/three/three.js  (0ms)  (pid 23533)
+Compiled lib/underscore/underscore-min.js  (1ms)  (pid 23533)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23533)
+Compiled main.js  (0ms)  (pid 23533)
+Compiled timber.js  (0ms)  (pid 23533)
+Compiled utils/utils.js  (0ms)  (pid 23533)
+Compiled application.js  (251ms)  (pid 23533)
+Compiled lab.css  (15ms)  (pid 23533)
+Compiled main.css  (2ms)  (pid 23533)
+Compiled timber.css  (2ms)  (pid 23533)
+Compiled application.css  (33ms)  (pid 23533)
+Compiled require.js  (1ms)  (pid 23533)
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:53:01 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application-b849337b45f73b89501d0c0f2fe1a288.css" for 127.0.0.1 at 2013-06-05 17:53:01 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-b849337b45f73b89501d0c0f2fe1a288.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Started GET "/assets/application-ccabf52cd958f5f48973165ad58d901a.js" for 127.0.0.1 at 2013-06-05 17:53:01 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-ccabf52cd958f5f48973165ad58d901a.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Started GET "/assets/require-96620328b168cee4ed71ef17826f0455.js" for 127.0.0.1 at 2013-06-05 17:53:01 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/require-96620328b168cee4ed71ef17826f0455.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Compiled application.js  (13ms)  (pid 23560)
+Compiled almond.js  (0ms)  (pid 23560)
+Compiled jquery-ui.js  (6ms)  (pid 23560)
+Compiled jquery-ui.min.js  (3ms)  (pid 23560)
+Compiled jquery.js  (3ms)  (pid 23560)
+Compiled jquery.min.js  (1ms)  (pid 23560)
+Compiled jquery_ujs.js  (0ms)  (pid 23560)
+Compiled boot.js  (0ms)  (pid 23563)
+Compiled engine/engine.js  (0ms)  (pid 23563)
+Compiled engine/map.js  (0ms)  (pid 23563)
+Compiled engine/server.js  (0ms)  (pid 23563)
+Compiled engine/sprite.js  (0ms)  (pid 23563)
+Compiled engine/user.js  (0ms)  (pid 23563)
+Compiled lab.js  (0ms)  (pid 23563)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23563)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23563)
+Compiled lib/console/console-min.js  (0ms)  (pid 23563)
+Compiled lib/console/console.js  (0ms)  (pid 23563)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23563)
+Compiled lib/cq/cq.js  (0ms)  (pid 23563)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23563)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23563)
+Compiled lib/require.js  (0ms)  (pid 23563)
+Compiled lib/three/three-min.js  (5ms)  (pid 23563)
+Compiled lib/three/three.js  (0ms)  (pid 23563)
+Compiled lib/underscore/underscore-min.js  (27ms)  (pid 23563)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23563)
+Compiled main.js  (0ms)  (pid 23563)
+Compiled timber.js  (0ms)  (pid 23563)
+Compiled utils/utils.js  (0ms)  (pid 23563)
+Compiled application.js  (176ms)  (pid 23563)
+Compiled lab.css  (12ms)  (pid 23563)
+Compiled main.css  (2ms)  (pid 23563)
+Compiled timber.css  (2ms)  (pid 23563)
+Compiled application.css  (32ms)  (pid 23563)
+Compiled require.js  (2ms)  (pid 23563)
+Compiled boot.js  (0ms)  (pid 23563)
+Compiled engine/engine.js  (0ms)  (pid 23563)
+Compiled engine/map.js  (0ms)  (pid 23563)
+Compiled engine/server.js  (0ms)  (pid 23563)
+Compiled engine/sprite.js  (0ms)  (pid 23563)
+Compiled engine/user.js  (0ms)  (pid 23563)
+Compiled lab.js  (0ms)  (pid 23563)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23563)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23563)
+Compiled lib/console/console-min.js  (0ms)  (pid 23563)
+Compiled lib/console/console.js  (0ms)  (pid 23563)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23563)
+Compiled lib/cq/cq.js  (0ms)  (pid 23563)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23563)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23563)
+Compiled lib/require.js  (0ms)  (pid 23563)
+Compiled lib/three/three-min.js  (7ms)  (pid 23563)
+Compiled lib/three/three.js  (0ms)  (pid 23563)
+Compiled lib/underscore/underscore-min.js  (1ms)  (pid 23563)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23563)
+Compiled main.js  (0ms)  (pid 23563)
+Compiled timber.js  (0ms)  (pid 23563)
+Compiled utils/utils.js  (0ms)  (pid 23563)
+Compiled application.js  (239ms)  (pid 23563)
+Compiled lab.css  (12ms)  (pid 23563)
+Compiled main.css  (1ms)  (pid 23563)
+Compiled timber.css  (2ms)  (pid 23563)
+Compiled application.css  (31ms)  (pid 23563)
+Compiled require.js  (2ms)  (pid 23563)
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:54:35 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application-b849337b45f73b89501d0c0f2fe1a288.css" for 127.0.0.1 at 2013-06-05 17:54:35 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-b849337b45f73b89501d0c0f2fe1a288.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Started GET "/assets/application-ccabf52cd958f5f48973165ad58d901a.js" for 127.0.0.1 at 2013-06-05 17:54:35 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-ccabf52cd958f5f48973165ad58d901a.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Started GET "/assets/require-96620328b168cee4ed71ef17826f0455.js" for 127.0.0.1 at 2013-06-05 17:54:35 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/require-96620328b168cee4ed71ef17826f0455.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Compiled application.js  (14ms)  (pid 23591)
+Compiled almond.js  (0ms)  (pid 23591)
+Compiled jquery-ui.js  (41ms)  (pid 23591)
+Compiled jquery-ui.min.js  (3ms)  (pid 23591)
+Compiled jquery.js  (3ms)  (pid 23591)
+Compiled jquery.min.js  (1ms)  (pid 23591)
+Compiled jquery_ujs.js  (0ms)  (pid 23591)
+Compiled boot.js  (0ms)  (pid 23594)
+Compiled engine/engine.js  (0ms)  (pid 23594)
+Compiled engine/map.js  (0ms)  (pid 23594)
+Compiled engine/server.js  (0ms)  (pid 23594)
+Compiled engine/sprite.js  (0ms)  (pid 23594)
+Compiled engine/user.js  (0ms)  (pid 23594)
+Compiled lab.js  (0ms)  (pid 23594)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23594)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23594)
+Compiled lib/console/console-min.js  (0ms)  (pid 23594)
+Compiled lib/console/console.js  (0ms)  (pid 23594)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23594)
+Compiled lib/cq/cq.js  (0ms)  (pid 23594)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23594)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23594)
+Compiled lib/require.js  (0ms)  (pid 23594)
+Compiled lib/three/three-min.js  (5ms)  (pid 23594)
+Compiled lib/three/three.js  (0ms)  (pid 23594)
+Compiled lib/underscore/underscore-min.js  (28ms)  (pid 23594)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23594)
+Compiled main.js  (0ms)  (pid 23594)
+Compiled timber.js  (0ms)  (pid 23594)
+Compiled utils/utils.js  (0ms)  (pid 23594)
+Compiled application.js  (180ms)  (pid 23594)
+Compiled lab.css  (11ms)  (pid 23594)
+Compiled main.css  (1ms)  (pid 23594)
+Compiled timber.css  (1ms)  (pid 23594)
+Compiled application.css  (25ms)  (pid 23594)
+Compiled require.js  (1ms)  (pid 23594)
+Compiled boot.js  (0ms)  (pid 23594)
+Compiled engine/engine.js  (0ms)  (pid 23594)
+Compiled engine/map.js  (0ms)  (pid 23594)
+Compiled engine/server.js  (0ms)  (pid 23594)
+Compiled engine/sprite.js  (0ms)  (pid 23594)
+Compiled engine/user.js  (0ms)  (pid 23594)
+Compiled lab.js  (0ms)  (pid 23594)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23594)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23594)
+Compiled lib/console/console-min.js  (0ms)  (pid 23594)
+Compiled lib/console/console.js  (0ms)  (pid 23594)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23594)
+Compiled lib/cq/cq.js  (0ms)  (pid 23594)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23594)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23594)
+Compiled lib/require.js  (0ms)  (pid 23594)
+Compiled lib/three/three-min.js  (7ms)  (pid 23594)
+Compiled lib/three/three.js  (0ms)  (pid 23594)
+Compiled lib/underscore/underscore-min.js  (1ms)  (pid 23594)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23594)
+Compiled main.js  (0ms)  (pid 23594)
+Compiled timber.js  (0ms)  (pid 23594)
+Compiled utils/utils.js  (0ms)  (pid 23594)
+Compiled application.js  (240ms)  (pid 23594)
+Compiled lab.css  (12ms)  (pid 23594)
+Compiled main.css  (1ms)  (pid 23594)
+Compiled timber.css  (1ms)  (pid 23594)
+Compiled application.css  (27ms)  (pid 23594)
+Compiled require.js  (1ms)  (pid 23594)
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:58:00 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (boot.js isn't precompiled):
+    6:   <script type="text/javascript" src="http://localhost:5100/socket.io/socket.io.js"></script>
+    7:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    8:   <%= javascript_include_tag "application" %>
+    9:   <%= requirejs_include_tag "boot" %>
+    10:   <%= csrf_meta_tags %>
+    11: </head>
+    12: <body>
+  app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__1246167446097252390_70169667734740'
+  app/controllers/main_controller.rb:5:in `index'
+
+
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-05 17:58:28 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application-b849337b45f73b89501d0c0f2fe1a288.css" for 127.0.0.1 at 2013-06-05 17:58:28 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-b849337b45f73b89501d0c0f2fe1a288.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Started GET "/assets/require-96620328b168cee4ed71ef17826f0455.js" for 127.0.0.1 at 2013-06-05 17:58:28 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/require-96620328b168cee4ed71ef17826f0455.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Started GET "/require-96620328b168cee4ed71ef17826f0455.js" for 127.0.0.1 at 2013-06-05 17:58:51 +0200
+
+ActionController::RoutingError (No route matches [GET] "/require-96620328b168cee4ed71ef17826f0455.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Started GET "/assets/require-96620328b168cee4ed71ef17826f0455.js" for 127.0.0.1 at 2013-06-05 17:58:57 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/require-96620328b168cee4ed71ef17826f0455.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Compiled almond.js  (0ms)  (pid 23623)
+Compiled jquery-ui.js  (6ms)  (pid 23623)
+Compiled jquery-ui.min.js  (2ms)  (pid 23623)
+Compiled jquery.js  (4ms)  (pid 23623)
+Compiled jquery.min.js  (1ms)  (pid 23623)
+Compiled jquery_ujs.js  (0ms)  (pid 23623)
+Compiled boot.js  (0ms)  (pid 23626)
+Compiled engine/engine.js  (0ms)  (pid 23626)
+Compiled engine/map.js  (0ms)  (pid 23626)
+Compiled engine/server.js  (0ms)  (pid 23626)
+Compiled engine/sprite.js  (0ms)  (pid 23626)
+Compiled engine/user.js  (0ms)  (pid 23626)
+Compiled lab.js  (0ms)  (pid 23626)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23626)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23626)
+Compiled lib/console/console-min.js  (0ms)  (pid 23626)
+Compiled lib/console/console.js  (0ms)  (pid 23626)
+Compiled lib/cq/canvasquery.js  (0ms)  (pid 23626)
+Compiled lib/cq/cq.js  (0ms)  (pid 23626)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23626)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23626)
+Compiled lib/require.js  (0ms)  (pid 23626)
+Compiled lib/three/three-min.js  (5ms)  (pid 23626)
+Compiled lib/three/three.js  (0ms)  (pid 23626)
+Compiled lib/underscore/underscore-min.js  (27ms)  (pid 23626)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23626)
+Compiled main.js  (0ms)  (pid 23626)
+Compiled timber.js  (0ms)  (pid 23626)
+Compiled utils/utils.js  (0ms)  (pid 23626)
+Compiled application.js  (175ms)  (pid 23626)
+Compiled lab.css  (13ms)  (pid 23626)
+Compiled main.css  (1ms)  (pid 23626)
+Compiled timber.css  (1ms)  (pid 23626)
+Compiled application.css  (30ms)  (pid 23626)
+Compiled require.js  (1ms)  (pid 23626)
+Compiled boot.js  (0ms)  (pid 23626)
+Compiled engine/engine.js  (0ms)  (pid 23626)
+Compiled engine/map.js  (0ms)  (pid 23626)
+Compiled engine/server.js  (0ms)  (pid 23626)
+Compiled engine/sprite.js  (0ms)  (pid 23626)
+Compiled engine/user.js  (0ms)  (pid 23626)
+Compiled lab.js  (0ms)  (pid 23626)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23626)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23626)
+Compiled lib/console/console-min.js  (0ms)  (pid 23626)
+Compiled lib/console/console.js  (0ms)  (pid 23626)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23626)
+Compiled lib/cq/cq.js  (0ms)  (pid 23626)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23626)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23626)
+Compiled lib/require.js  (0ms)  (pid 23626)
+Compiled lib/three/three-min.js  (7ms)  (pid 23626)
+Compiled lib/three/three.js  (0ms)  (pid 23626)
+Compiled lib/underscore/underscore-min.js  (1ms)  (pid 23626)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23626)
+Compiled main.js  (0ms)  (pid 23626)
+Compiled timber.js  (0ms)  (pid 23626)
+Compiled utils/utils.js  (0ms)  (pid 23626)
+Compiled application.js  (255ms)  (pid 23626)
+Compiled lab.css  (12ms)  (pid 23626)
+Compiled main.css  (1ms)  (pid 23626)
+Compiled timber.css  (1ms)  (pid 23626)
+Compiled application.css  (26ms)  (pid 23626)
+Compiled require.js  (1ms)  (pid 23626)
+Compiled boot.js  (0ms)  (pid 23644)
+Compiled engine/engine.js  (0ms)  (pid 23644)
+Compiled engine/map.js  (0ms)  (pid 23644)
+Compiled engine/server.js  (0ms)  (pid 23644)
+Compiled engine/sprite.js  (0ms)  (pid 23644)
+Compiled engine/user.js  (0ms)  (pid 23644)
+Compiled lab.js  (0ms)  (pid 23644)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23644)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23644)
+Compiled lib/console/console-min.js  (0ms)  (pid 23644)
+Compiled lib/console/console.js  (0ms)  (pid 23644)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23644)
+Compiled lib/cq/cq.js  (0ms)  (pid 23644)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23644)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23644)
+Compiled lib/require.js  (0ms)  (pid 23644)
+Compiled lib/three/three-min.js  (7ms)  (pid 23644)
+Compiled lib/three/three.js  (0ms)  (pid 23644)
+Compiled lib/underscore/underscore-min.js  (0ms)  (pid 23644)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23644)
+Compiled main.js  (0ms)  (pid 23644)
+Compiled timber.js  (0ms)  (pid 23644)
+Compiled utils/utils.js  (0ms)  (pid 23644)
+Compiled application.js  (227ms)  (pid 23644)
+Compiled almond.js  (0ms)  (pid 23644)
+Compiled require.js  (1ms)  (pid 23644)
+Compiled jquery-ui.js  (46ms)  (pid 23644)
+Compiled jquery-ui.min.js  (3ms)  (pid 23644)
+Compiled jquery.js  (4ms)  (pid 23644)
+Compiled jquery.min.js  (31ms)  (pid 23644)
+Compiled jquery_ujs.js  (0ms)  (pid 23644)
+Compiled boot.js  (0ms)  (pid 23675)
+Compiled engine/engine.js  (0ms)  (pid 23675)
+Compiled engine/map.js  (0ms)  (pid 23675)
+Compiled engine/server.js  (0ms)  (pid 23675)
+Compiled engine/sprite.js  (0ms)  (pid 23675)
+Compiled engine/user.js  (0ms)  (pid 23675)
+Compiled lab.js  (0ms)  (pid 23675)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23675)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23675)
+Compiled lib/console/console-min.js  (0ms)  (pid 23675)
+Compiled lib/console/console.js  (0ms)  (pid 23675)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23675)
+Compiled lib/cq/cq.js  (0ms)  (pid 23675)
+Compiled lib/jquery/jquery-min.js  (2ms)  (pid 23675)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23675)
+Compiled lib/require.js  (0ms)  (pid 23675)
+Compiled lib/three/three-min.js  (5ms)  (pid 23675)
+Compiled lib/three/three.js  (0ms)  (pid 23675)
+Compiled lib/underscore/underscore-min.js  (0ms)  (pid 23675)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23675)
+Compiled main.js  (0ms)  (pid 23675)
+Compiled timber.js  (0ms)  (pid 23675)
+Compiled utils/utils.js  (0ms)  (pid 23675)
+Compiled application.js  (217ms)  (pid 23675)
+Compiled almond.js  (0ms)  (pid 23675)
+Compiled require.js  (2ms)  (pid 23675)
+Compiled jquery-ui.js  (35ms)  (pid 23675)
+Compiled jquery-ui.min.js  (4ms)  (pid 23675)
+Compiled jquery.js  (5ms)  (pid 23675)
+Compiled jquery.min.js  (27ms)  (pid 23675)
+Compiled jquery_ujs.js  (0ms)  (pid 23675)
+Compiled boot.js  (0ms)  (pid 23701)
+Compiled application.js  (13ms)  (pid 23701)
+Compiled boot.js  (0ms)  (pid 23706)
+Compiled application.js  (14ms)  (pid 23706)
+Compiled boot.js  (0ms)  (pid 23721)
+Compiled engine/engine.js  (0ms)  (pid 23721)
+Compiled engine/map.js  (0ms)  (pid 23721)
+Compiled engine/server.js  (0ms)  (pid 23721)
+Compiled engine/sprite.js  (0ms)  (pid 23721)
+Compiled engine/user.js  (0ms)  (pid 23721)
+Compiled lab.js  (0ms)  (pid 23721)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 23721)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 23721)
+Compiled lib/console/console-min.js  (0ms)  (pid 23721)
+Compiled lib/console/console.js  (0ms)  (pid 23721)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 23721)
+Compiled lib/cq/cq.js  (0ms)  (pid 23721)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 23721)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 23721)
+Compiled lib/require.js  (0ms)  (pid 23721)
+Compiled lib/three/three-min.js  (7ms)  (pid 23721)
+Compiled lib/three/three.js  (0ms)  (pid 23721)
+Compiled lib/underscore/underscore-min.js  (1ms)  (pid 23721)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 23721)
+Compiled main.js  (0ms)  (pid 23721)
+Compiled timber.js  (0ms)  (pid 23721)
+Compiled utils/utils.js  (0ms)  (pid 23721)
+Compiled application.js  (166ms)  (pid 23721)
+Compiled almond.js  (0ms)  (pid 23721)
+Compiled require.js  (1ms)  (pid 23721)
+Compiled jquery-ui.js  (6ms)  (pid 23721)
+Compiled jquery-ui.min.js  (3ms)  (pid 23721)
+Compiled jquery.js  (3ms)  (pid 23721)
+Compiled jquery.min.js  (1ms)  (pid 23721)
+Compiled jquery_ujs.js  (0ms)  (pid 23721)
+Compiled jquery.js  (4ms)  (pid 24109)
+Compiled jquery.min.js  (1ms)  (pid 24109)
+Compiled jquery_ujs.js  (0ms)  (pid 24109)
+Compiled application.js  (14ms)  (pid 24114)
+Compiled application.js  (0ms)  (pid 24119)
+Compiled application.js  (0ms)  (pid 24122)
+Compiled boot.js  (1ms)  (pid 24122)
+Compiled lib/require.js  (0ms)  (pid 24122)
+Compiled lab.css  (6ms)  (pid 24122)
+Compiled main.css  (1ms)  (pid 24122)
+Compiled timber.css  (1ms)  (pid 24122)
+Compiled application.css  (23ms)  (pid 24122)
+Compiled require.js  (1ms)  (pid 24122)
+Compiled application.js  (0ms)  (pid 24122)
+Compiled boot.js  (0ms)  (pid 24122)
+Compiled lib/require.js  (1ms)  (pid 24122)
+Compiled lab.css  (6ms)  (pid 24122)
+Compiled main.css  (1ms)  (pid 24122)
+Compiled timber.css  (1ms)  (pid 24122)
+Compiled application.css  (21ms)  (pid 24122)
+Compiled require.js  (1ms)  (pid 24122)
+Connecting to database specified by database.yml
+Started GET "/assets/require-96620328b168cee4ed71ef17826f0455.js" for 127.0.0.1 at 2013-06-05 18:25:37 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/require-96620328b168cee4ed71ef17826f0455.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Started GET "/" for 127.0.0.1 at 2013-06-05 18:25:43 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application-b849337b45f73b89501d0c0f2fe1a288.css" for 127.0.0.1 at 2013-06-05 18:25:43 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-b849337b45f73b89501d0c0f2fe1a288.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Started GET "/assets/require-5cfadf23cd92409c2a120f760fea0228.js" for 127.0.0.1 at 2013-06-05 18:25:43 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/require-5cfadf23cd92409c2a120f760fea0228.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Compiled engine/engine.js  (0ms)  (pid 24151)
+Compiled engine/map.js  (0ms)  (pid 24151)
+Compiled engine/server.js  (0ms)  (pid 24151)
+Compiled engine/sprite.js  (0ms)  (pid 24151)
+Compiled engine/user.js  (0ms)  (pid 24151)
+Compiled lab.js  (0ms)  (pid 24151)
+Compiled lib/backbone/backbone-min.js  (0ms)  (pid 24151)
+Compiled lib/backbone/backbone.js  (0ms)  (pid 24151)
+Compiled lib/console/console-min.js  (0ms)  (pid 24151)
+Compiled lib/console/console.js  (0ms)  (pid 24151)
+Compiled lib/cq/canvasquery.js  (1ms)  (pid 24151)
+Compiled lib/cq/cq.js  (0ms)  (pid 24151)
+Compiled lib/jquery/jquery-min.js  (1ms)  (pid 24151)
+Compiled lib/jquery/jquery.js  (0ms)  (pid 24151)
+Compiled lib/three/three-min.js  (8ms)  (pid 24151)
+Compiled lib/three/three.js  (0ms)  (pid 24151)
+Compiled lib/underscore/underscore-min.js  (0ms)  (pid 24151)
+Compiled lib/underscore/underscore.js  (0ms)  (pid 24151)
+Compiled main.js  (0ms)  (pid 24151)
+Compiled timber.js  (0ms)  (pid 24151)
+Compiled utils/utils.js  (0ms)  (pid 24151)
+Compiled almond.js  (0ms)  (pid 24151)
+Compiled require.js  (1ms)  (pid 24151)
+Compiled jquery.js  (3ms)  (pid 24151)
+Compiled jquery.min.js  (1ms)  (pid 24151)
+Compiled jquery_ujs.js  (0ms)  (pid 24151)
+Compiled application.js  (0ms)  (pid 24154)
+Compiled boot.js  (1ms)  (pid 24154)
+Compiled lib/require.js  (0ms)  (pid 24154)
+Compiled lab.css  (5ms)  (pid 24154)
+Compiled main.css  (1ms)  (pid 24154)
+Compiled timber.css  (1ms)  (pid 24154)
+Compiled application.css  (19ms)  (pid 24154)
+Compiled require.js  (38ms)  (pid 24154)
+Compiled application.js  (0ms)  (pid 24154)
+Compiled boot.js  (0ms)  (pid 24154)
+Compiled lib/require.js  (0ms)  (pid 24154)
+Compiled lab.css  (6ms)  (pid 24154)
+Compiled main.css  (1ms)  (pid 24154)
+Compiled timber.css  (1ms)  (pid 24154)
+Compiled application.css  (20ms)  (pid 24154)
+Compiled require.js  (2ms)  (pid 24154)
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-05 18:30:08 +0200
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application-b849337b45f73b89501d0c0f2fe1a288.css" for 127.0.0.1 at 2013-06-05 18:30:08 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-b849337b45f73b89501d0c0f2fe1a288.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+Started GET "/assets/require-e88b39cafd7c4f33a4b63932da0f7972.js" for 127.0.0.1 at 2013-06-05 18:30:09 +0200
+
+ActionController::RoutingError (No route matches [GET] "/assets/require-e88b39cafd7c4f33a4b63932da0f7972.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.13) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.13) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.13) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.13) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+

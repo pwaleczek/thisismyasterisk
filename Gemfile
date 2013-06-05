@@ -10,7 +10,7 @@ group :development, :test do
 end
 
 group :production do
-	gem 'mysql2'
+	gem 'pg'
 end
 
 # Gems used only for assets and not required
@@ -27,7 +27,7 @@ end
 
 gem 'jquery-rails'
 gem 'thin'
-gem 'requirejs-rails'
+gem 'requirejs-rails', '= 0.9.0'
 
 # gem 'execjs'
 # gem 'therubyracer'
@@ -36,3 +36,4 @@ gem 'requirejs-rails'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'capistrano'
