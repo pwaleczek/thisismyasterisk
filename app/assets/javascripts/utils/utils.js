@@ -20,6 +20,25 @@ define([
 		return Math.fact(j) / (Math.fact(k) * Math.fact(j -1));
 	}
 
+	//Array.prototype;
+
+	Array.prototype.exists = function(o, index) {
+		//console.log(o instanceof Array);
+		index = !!index;
+		for(var i = 0; i < this.length; i++)
+			if(o instanceof Array) {
+				
+				if(this[i][0] === o[0] && this[i][1] === o[1]) {
+					return (index) ? true : i;
+					console.log('exists: ' + o);
+					console.log(this);
+				}
+			} else {
+				if(this[i] === o)
+				return (index) ? true : i;
+			}
+		return false;
+	}
 
 	// Utilities
 	var Utils = {
@@ -58,10 +77,14 @@ define([
 				var allow_diagonals = false;//!!allow_diagonals;
 				var columns = board.length;
 				var rows = board[0].length;
-
+				Logger.info(JSON.stringify(start),JSON.stringify(destination));
+				console.log(rows + ' ' + columns);
+				
+				// console.log(JSON.stringify(Utils.transposeArray(board)));
 				start = new this.node(start.x, start.y, -1, -1, -1, -1);
 				destination = new this.node(destination.x, destination.y, -1, -1, -1, -1);
-
+				board = Utils.transposeArray(board);
+				//console.log(Utils.)
 				var open = []; //List of open nodes (nodes to be inspected)
 				var closed = []; //List of closed nodes (nodes we've already inspected)
 
@@ -125,7 +148,7 @@ define([
 									continue;
 							}
 
-							if (board[new_node_x][new_node_y] == 0 //If the new node is open
+							if (board[new_node_x][new_node_y] == 1 //If the new node is open
 								|| (destination.x == new_node_x && destination.y == new_node_y)) //or the new node is our destination
 							{
 								//See if the node is already in our closed list. If so, skip it.
@@ -198,6 +221,51 @@ define([
 			}
 		},
 
+		rotateArray: function(array, deg, direction) {
+		    var temp = [];
+		    var i, j;
+		    for(i = 0; i < array.length; ++i){
+		        temp[i] = [];
+		        for (j = 0; j < array[i].length; ++j){
+		            temp[i][j] = array[temp.length - j - 1][i];
+		        }
+		    }
+		    return temp;
+		},
+
+		transposeArray: function(array) {
+		// Calculate the width and height of the Array
+			var a = array,
+			w = a.length ? a.length : 0,
+			h = a[0] instanceof Array ? a[0].length : 0;
+
+			// In case it is a zero matrix, no transpose routine needed.
+			if(h === 0 || w === 0) { return []; }
+
+			/**
+			* @var {Number} i Counter
+			* @var {Number} j Counter
+			* @var {Array} t Transposed data is stored in this array.
+			*/
+			var i, j, t = [];
+
+			// Loop through every item in the outer array (height)
+			for(i=0; i<h; i++) {
+
+			// Insert a new row (array)
+			t[i] = [];
+
+			// Loop through every item per item in outer array (width)
+			for(j=0; j<w; j++) {
+
+			  // Save transposed data.
+			  t[i][j] = a[j][i];
+			}
+			}
+			console.log(t);
+			return t;
+		},
+
 		imagePreloader: function() {
 			var imageList = {};
 			var loadItems = 0;
@@ -223,7 +291,7 @@ define([
 				if(!loadItems) {
 					this.isPreloaderWorking = false;
 					if(callback) {
-						callback();
+						callback(imageList);
 					}
 				}
 			}
@@ -232,7 +300,7 @@ define([
 				var imageName = arguments[0][i];
 				var image = new Image;
 				addLoad(image, imageName);
-				image.src = '/images/' + imageName + '.png';
+				image.src = '/assets/' + imageName + '.png';
 				imageList[imageName] = image;
 			}
 
@@ -250,7 +318,7 @@ define([
 				position.x = Math.pow(1 - t, 2) * points[0][0] + 2 * (1 - t) * t * points[1][0] + Math.pow(t, 2) * points[2][0];
 				position.y = Math.pow(1 - t, 2) * points[0][1] + 2 * (1 - t) * t * points[1][1] + Math.pow(t, 2) * points[2][1];
 			} else {
-				Logger.error('Not enoug points specified, need at least 3.');
+				Logger.error('3 points have to be specified.');
 			}
 			return position;
 		},

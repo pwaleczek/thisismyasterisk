@@ -20,7 +20,7 @@ requirejs.config({
 		'Underscore',
 		'Backbone',
 	],
-	urlArgs: 'v=0.1-' + new Date().getTime()
+	urlArgs: ''//v=0.1-' + new Date().getTime()
 });
 
 require([

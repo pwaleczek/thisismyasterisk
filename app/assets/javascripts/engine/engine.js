@@ -1,3 +1,17 @@
+
+/*
+	@file: engine.js
+	
+	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
+
+	THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF
+	ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+	IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+	PURPOSE.
+
+	Please see the license.txt file for more information.
+*/
+
 define([
 	'Logger',
 	'Utils',
@@ -15,13 +29,20 @@ define([
 	// var tileSize = Math.sqrt(Math.pow(46/2, 2)+Math.pow(23/2, 2));
 	var scale = 20;//Math.min(window.innerWidth, window.innerHeight) / 10 //40;
 
+	//var activeTilesList = new Array([24, 19], [17, 19], [0, 23]);
+
+	var activeTilesList = [[24, 19, 'marker [24, 19] - you are here. Do it again.'], [17, 19, 'marker [17, 19] - you are here.'], [0, 23, 'marker [0, 23] - you are here. Go for the next one.']];
+
+
+
 	Engine = {
 		scale: scale,
 		sprite: {
-			w: (sqrt3 * scale) | 0,
-			h: scale
+			w: 38,
+			h: 28 -6,
+			d: 6
 		},
-		
+		label: '',
 		entitiesList: {},
 		name: 'Engine',
 		time: 0,
@@ -36,28 +57,11 @@ define([
 			y: 0
 		},
 		//'rgba(119,108,90, 0.3)'
-		makeTile: function (color, outline) {
+		makeTile: function (image, x, y) {
 			var tile = cq(this.sprite.w, this.sprite.h)
-			.save();
-			if (!!outline) {
-				tile.strokeStyle(color);
-			} else {
-				tile.fillStyle(color);
-			}
-			tile.beginPath()
-			.moveTo(0, (0.5 * scale) | 0)
-			.lineTo((sqrt3h * scale) | 0, scale | 0)
-			.lineTo((sqrt3 * scale) | 0, (0.5 * scale) | 0)
-			.lineTo((sqrt3h * scale) | 0, 0)
-			.lineTo(0, (0.5 * scale) | 0);
-			if (!!outline) {
-				tile.closePath();
-				tile.stroke();
-			} else {
-				tile.fill();
-			}
-			tile.restore();
-			return tile.canvas
+			//console.log(image);
+			tile.drawImage(image, x, y, this.sprite.w, this.sprite.h, 0, 0, this.sprite.w, this.sprite.h);
+			return tile.canvas;
 		},
 
 		initialize: function () {
@@ -73,54 +77,60 @@ define([
 			}
 			document.body.appendChild(this.renderCanvas.canvas);
 			
-			this.cursorTile = this.makeTile('rgba(119,108,90, 1)', true);
-			this.pathTile = this.makeTile('rgba(119,108,90, 0.3)');
+			
 			Utils.attachEvent(window, 'resize', this.resize);
 			Map.initialize();
 			
 			this.Map.load('temp');
 			
-			// this.images = Utils.imagePreloader(['tiles', 'ball'], function () {
-			this.Map.draw();
-			// });
-			this.resize();
-			Server.connect(function (playerUID, users) {
-				Logger.info('server data', playerUID, users);
+			this.images = Utils.imagePreloader(['cube','mark_tiles'], function (imageList) {
+				//_engine.Map.draw();
+			//	console.log('loaded');
+				_engine.resize();
+				Server.connect(function (playerUID, users) {
+					Logger.info('server data', playerUID, users);
 
-				var _player = users[playerUID];
+					var _player = users[playerUID];
 
-				for(var UID in users) {
-					if(users[UID].uid !== playerUID) {
-						var _user = users[UID];
-						console.log(_user);
-						new User('user', _user.uid, _engine.getMapCoordinates(_user.position.x, _user.position.y), _user.color);
-					
+					for(var UID in users) {
+						if(users[UID].uid !== playerUID) {
+							var _user = users[UID];
+							//console.log(_user);
+							new User('user', _user.uid, _user.position, _user.color);
+						
+						}
 					}
-				}
-				_engine.player = new User('player', _player.uid, _player.position, _player.color);
-				//_engine.player.generateSprites();
-				console.log(_player);
-				Utils.attachEvent(window, 'blur', function (event) {
-					Logger.info('got Blur event', event);
-					_engine.player.active = false;
-					Server.socket.emit('player_active_state', _engine.player.active);
+					_engine.player = new User('player', _player.uid, _player.position, _player.color);
+					//_engine.player.generateSprites();
+					//console.log(_player);
+					Utils.attachEvent(window, 'blur', function (event) {
+						Logger.info('got Blur event', event);
+						_engine.player.active = false;
+						Server.socket.emit('player_active_state', _engine.player.active);
+					});
+					
+					Utils.attachEvent(window, 'focus', function (event) {
+						Logger.info('got Focus event', event);
+						_engine.player.active = true;
+						Server.socket.emit('player_active_state', _engine.player.active);
+					});
+					_engine.cursorTile = _engine.makeTile(imageList['mark_tiles'], 0, 0);
+					_engine.pathTile = _engine.makeTile(imageList['mark_tiles'], 38, 0);
+					_engine.activeTile = _engine.makeTile(imageList['mark_tiles'], 76, 0);
+					// setInterval(function() {
+					// 	console.log(Engine.player.position.raw);
+					// }, 1000);
+					// Utils.attachEvent(document, 'beforeunload', function (event) {
+					// 	event.preventDefault();
+					// 	Logger.info('unload', event);
+					// 	Server.disconnect('message text');
+					// 	return 'fdsdfsdfsdgsdhs';
+					// });
 				});
-				
-				Utils.attachEvent(window, 'focus', function (event) {
-					Logger.info('got Focus event', event);
-					_engine.player.active = true;
-					Server.socket.emit('player_active_state', _engine.player.active);
-				});
-				// setInterval(function() {
-				// 	console.log(Engine.player.position.raw);
-				// }, 1000);
-				// Utils.attachEvent(document, 'beforeunload', function (event) {
-				// 	event.preventDefault();
-				// 	Logger.info('unload', event);
-				// 	Server.disconnect('message text');
-				// 	return 'fdsdfsdfsdgsdhs';
-				// });
 			});
+			
+			// });
+			
 
 			this.renderCanvas.onRender(function (delta) {
 				_engine.onRender(_engine.buffer, delta);
@@ -140,10 +150,21 @@ define([
 
 		},
 
+
+
 		onStep: function (delta) {
 			if(this.player) {
 				this.player.onStep(delta);
-				var pos = this.player.position.raw;
+				var pos = this.player.position;
+				var pos = new Array(pos.x, pos.y);
+				if(activeTilesList.exists(pos, true)) {
+					this.label = activeTilesList[activeTilesList.exists(pos)][2];
+					this.player.opacity = 0.5;
+					//console.log('in place!');
+				} else {
+					this.label = '';
+					this.player.opacity = 1;
+				}
 				// this.worldOffset.x -= 0.1; //Math.max(Math.min(pos.x - Engine.renderCanvas.canvas.width, 0), Engine.renderCanvas.canvas.width - Engine.Map.canvas.width);
 				// this.worldOffset.y -= 0;//Math.max(Math.min(pos.y - Engine.renderCanvas.canvas.height, 0), Engine.renderCanvas.canvas.height - Engine.Map.canvas.height);
 			}
@@ -186,7 +207,7 @@ define([
 		//get tile iso position
 		getMapCoordinates: function (x, y) {
 			x = ((2 * (x - this.worldOffset.x) - Map.mapData.width * this.sprite.w) / this.sprite.w);
-			y = (2 * (y - this.worldOffset.y)) / this.sprite.h;
+			y = (2 * (y - this.worldOffset.y)) / this.sprite.h ;
 		
 			var mx = Math.round((y + x) / 2) - 1;
 			var my = Math.round((y - x) / 2);
@@ -215,6 +236,27 @@ define([
 			Logger.info('Adding Entity: ' + object.name, object, this.entitiesList);
 		},
 
+		renderItems: function(ctx) {
+			if(this.itemCanvas) {
+				ctx.drawImage(this.itemCanvas.canvas, 0, 0);
+				
+			} else {
+				console.log(activeTilesList);
+				this.itemCanvas = cq(Map.canvas.width, Map.canvas.height);
+				for (var i = 0; i < activeTilesList.length; i++) {
+					var pos = this.getScreenCoordinates(activeTilesList[i][0], activeTilesList[i][1]);
+					
+					console.log(activeTilesList[i]);
+					console.log(pos);
+					this.itemCanvas.save()
+						//.translate(, pos.y - (this.sprite.h)/2 )
+						.drawImage(this.activeTile, pos.x - this.sprite.w/2, pos.y - (this.sprite.h)/2)
+					.restore();
+				}
+				console.log(this.itemCanvas.canvas.toDataURL());
+			}
+		},
+
 		renderEntities: function(ctx) {
 			for(var key in this.entitiesList) {
 				var object = this.entitiesList[key];
@@ -222,38 +264,16 @@ define([
 			}
 			if(this.player) this.player.render(ctx);
 		},
-		
-		// render_test_cube: function (ctx) {
-		// 	console.log('test_cube');
-		// 	var scale = this.scale;
-
-		// 	ctx.save();
-		// 	ctx.beginPath();
-		// 	ctx.moveTo(0, Math.round(0.5 * scale));
-		// 	ctx.lineTo(0, Math.round(1.5 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3)/2 * scale), Math.round(2 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3) * scale), Math.round(1.5 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3) * scale), Math.round(0.5 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3)/2 * scale), 0);
-		// 	ctx.lineTo(0, Math.round(0.5 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3)/2 * scale), Math.round(1 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3)/2 * scale), Math.round(2 * scale));
-		// 	ctx.moveTo(Math.round(Math.sqrt(3)/2 * scale), Math.round(1 * scale));
-		// 	ctx.lineTo(Math.round(Math.sqrt(3) * scale), Math.round(0.5 * scale));
-		// 	ctx.closePath();
-		// 	ctx.stroke();
-		// 	ctx.restore();
-		// },
 
 		renderCursorTile: function (ctx) {
 			if (this.cursorPosition.x >= 0 &&
 			 		this.cursorPosition.y >= 0 &&
 			 		this.cursorPosition.x < Map.mapData.width &&
 			 		this.cursorPosition.y < Map.mapData.height) {
-				if (!this.Map.mapData.data[this.cursorPosition.x][this.cursorPosition.y]) {
+				if (this.Map.mapData.data.accessible[this.cursorPosition.y][this.cursorPosition.x]) {
 					var cursor = this.getScreenCoordinates(this.cursorPosition.x, this.cursorPosition.y);
 					ctx.save()
-						.translate(cursor.x - this.sprite.w/2, cursor.y - this.sprite.h/2)
+						.translate(cursor.x - this.sprite.w/2, cursor.y - (this.sprite.h)/2 )
 						.drawImage(this.cursorTile, 0, 0)
 					.restore();
 				}
@@ -274,7 +294,7 @@ define([
 				ctx.fillRect(0, 0, Utils.preloaderProgress * this.canvas.width - 50, 40);
 				ctx.restore();
 			
-			} else if(Map) {
+			} else if(Map.isLoaded) {
 			 	//this.drawGround(ctx);
 
 			 	ctx.save();
@@ -287,15 +307,25 @@ define([
 				//this.renderPath(this.renderCanvas);
 				//this.renderCanvas.save();
 				//this.renderCanvas.translate(this.worldOffset.x, this.worldOffset.y);
-				this.renderEntities(ctx);
+				
+				
 				//this.renderCanvas.drawImage(ctx.canvas, this.worldOffset.x, this.worldOffset.y);//this.renderCanvas.restore();
-				this.renderCursorTile(ctx);
+				
 				
 				//this.render_test_cube(this.renderCanvas);
 				//this.renderCanvas.drawImage(this.cursorPositionCanvas.canvas,  this.worldOffset.x, this.worldOffset.y);
-				ctx.font("20pt Arial").fillText(delta, 20, 40);
+				
+				ctx.font("20pt Arial").fillStyle('#fff').fillText(delta, 20, 40);
 				if(this.player) {
-					ctx.font("10pt Arial").fillText('[' + this.player.position.raw.x + ', ' + this.player.position.raw.y + ']', 20, 80);
+					this.renderItems(ctx);
+				
+					this.renderCursorTile(ctx);
+				
+					this.renderEntities(ctx);
+
+					ctx.font("10pt Arial").fillText('[' + this.player.position.raw.x + ', ' + this.player.position.raw.y + ']', 20, 60);
+					ctx.font("10pt Arial").fillText('progress: ' + this.player.moveProggres, 20, 80);
+					ctx.font("16pt Arial").fillText(this.label, 20, window.innerHeight - 20);
 				}
 				ctx.restore();
 				this.renderCanvas.drawImage(ctx.canvas, 0, 0);

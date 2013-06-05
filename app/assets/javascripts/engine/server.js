@@ -6,15 +6,19 @@ define([
 	var Server = {
 		name: 'Server',
 
+		resetUsersList: function() {
+			this.socket.emit('reset_userlist', {});
+		},
+
 		connect: function (callback) {
 			var _server = this;
-			this.socket = io.connect('http://' + window.location.hostname + ':5000');
+			this.socket = io.connect('http://' + window.location.hostname + ':5100');
 			
 			this.socket.on('connect', function () {
 				var player = { 
 					uid: localStorage.getItem('asterisk.player.UID'),
 					color: localStorage.getItem('asterisk.player.color') || '#'+((1<<24)*Math.random()|0).toString(16),
-					position: JSON.parse(localStorage.getItem('asterisk.player.position')) || { x: 10, y: 3 }
+					position: JSON.parse(localStorage.getItem('asterisk.player.position')) || { x: 0, y: 26 }
 				}
 				Logger.info(player);
 				_server.socket.emit('player_data', player);
@@ -36,7 +40,9 @@ define([
 			});
 			
 			this.socket.on('update_user', function (data){
-				Engine.entitiesList[data.uid].position.raw = data.position;
+				Logger.info('User target:', data);
+				Engine.entitiesList[data.uid].setMoveTarget(data.target.x, data.target.y, true);
+				//Engine.entitiesList[data.uid].position.raw = data.position;
 			});
 
 			this.socket.on('player_active_state', function (data) {

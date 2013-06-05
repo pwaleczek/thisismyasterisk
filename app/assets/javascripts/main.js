@@ -28,9 +28,11 @@ define([
 
 				Engine.initialize();
 
+				
+
 				Backbone.history.start();
 
-				console.log(Engine);
+				//console.log(Engine);
 			} else {
 				this.showNotWorkingMessage();
 			}
