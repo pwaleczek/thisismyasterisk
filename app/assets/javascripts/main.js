@@ -3,7 +3,6 @@
 
 define([
 	'Logger',
-	'jQuery',
 	'Underscore',
 	'Backbone',
 	'Utils',
@@ -13,7 +12,7 @@ define([
 	'engine/engine'
 	//'engine/map'
 
-], function(Logger, $, _, Backbone, Utils,  Engine) {
+], function(Logger, _, Backbone, Utils,  Engine) {
 	'use strict';
 	var scope = this;
 	var Application = {

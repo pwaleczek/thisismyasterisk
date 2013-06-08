@@ -1,0 +1,13 @@
+shim:
+  jquery:
+    exports: '$'
+modules:
+  - name: 'boot'
+  - name: 'main'
+paths:
+  Logger: lib/console/console
+  Utils: utils/utils
+  CQ: lib/cq/cq
+  jquery: lib/jquery/jquery-min
+  Underscore: lib/underscore/underscore
+  Backbone: lib/backbone/backbone

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+#ruby '2.0.0'
 
 gem 'rails', '3.2.13'
 
@@ -10,7 +10,7 @@ group :development, :test do
 end
 
 group :production do
-	gem 'pg'
+	gem 'sqlite3'
 end
 
 # Gems used only for assets and not required
@@ -27,7 +27,7 @@ end
 
 gem 'jquery-rails'
 gem 'thin'
-gem 'requirejs-rails'
+gem 'requirejs-rails', :git => 'git://github.com/jwhitley/requirejs-rails.git'
 
 # gem 'execjs'
 # gem 'therubyracer'
@@ -36,3 +36,4 @@ gem 'requirejs-rails'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'capistrano'
