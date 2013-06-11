@@ -28,14 +28,12 @@ require([
 	'Logger',
 	'Utils',
 	'CQ',
-	 'Underscore',
-	 'Backbone'
+	'Backbone'
 ], function(require, Logger, Utils, cq, _, Backbone) {
 	Logger.group('Libs loaded, booting...');
 	Logger.info('Logger: ', Logger);
 	Logger.info('Utils: ', Utils);
 	Logger.info('CQ: ', cq);
-	Logger.info('Underscore: ', _);
 	Logger.info('Backbone: ', Backbone);
 
 	require(['main'], function(App) {

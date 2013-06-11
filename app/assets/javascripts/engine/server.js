@@ -12,7 +12,7 @@ define([
 
 		connect: function (callback) {
 			var _server = this;
-			this.socket = io.connect('http://service.' + window.location.hostname);
+			this.socket = io.connect('http://service.thisismyasterisk.org:80');
 			
 			this.socket.on('connect', function () {
 				var player = { 

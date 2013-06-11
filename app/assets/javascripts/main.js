@@ -3,7 +3,6 @@
 
 define([
 	'Logger',
-	'Underscore',
 	'Backbone',
 	'Utils',
 // @app files
@@ -12,7 +11,7 @@ define([
 	'engine/engine'
 	//'engine/map'
 
-], function(Logger, _, Backbone, Utils,  Engine) {
+], function(Logger, Backbone, Utils,  Engine) {
 	'use strict';
 	var scope = this;
 	var Application = {
