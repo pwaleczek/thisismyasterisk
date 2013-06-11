@@ -1,13 +1,33 @@
 shim:
   jquery:
     exports: '$'
+    
 modules:
+  - name: 'Logger'
+  - name: 'Utils'
+    exclude: ['Logger']
+  - name: 'CQ'
+    exclude: ['Logger']
+  - name: 'Backbone'
+    exclude: ['Logger']
   - name: 'boot'
+    exclude: ['main', 'Logger', 'Utils', 'CQ']
   - name: 'main'
+    exclude: ['engine/engine', 'Logger', 'Utils', 'Backbone']
+  - name: 'engine/engine'
+    exclude: ['engine/map', 'engine/sprite', 'engine/user', 'engine/server', 'Logger', 'Utils', 'CQ']
+  - name: 'engine/map'
+    exclude: ['engine/sprite', 'Logger', 'Utils']
+  - name: 'engine/server'
+    exclude: ['Logger']
+  - name: 'engine/sprite'
+    exclude: ['Logger']
+  - name: 'engine/user'
+    exclude: ['engine/server', 'engine/sprite', 'Logger', 'Utils']
+
 paths:
   Logger: lib/console/console
   Utils: utils/utils
   CQ: lib/cq/cq
-  jquery: lib/jquery/jquery-min
-  Underscore: lib/underscore/underscore
+  underscore: lib/underscore/underscore
   Backbone: lib/backbone/backbone

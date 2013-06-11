@@ -104,7 +104,7 @@ define([
 						x=1;
 					break;
 				}
-				this.a+=0.5*delta/1000;
+				this.a+=0.5/**delta/1000*/;
 				ctx.globalAlpha(this.opacity).drawImage(this.spriteList[x][Math.floor(this.a)], pos.x - this.sprite.w/2, pos.y - this.sprite.h/2 - Engine.sprite.d -4);
 
 
