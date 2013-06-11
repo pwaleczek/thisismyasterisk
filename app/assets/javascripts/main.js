@@ -1,36 +1,51 @@
-//	@app main thread
-//  @author: Pawel Waleczek | pawel@thisismyasterisk.org
+/*
+	@file: main.js
+	
+	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
+
+	THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF
+	ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+	IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+	PURPOSE.
+
+	Please see the license.txt file for more information.
+*/
 
 define([
 	'Logger',
 	'Backbone',
 	'Utils',
-// @app files
-	// 'engine/user',
-	// 'engine/server',
-	'engine/engine'
-	//'engine/map'
+	'engine/engine',
+	'ui/ui'
 
-], function(Logger, Backbone, Utils,  Engine) {
+], function(Logger, Backbone, Utils,  Engine, UI) {
 	'use strict';
 	var scope = this;
 	var Application = {
 		initialize: function () {
+			console.log('Welcome to thisismyasterisk.org!\r\nCopyright 2013, Pawel Waleczek | pawel@thisismyasterisk.org');
 			if(this.browserFit()) {
 
 				window.Engine = Engine;
-				//window.Utils = Utils;
+
 				Logger.group('Application init.');
 				
 				this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
 
-				Engine.initialize();
+				//Engine.initialize();
 
-				
+				if (this.env === 'production' || typeof window.console === 'undefined') {
+				  window.console = {
+				    log: function() {}
+				  };
+				  Logger.setLevel(0);
+				} 
+				console.log(UI);
+				this.router = new UI.Router;
 
-				Backbone.history.start();
+				Backbone.history.start({pushState: true});
 
-				//console.log(Engine);
+
 			} else {
 				this.showNotWorkingMessage();
 			}
@@ -38,12 +53,13 @@ define([
 		},
 
 		browserFit: function() {
+			
 			return true;
 		},
 
 		showNotWorkingMessage: function () {
 			$('body').append('<h1>Not supported</h1>');
-			return;
+			return console.log('.. get a proper browser!');
 		}
 	};
 	return Application;

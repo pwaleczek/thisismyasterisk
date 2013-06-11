@@ -1,3 +1,16 @@
+/*
+	@file: server.js
+	
+	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
+
+	THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF
+	ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+	IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+	PURPOSE.
+
+	Please see the license.txt file for more information.
+*/
+
 define([
 	'Logger',
 ], function (Logger) {
@@ -12,7 +25,7 @@ define([
 
 		connect: function (callback) {
 			var _server = this;
-			this.socket = io.connect('http://service.thisismyasterisk.org:80');
+			this.socket = io.connect((env == 'production') ? 'http://service.thisismyasterisk.org:80' : 'http://localhost:4000');
 			
 			this.socket.on('connect', function () {
 				var player = { 
@@ -46,7 +59,8 @@ define([
 			});
 
 			this.socket.on('player_active_state', function (data) {
-				Engine.entitiesList[data.uid].active = data;
+				Engine.entitiesList[data.uid].active = data.active;
+				console.log(data.uid + ' ' + data.active);
 			});
 
 		},

@@ -1,27 +1,19 @@
-// @app bootstrap
-// @author Pawel Waleczek | pawel@thisismyasterisk.org
+/*
+	@file: boot.js
+	
+	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
+
+	THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF
+	ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+	IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+	PURPOSE.
+
+	Please see the license.txt file for more information.
+*/
 
 'use strict';
 
-// requirejs.config({
-// 	paths: {
-// 		Logger: 'lib/console/console',
-// 		Utils: 'utils/utils',
-// 		CQ: 'lib/cq/cq',
-// 		jQuery: 'lib/jquery/jquery',
-// 		Underscore: 'lib/underscore/underscore',
-// 		Backbone: 'lib/backbone/backbone'
-// 	},
-// 	priority: [ 
-// 		'Logger',
-// 		'Utils',
-// 		'CQ',
-// 		'jQuery',
-// 		'Underscore',
-// 		'Backbone',
-// 	],
-// 	urlArgs: ''//v=0.1-' + new Date().getTime()
-// });
+var env;
 
 require([
 	'require',
@@ -39,7 +31,11 @@ require([
 	require(['main'], function(App) {
 		Logger.group("Starting application.");
 		Logger.info("App: ", App);
+		
+		env = $('meta[name="app_env"]').attr('content');
 
+		window.App = App;
+		
 		App.initialize();
 		
 		Logger.groupEnd();

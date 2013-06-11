@@ -13,17 +13,11 @@ modules:
   - name: 'boot'
     exclude: ['main', 'Logger', 'Utils', 'CQ']
   - name: 'main'
-    exclude: ['engine/engine', 'Logger', 'Utils', 'Backbone']
+    exclude: ['engine/engine', 'ui/ui', 'Logger', 'Utils', 'Backbone']
   - name: 'engine/engine'
-    exclude: ['engine/map', 'engine/sprite', 'engine/user', 'engine/server', 'Logger', 'Utils', 'CQ']
-  - name: 'engine/map'
-    exclude: ['engine/sprite', 'Logger', 'Utils']
-  - name: 'engine/server'
-    exclude: ['Logger']
-  - name: 'engine/sprite'
-    exclude: ['Logger']
-  - name: 'engine/user'
-    exclude: ['engine/server', 'engine/sprite', 'Logger', 'Utils']
+    exclude: ['Logger', 'Utils', 'CQ']
+  - name: 'ui/ui'
+    exclude: ['Logger', 'Utils', 'Backbone', 'underscore']
 
 paths:
   Logger: lib/console/console
