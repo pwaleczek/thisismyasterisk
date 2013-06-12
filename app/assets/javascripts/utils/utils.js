@@ -11,10 +11,8 @@
 	Please see the license.txt file for more information.
 */
 
-define([
-	'logger'
-], function(Logger) {
-	Logger.group('Loading Utilities...');
+define(function() {
+	console.log('Loading Utilities module for anything...');
 
 	// do some math
 	Math.fact = function(m) {
@@ -90,8 +88,7 @@ define([
 				var allow_diagonals = false;//!!allow_diagonals;
 				var columns = board.length;
 				var rows = board[0].length;
-				Logger.info(JSON.stringify(start),JSON.stringify(destination));
-				console.log(rows + ' ' + columns);
+				
 				
 				// console.log(JSON.stringify(Utils.transposeArray(board)));
 				start = new this.node(start.x, start.y, -1, -1, -1, -1);
@@ -292,11 +289,11 @@ define([
 			this.preloadProgress = 0;
 			
 			function addLoad(image, name) {
-				Logger.info('Loading image: ' + name + '.');
+				debug.info('Loading image: ' + name + '.');
 				this.isPreloaderWorking = true;
 				loadItems++;
 				image.onload = loadReady;
-				image.onerror = function() { Logger.error('Failed to load ' + name); };
+				image.onerror = function() { debug.error('Failed to load ' + name); };
 			}
 			function loadReady () {
 				loadItems--;
@@ -331,7 +328,7 @@ define([
 				position.x = Math.pow(1 - t, 2) * points[0][0] + 2 * (1 - t) * t * points[1][0] + Math.pow(t, 2) * points[2][0];
 				position.y = Math.pow(1 - t, 2) * points[0][1] + 2 * (1 - t) * t * points[1][1] + Math.pow(t, 2) * points[2][1];
 			} else {
-				Logger.error('3 points have to be specified.');
+				debug.error('3 points have to be specified.');
 			}
 			return position;
 		},
@@ -356,7 +353,7 @@ define([
 		attachEvent: function(eventElement, eventName, eventMethod) {
 			console.log(this);
 			if(typeof eventElement !== 'object') {
-				Logger.error('Event element is not an object!');
+				console.error('Event element is not an object!');
 				return;
 			}
 			if(typeof eventMethod === 'function') {
@@ -365,20 +362,19 @@ define([
 				} else if(window.addEventListener) {
 					eventElement.addEventListener(eventName, eventMethod, true);
 				} else {
-					Logger.error('Unable to attach event "' + eventName + '" - no support for this. Get a real browser.');
+					console.error('Unable to attach event "' + eventName + '" - no support for this. Get a real browser.');
 					return;
 				}
 			} else {
-				Logger.error('Event method is not a function!');
+				console.error('Event method is not a function!');
 				return;
 			}
-			Logger.info('Attached [' + eventName + '] to ' + eventElement + '.');
-			Logger.info(eventMethod);
+			console.log('Attached [' + eventName + '] to ' + eventElement + '.');
 		},
 
 		detachEvent: function(eventElement, eventName, eventMethod) {
 			if(typeof eventElement !== 'object') {
-				Logger.error('Event element is not an object!');
+				console.error('Event element is not an object!');
 				return;
 			}
 			if(typeof eventMethod === 'function') {
@@ -387,18 +383,16 @@ define([
 				} else if(window.addEventListener) {
 					eventElement.addEventListener(eventName, eventMethod, true);
 				} else {
-					Logger.error('Unable to detach event "' + eventName + '" - no support for this. Get a real browser.');
+					console.error('Unable to detach event "' + eventName + '" - no support for this. Get a real browser.');
 					return;
 				}
 			} else {
-				Logger.error('Event method is not a function!');
+				console.error('Event method is not a function!');
 				return;
 			}
-			Logger.info('Detached [' + eventName + '] from ' + eventElement + '.');
+			console.log('Detached [' + eventName + '] from ' + eventElement + '.');
 		}
 	};
-	
-	Logger.info('-> ', Utils);
-	Logger.groupEnd();
+	console.log('										...loaded.');
 	return Utils;
 });

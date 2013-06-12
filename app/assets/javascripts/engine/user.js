@@ -12,15 +12,13 @@
 */
 
 define([
-	'logger',
 	'utils',
 	'engine/server',
 	'engine/sprite'
-], function (Logger, Utils, Server, Sprite) {
-	Logger.group('Loading User...');
-	//Logger.info('Engine: ', window.App.Engine)
-	var sqrt3 = Utils.sqrt3;
-	var sqrt3h = sqrt3/2;
+], function (Utils, Server, Sprite) {
+	console.log('Loading User module for Engine...');
+	//debug.info('Engine: ', window.App.Engine)
+
 	
 	var User = function (userName, userId, spawnPosition, userColor) {
 		//console.log(userName);
@@ -57,7 +55,7 @@ define([
 
 		setMoveTarget: function (x, y, remote) {
 			remote = remote || false;
-			Logger.info('setting move target to: ' + x + ', ' + y);
+			console.log('setting move target to: ' + x + ', ' + y);
 			if(remote || this.checkTileAvailability()) {
 
 				this.moveTarget = Engine.getScreenCoordinates(x, y);
@@ -141,7 +139,7 @@ define([
 		}
 	}
 
-	Logger.info('-> ', User);
-	Logger.groupEnd();
+	console.log('										...loaded.');
+
 	return User;
 });

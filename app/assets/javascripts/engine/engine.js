@@ -12,16 +12,15 @@
 */
 
 define([
-	'logger',
 	'utils',
 	'cq',
 	'engine/map',
 	'engine/sprite',
 	'engine/user',
 	'engine/server'
-], function (Logger, Utils, cq, Map, Sprite, User, Server) {
+], function (Utils, cq, Map, Sprite, User, Server) {
 	
-	Logger.group('Loading Engine...');
+	console.log('Loading Engine...');
 
 	var scale = 20;
 
@@ -102,7 +101,7 @@ define([
 					//_engine.player.generateSprites();
 					//console.log(_player);
 					Utils.attachEvent(window, 'blur', function (event) {
-						Logger.info('got Blur event', event);
+						console.log('got Blur event');
 						_engine.player.active = false;
 						Server.socket.emit('player_active_state', {
 							uid: _engine.player.uid,
@@ -111,7 +110,7 @@ define([
 					});
 					
 					Utils.attachEvent(window, 'focus', function (event) {
-						Logger.info('got Focus event', event);
+						console.log('got Focus event');
 						_engine.player.active = true;
 						Server.socket.emit('player_active_state', {
 							uid: _engine.player.uid,
@@ -144,7 +143,7 @@ define([
 			}).onMouseMove(function (x, y) {
 				Engine.onMouseMove(x, y);
 			});
-			Logger.info('Engine: ', this);
+			debug.info('Engine: ', this);
 
 		},
 
@@ -177,7 +176,6 @@ define([
 			tmp = this.cursorPosition;
 			this.player.setMoveTarget(tmp.x, tmp.y);
 			console.log(tmp);
-			console.log(this.getScreenCoordinates(tmp.x, tmp.y, true));
 		},
 
 		onMouseDown: function (x, y) {
@@ -218,7 +216,7 @@ define([
 
 		addEntity: function (object) { 
 			this.entitiesList[object.uid] = object; 
-			Logger.info('Adding Entity: ' + object.name, object, this.entitiesList);
+			console.log('Adding Entity: ' + object.name);
 		},
 
 		renderItems: function(ctx) {
@@ -312,8 +310,7 @@ define([
 		}
 	};
 	
-	Logger.info('-> ', Engine);
-	Logger.groupEnd();
+	console.log('										...loaded.');
 	
 	return Engine;
 });

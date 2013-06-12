@@ -3,21 +3,17 @@ shim:
     exports: '$'
     
 modules:
-  - name: 'logger'
   - name: 'utils'
-    exclude: ['logger']
   - name: 'cq'
-    exclude: ['logger']
   - name: 'backbone'
-    exclude: ['logger']
   - name: 'boot'
-    exclude: ['main', 'logger', 'utils', 'cq']
+    exclude: ['main', 'utils', 'cq']
   - name: 'main'
-    exclude: ['engine/engine', 'ui/ui', 'logger', 'utils', 'backbone']
+    exclude: ['engine/engine', 'ui/ui', 'utils', 'backbone']
   - name: 'engine/engine'
-    exclude: ['logger', 'utils', 'cq']
+    exclude: ['utils', 'cq']
   - name: 'ui/ui'
-    exclude: ['engine/engine', 'logger', 'utils', 'backbone', 'underscore']
+    exclude: ['engine/engine', 'utils', 'backbone', 'underscore']
 
 paths:
   logger: lib/console/console
@@ -25,4 +21,5 @@ paths:
   cq: lib/cq/cq
   underscore: lib/underscore/underscore
   backbone: lib/backbone/backbone
+  localstorage: lib/backbone/localstorage
   text: lib/text

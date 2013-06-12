@@ -1,5 +1,5 @@
 /*
-	@file: router.js
+	@file: about.js
 	
 	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
 
@@ -10,44 +10,29 @@
 
 	Please see the license.txt file for more information.
 */
+
 define([
 	'utils',
 	'backbone',
-], function (Utils, Backbone) {
+	'underscore',
+	'text!ui/views/about.html'
+], function (Utils, Backbone, _, view) {
 	
-	console.log('Loading Router module for UI...');
+	console.log('Loading about controller module for UI...');
 	
-	var Router = Backbone.Router.extend({
+	var About = Backbone.View.extend({
+		el: 'body',
 
-		initialize: function(options) {
+		template: _.template(view),
 
+		initialize: function (options) {
+			this.render();
 		},
 
-		routes: {
-			''				: 'index',
-			'about'			: 'about',
-			'timber'		: 'timber',
-			'lab'			: 'lab'
-		},
-
-		index: function() {
-
-		},
-
-		about: function() {
-
-		},
-
-		timber: function() {
-
-		},
-
-		lab: function() {
-
+		render: function() {
+			$(this.el).append(this.template);
 		}
-
 	});
 	console.log('										...loaded.');
-
-	return Router;
+	return About;
 });

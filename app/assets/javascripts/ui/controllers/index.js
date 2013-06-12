@@ -12,14 +12,13 @@
 */
 
 define([
-	'logger',
 	'utils',
 	'backbone',
 	'underscore',
 	'text!ui/views/index.html'
-], function (Logger, Utils, Backbone, _, view) {
+], function (Utils, Backbone, _, view) {
 	
-	Logger.info('indexController');
+	console.log('Loading index controller module for UI...');
 	
 	var Index = Backbone.View.extend({
 		el: 'body',
@@ -34,5 +33,6 @@ define([
 			$(this.el).append(this.template);
 		}
 	});
+	console.log('										...loaded.');
 	return Index;
 });

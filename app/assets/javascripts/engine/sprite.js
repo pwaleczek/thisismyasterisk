@@ -10,9 +10,8 @@
 
 	Please see the license.txt file for more information.
 */
-define([
-	'logger',
-], function(Logger) {
+define(function() {
+	console.log('Loading Sprite module for Engine...');
 	var Sprite = function(type, image, w, h) {
 		// if(typeof image !== 'Image' || typeof image !== 'object') {
 		// 	Logger.error('No proper image given!', typeof image);
@@ -63,7 +62,7 @@ define([
 		}
 	}
 
-	Logger.info('-> ', Sprite);
-	Logger.groupEnd();
+	console.log('										...loaded.');
+
 	return Sprite;
 });

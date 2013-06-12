@@ -11,10 +11,8 @@
 	Please see the license.txt file for more information.
 */
 
-define([
-	'logger',
-], function (Logger) {
-	Logger.group('Loading Server...');
+define(function () {
+	console.log('Loading Server module for Engine...');
 
 	var Server = {
 		name: 'Server',
@@ -33,9 +31,9 @@ define([
 					color: localStorage.getItem('asterisk.player.color') || '#'+((1<<24)*Math.random()|0).toString(16),
 					position: JSON.parse(localStorage.getItem('asterisk.player.position')) || { x: 0, y: 26 }
 				}
-				Logger.info(player);
+				console.log(player);
 				_server.socket.emit('player_data', player);
-				Logger.info('onConnect');
+				console.log('onConnect');
 			});
 
 			this.socket.on('player_join', function (data) {
@@ -44,7 +42,7 @@ define([
 			});
 
 			this.socket.on('remove_user', function(data){
-				Logger.info('removing user: ', data);
+				console.log('removing user: ' + data);
 				delete Engine.entitiesList[data];
 			});
 
@@ -53,7 +51,7 @@ define([
 			});
 			
 			this.socket.on('update_user', function (data){
-				Logger.info('User target:', data);
+				console.log('User target: ' + data.target.x + ', ' + data.target.y);
 				Engine.entitiesList[data.uid].setMoveTarget(data.target.x, data.target.y, true);
 				//Engine.entitiesList[data.uid].position.raw = data.position;
 			});
@@ -69,7 +67,7 @@ define([
 		}
 
 	};
-	Logger.info('-> ', Server);
-	Logger.groupEnd();
+	console.log('										...loaded.');
+
 	return Server;
 });

@@ -12,55 +12,37 @@
 */
 
 define([
-	'logger',
 	'backbone',
 	'utils',
 	'engine/engine',
 	'ui/ui'
-], function(Logger, Backbone, Utils,  Engine) {
+], function(Backbone, Utils,  Engine) {
 	'use strict';
+	console.log('Loading Application module...');
+
 	var scope = this;
 	var Application = {
 		initialize: function () {
-			console.log('Welcome to thisismyasterisk.org!\r\nCopyright 2013, Pawel Waleczek | pawel@thisismyasterisk.org');
-			if(this.browserFit()) {
-
-				window.Engine = Engine;
-
-				Logger.group('Application init.');
-				
-				this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-
-				//Engine.initialize();
-
-				// if (this.env === 'production' || typeof window.console === 'undefined') {
-				//   window.console = {
-				//     log: function() {}
-				//   };
-				//   Logger.setLevel(0);
-				// } 
-
-				this.router = new UI.Router;
-
-				Backbone.history.start({pushState: true});
-
-
-			} else {
-				this.showNotWorkingMessage();
-			}
-			Logger.groupEnd(); // [Application init]
-		},
-
-		browserFit: function() {
 			
-			return true;
-		},
 
-		showNotWorkingMessage: function () {
-			$('body').append('<h1>Not supported</h1>');
-			return console.log('.. get a proper browser!');
-		}
+			window.Engine = Engine;
+
+			console.log('Application init.');
+			
+			this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+
+			//Engine.initialize();
+
+			
+			UI.initialize();
+			//this.router = new UI.Router();
+
+			Backbone.history.start({pushState: true});	
+		}	
 	};
+
+	console.log('										...loaded.');
+	
 	return Application;
 
 });

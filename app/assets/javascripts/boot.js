@@ -11,35 +11,58 @@
 	Please see the license.txt file for more information.
 */
 
-'use strict';
 
-var env;
 
-require([
-	'require',
-	'logger',
-	'utils',
-	'cq',
-	'backbone'
-], function(require, Logger, Utils, cq, _, Backbone) {
-	Logger.group('Libs loaded, booting...');
-	Logger.info('Logger: ', Logger);
-	Logger.info('Utils: ', Utils);
-	Logger.info('CQ: ', cq);
-	Logger.info('Backbone: ', Backbone);
 
-	require(['main'], function(App) {
-		Logger.group("Starting application.");
-		Logger.info("App: ", App);
+
+define(['require'], function(require) {
+	
+	'use strict';
+
+	console.log('Welcome to thisismyasterisk.org!\r\nCopyright 2013, Pawel Waleczek | pawel@thisismyasterisk.org');
+	console.log('env is: %s.', env);
+	
+	// if (env === 'production' || typeof console === 'undefined') {
+	//   console = {
+	//     log: function() {}
+	//   };
+	// } 
+
+	console.log('booting thisismyasterisk.org...');
+	
+	requirejs.onError = function(error) {
+		console.log(error);
+	}
+
+	var browserFit = function() {
 		
-		env = $('meta[name="app_env"]').attr('content');
+		return true;
+	};
 
-		window.App = App;
-		
-		App.initialize();
-		
-		Logger.groupEnd();
-	});
+	var showNotWorkingMessage = function () {
+		document.getElementsByTagName('body')[0].innerHTML = '<h1 class="oldBrowser">Get a proper browser!</h1>';
+		return console.log('No, seriously, get a proper browser! ');
+	}
 
-	Logger.groupEnd();
+	if(browserFit()) {	
+		require([
+			'main',
+			'utils',
+			'cq',
+			'backbone'
+		], function(App, Utils, cq, _, Backbone) {
+			console.log("Starting application.");
+			
+			//env = $('meta[name="app_env"]').attr('content');
+
+			window.App = App;
+			
+			App.initialize();
+
+		});
+	} else {
+		showNotWorkingMessage();
+	}
+	console.log('										...done!');
+
 });

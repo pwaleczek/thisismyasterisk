@@ -12,6 +12,9 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= requirejs_include_tag "boot" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript">
+    window.env = '<%= ENV['RAILS_ENV'] %>';
+  </script>
 </head>
 <body>
 <%= yield %>
