@@ -1,4 +1,4 @@
-define(['Logger', 'lib/cq/canvasquery'], function (Logger) {
+define(['logger', 'lib/cq/canvasquery'], function (Logger) {
 	Logger.group('Loading CanvasQuery...');
 	Logger.info('-> ', cq);
 	Logger.groupEnd();

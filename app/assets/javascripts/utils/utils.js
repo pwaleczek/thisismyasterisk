@@ -12,8 +12,8 @@
 */
 
 define([
-	'Logger'
-	], function(Logger) {
+	'logger'
+], function(Logger) {
 	Logger.group('Loading Utilities...');
 
 	// do some math

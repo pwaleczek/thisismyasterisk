@@ -12,9 +12,9 @@
 */
 
 define([
-	'Logger',
-	'Utils',
-	'CQ',
+	'logger',
+	'utils',
+	'cq',
 	'engine/map',
 	'engine/sprite',
 	'engine/user',

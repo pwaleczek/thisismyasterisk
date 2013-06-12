@@ -12,18 +12,21 @@
 */
 
 define([
-	'Logger',
-	'Utils',
-	'Backbone',
+	'logger',
+	'utils',
+	'backbone',
 	'underscore',
-], function (Logger, Utils, Backbone, _) {
+	'text!ui/views/index.html'
+], function (Logger, Utils, Backbone, _, view) {
+	
 	Logger.info('indexController');
+	
 	var Index = Backbone.View.extend({
 		el: 'body',
 
-		template: _.template(require('text!ui/views/index.jst'), {} ),
+		template: _.template(view),
 
-		initialise: function (options) {
+		initialize: function (options) {
 			this.render();
 		},
 

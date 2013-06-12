@@ -12,13 +12,12 @@
 */
 
 define([
-	'Logger',
-	'Backbone',
-	'Utils',
+	'logger',
+	'backbone',
+	'utils',
 	'engine/engine',
 	'ui/ui'
-
-], function(Logger, Backbone, Utils,  Engine, UI) {
+], function(Logger, Backbone, Utils,  Engine) {
 	'use strict';
 	var scope = this;
 	var Application = {
@@ -34,13 +33,13 @@ define([
 
 				//Engine.initialize();
 
-				if (this.env === 'production' || typeof window.console === 'undefined') {
-				  window.console = {
-				    log: function() {}
-				  };
-				  Logger.setLevel(0);
-				} 
-				console.log(UI);
+				// if (this.env === 'production' || typeof window.console === 'undefined') {
+				//   window.console = {
+				//     log: function() {}
+				//   };
+				//   Logger.setLevel(0);
+				// } 
+
 				this.router = new UI.Router;
 
 				Backbone.history.start({pushState: true});

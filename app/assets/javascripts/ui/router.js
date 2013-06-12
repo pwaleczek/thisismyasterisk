@@ -11,15 +11,14 @@
 	Please see the license.txt file for more information.
 */
 define([
-	'Logger',
-	'Utils',
-	'Backbone',
-	
+	'logger',
+	'utils',
+	'backbone',
 ], function (Logger, Utils, Backbone) {
 	
 	Logger.group('Loading UI.Router...');
 	
-	UI.Router = Backbone.Router.extend({
+	var Router = Backbone.Router.extend({
 
 		initialize: function(options) {
 			UI.initialize();
@@ -50,5 +49,5 @@ define([
 
 	});
 	Logger.groupEnd();
-
+	return Router;
 });

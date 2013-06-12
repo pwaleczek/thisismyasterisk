@@ -12,7 +12,7 @@
 */
 
 define([
-	'Logger',
+	'logger',
 ], function (Logger) {
 	Logger.group('Loading Server...');
 

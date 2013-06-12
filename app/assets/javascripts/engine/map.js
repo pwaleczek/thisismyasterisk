@@ -12,8 +12,8 @@
 */
 
 define([
-	'Logger',
-	'Utils',
+	'logger',
+	'utils',
 	'engine/sprite'
 ], function(Logger, Utils, Sprite) {
 	Logger.group('Loading Map module for Engine...');

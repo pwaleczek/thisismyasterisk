@@ -11,7 +11,7 @@
 	Please see the license.txt file for more information.
 */
 define([
-	'Logger',
+	'logger',
 ], function(Logger) {
 	var Sprite = function(type, image, w, h) {
 		// if(typeof image !== 'Image' || typeof image !== 'object') {

@@ -12,8 +12,8 @@
 */
 
 define([
-	'Logger',
-	'Utils',
+	'logger',
+	'utils',
 	'engine/server',
 	'engine/sprite'
 ], function (Logger, Utils, Server, Sprite) {

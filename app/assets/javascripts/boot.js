@@ -17,10 +17,10 @@ var env;
 
 require([
 	'require',
-	'Logger',
-	'Utils',
-	'CQ',
-	'Backbone'
+	'logger',
+	'utils',
+	'cq',
+	'backbone'
 ], function(require, Logger, Utils, cq, _, Backbone) {
 	Logger.group('Libs loaded, booting...');
 	Logger.info('Logger: ', Logger);

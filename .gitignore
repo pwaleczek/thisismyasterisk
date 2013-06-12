@@ -11,7 +11,7 @@ capybara-*.html
 .rvmrc
 /.bundle
 /vendor/bundle
-/log/*
+/log/*.log
 /tmp/*
 /db/*.sqlite3
 /public/system/*
@@ -21,3 +21,5 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 .project
+/public/assets
+/public/assets/*

@@ -12,29 +12,25 @@
 */
 
 define([
-	'Logger',
-	'ui/router'
-	// views
-	// 'ui/views/index',
-	// 'ui/views/timber',
-	// 'ui/views/about',
-	// 'ui/views/lab', 
-
+	'logger',
+	'engine/engine',
+	'ui/router',
 	// // models and collections
 	// 'ui/models/game',
 	// 'ui/models/' 
 
 	// controllers
 	'ui/controllers/index'
-], function (Logger, router, Index) {
+], function (Logger, Engine, router, index) {
 	Logger.info('iu..');
 	window.UI = {
 		Views: {
-			Index
+			Index: new index
 		},
 		Models: {},
 		Controllers: {},
-		Router: router
+		Router: router,
+		initialize: function() {}
 	};
 	//return UI;
 });
