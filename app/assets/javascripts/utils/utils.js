@@ -289,7 +289,7 @@ define(function() {
 			this.preloadProgress = 0;
 			
 			function addLoad(image, name) {
-				debug.info('Loading image: ' + name + '.');
+				console.log('Loading image: ' + name + '.');
 				this.isPreloaderWorking = true;
 				loadItems++;
 				image.onload = loadReady;

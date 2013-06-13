@@ -31,7 +31,7 @@ define([
 			
 			this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
 
-			//Engine.initialize();
+			Engine.initialize();
 
 			
 			UI.initialize();

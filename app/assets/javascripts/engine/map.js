@@ -16,28 +16,7 @@ define([
 	'engine/sprite'
 ], function(Utils, Sprite) {
 	console.log('Loading Map module for Engine...');
-	//generate random map
-	var sqrt3 = Utils.sqrt3;
-	var sqrt3h = sqrt3/2;
-	var generatedMap = '';
-	(function() {
-		console.log('making map');
-		var map = {
-			width: 40,
-			height: 40,
-			tileset: 'default',
-			data: new Array()
-		};
-		for(var i = 0; i < map.height; i++) {
-			map.data[i] = [];
-			for(var j = 0; j < map.width; j++) {
-				map.data[i][j] = Math.floor(Math.random()*1.5);
-			}
-		}
-		generatedMap = JSON.stringify(map);
-		//console.log(generatedMap);
-		console.log(map);
-	})();
+
 	//static map
 	var tempMapData = '{ \
 	"width": 28, \
@@ -121,7 +100,7 @@ define([
 			this.mapData = JSON.parse(tempMapData);
 			Utils.imagePreloader([this.mapData.tileset + '_tileset'], function(imageList) {
 				Map.spriteList = new Sprite('tileset', imageList[Map.mapData.tileset + '_tileset'], 38, 28);
-				console.log(Map.spriteList);
+				//console.log(Map.spriteList);
 				Map.isLoaded = true;
 				Map.draw();
 			});
@@ -148,7 +127,7 @@ define([
 
 				var offset = this.tw * this.mapData.width/2,
 					mapCanvas = cq(this.mapData.width * this.tw + this.tw/2, this.mapData.height * 2*this.th);
-					debug.info('mapCanvas', mapCanvas, this, scale);
+					//console.log('mapCanvas', mapCanvas, this, scale);
 
 				//console.log(Map.spriteList);
 				for(var i = 0; i < this.mapData.width; i++)
@@ -162,7 +141,7 @@ define([
 						}
 					} 
 			
-				console.log(mapCanvas.canvas.toDataURL());
+				//console.log(mapCanvas.canvas.toDataURL());
 				this.canvas = mapCanvas.canvas;
 			}
 		}

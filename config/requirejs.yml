@@ -1,3 +1,16 @@
+optimize: 'uglify2'
+
+uglify2: 
+  output:
+    beautify: true
+    semicolons: true
+  compress: 
+    sequences: true
+    global_defs: 
+      DEBUG: false
+  warnings: true
+  mangle: false
+
 shim:
   jquery:
     exports: '$'
