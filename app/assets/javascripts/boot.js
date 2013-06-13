@@ -1,49 +1,64 @@
-// @app bootstrap
-// @author Pawel Waleczek | pawel@thisismyasterisk.org
+/*
+	@file: boot.js
+	
+	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
 
-'use strict';
+	THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF
+	ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+	IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+	PURPOSE.
 
-// requirejs.config({
-// 	paths: {
-// 		Logger: 'lib/console/console',
-// 		Utils: 'utils/utils',
-// 		CQ: 'lib/cq/cq',
-// 		jQuery: 'lib/jquery/jquery',
-// 		Underscore: 'lib/underscore/underscore',
-// 		Backbone: 'lib/backbone/backbone'
-// 	},
-// 	priority: [ 
-// 		'Logger',
-// 		'Utils',
-// 		'CQ',
-// 		'jQuery',
-// 		'Underscore',
-// 		'Backbone',
-// 	],
-// 	urlArgs: ''//v=0.1-' + new Date().getTime()
-// });
+	Please see the license.txt file for more information.
+*/
 
-require([
-	'require',
-	'Logger',
-	'Utils',
-	'CQ',
-	'Backbone'
-], function(require, Logger, Utils, cq, _, Backbone) {
-	Logger.group('Libs loaded, booting...');
-	Logger.info('Logger: ', Logger);
-	Logger.info('Utils: ', Utils);
-	Logger.info('CQ: ', cq);
-	Logger.info('Backbone: ', Backbone);
+define(function() {
+	
+	'use strict';
 
-	require(['main'], function(App) {
-		Logger.group("Starting application.");
-		Logger.info("App: ", App);
+	console.log('Welcome to thisismyasterisk.org!\r\nCopyright 2013, Pawel Waleczek | pawel@thisismyasterisk.org');
+	console.log('env is: %s.', env);
+	
+	// if (env === 'production' || typeof console === 'undefined') {
+	//   console = {
+	//     log: function() {}
+	//   };
+	// } 
 
-		App.initialize();
+	console.log('booting thisismyasterisk.org...');
+	
+	requirejs.onError = function(error) {
+		console.log(error);
+	}
+
+	var browserFit = function() {
 		
-		Logger.groupEnd();
-	});
+		return true;
+	};
 
-	Logger.groupEnd();
+	var showNotWorkingMessage = function () {
+		document.getElementsByTagName('body')[0].innerHTML = '<h1 class="oldBrowser">Get a proper browser!</h1>';
+		return console.log('No, seriously, get a proper browser! ');
+	}
+
+	if(browserFit()) {	
+		define([
+			'main',
+			'utils',
+			'cq',
+			'backbone'
+		], function(App, Utils, cq, _, Backbone) {
+			console.log("Starting application.");
+			
+			//env = $('meta[name="app_env"]').attr('content');
+
+			window.App = App;
+			
+			App.initialize();
+
+		});
+	} else {
+		showNotWorkingMessage();
+	}
+	console.log('										...done!');
+
 });

@@ -3,31 +3,23 @@ shim:
     exports: '$'
     
 modules:
-  - name: 'Logger'
-  - name: 'Utils'
-    exclude: ['Logger']
-  - name: 'CQ'
-    exclude: ['Logger']
-  - name: 'Backbone'
-    exclude: ['Logger']
+  - name: 'utils'
+  - name: 'cq'
+  - name: 'backbone'
   - name: 'boot'
-    exclude: ['main', 'Logger', 'Utils', 'CQ']
+    exclude: ['main', 'utils', 'cq']
   - name: 'main'
-    exclude: ['engine/engine', 'Logger', 'Utils', 'Backbone']
+    exclude: ['engine/engine', 'ui/ui', 'utils', 'backbone']
   - name: 'engine/engine'
-    exclude: ['engine/map', 'engine/sprite', 'engine/user', 'engine/server', 'Logger', 'Utils', 'CQ']
-  - name: 'engine/map'
-    exclude: ['engine/sprite', 'Logger', 'Utils']
-  - name: 'engine/server'
-    exclude: ['Logger']
-  - name: 'engine/sprite'
-    exclude: ['Logger']
-  - name: 'engine/user'
-    exclude: ['engine/server', 'engine/sprite', 'Logger', 'Utils']
+    exclude: ['utils', 'cq']
+  - name: 'ui/ui'
+    exclude: ['engine/engine', 'utils', 'backbone', 'underscore']
 
 paths:
-  Logger: lib/console/console
-  Utils: utils/utils
-  CQ: lib/cq/cq
+  logger: lib/console/console
+  utils: utils/utils
+  cq: lib/cq/cq
   underscore: lib/underscore/underscore
-  Backbone: lib/backbone/backbone
+  backbone: lib/backbone/backbone
+  localstorage: lib/backbone/localstorage
+  text: lib/text

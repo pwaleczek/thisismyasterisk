@@ -1,4 +1,3 @@
-
 /*
 	@file: engine.js
 	
@@ -13,29 +12,27 @@
 */
 
 define([
-	'Logger',
-	'Utils',
-	'CQ',
+	'utils',
+	'cq',
 	'engine/map',
 	'engine/sprite',
 	'engine/user',
 	'engine/server'
-], function (Logger, Utils, cq, Map, Sprite, User, Server) {
+], function (Utils, cq, Map, Sprite, User, Server) {
 	
-	Logger.group('Loading Engine...');
+	console.log('Loading Engine...');
 
-	var sqrt3 = Utils.sqrt3;
-	var sqrt3h = sqrt3/2;
-	// var tileSize = Math.sqrt(Math.pow(46/2, 2)+Math.pow(23/2, 2));
-	var scale = 20;//Math.min(window.innerWidth, window.innerHeight) / 10 //40;
+	var scale = 20;
 
-	//var activeTilesList = new Array([24, 19], [17, 19], [0, 23]);
-
-	var activeTilesList = [[24, 19, 'marker [24, 19] - you are here. Do it again.'], [17, 19, 'marker [17, 19] - you are here.'], [0, 23, 'marker [0, 23] - you are here. Go for the next one.']];
-
+	var activeTilesList = [
+		[24, 19, 'marker [24, 19] - you are here. Do it again.'], 
+		[17, 19, 'marker [17, 19] - you are here.'], 
+		[0, 23, 'marker [0, 23] - you are here. Go for the next one.']
+	];
 
 
-	Engine = {
+
+	var Engine = {
 		scale: scale,
 		sprite: {
 			w: 38,
@@ -104,15 +101,21 @@ define([
 					//_engine.player.generateSprites();
 					//console.log(_player);
 					Utils.attachEvent(window, 'blur', function (event) {
-						Logger.info('got Blur event', event);
+						console.log('got Blur event');
 						_engine.player.active = false;
-						Server.socket.emit('player_active_state', _engine.player.active);
+						Server.socket.emit('player_active_state', {
+							uid: _engine.player.uid,
+							active: _engine.player.active 
+						});
 					});
 					
 					Utils.attachEvent(window, 'focus', function (event) {
-						Logger.info('got Focus event', event);
+						console.log('got Focus event');
 						_engine.player.active = true;
-						Server.socket.emit('player_active_state', _engine.player.active);
+						Server.socket.emit('player_active_state', {
+							uid: _engine.player.uid,
+							active: _engine.player.active 
+						});
 					});
 					_engine.cursorTile = _engine.makeTile(imageList['mark_tiles'], 0, 0);
 					_engine.pathTile = _engine.makeTile(imageList['mark_tiles'], 38, 0);
@@ -129,12 +132,8 @@ define([
 				});
 			});
 			
-			// });
-			
-
 			this.renderCanvas.onRender(function (delta) {
 				_engine.onRender(_engine.buffer, delta);
-				//_engine.renderCanvas.drawImage(_engine.buffer.canvas, 0, 0);
 			}).onStep(function (delta) {
 				_engine.onStep(delta);
 			}).onMouseUp(function (x, y) {
@@ -144,15 +143,12 @@ define([
 			}).onMouseMove(function (x, y) {
 				Engine.onMouseMove(x, y);
 			});
-			Logger.info('Engine: ', this);
-		
-
+			debug.info('Engine: ', this);
 
 		},
 
-
-
 		onStep: function (delta) {
+			// Engine.pathCanvas.clear();
 			if(this.player) {
 				this.player.onStep(delta);
 				var pos = this.player.position;
@@ -163,31 +159,26 @@ define([
 					//console.log('in place!');
 				} else {
 					this.label = '';
-					this.player.opacity = 1;
 				}
-				// this.worldOffset.x -= 0.1; //Math.max(Math.min(pos.x - Engine.renderCanvas.canvas.width, 0), Engine.renderCanvas.canvas.width - Engine.Map.canvas.width);
-				// this.worldOffset.y -= 0;//Math.max(Math.min(pos.y - Engine.renderCanvas.canvas.height, 0), Engine.renderCanvas.canvas.height - Engine.Map.canvas.height);
 			}
 			if(Object.keys(this.entitiesList).length > 0) {
-				for(var key in this.entitiesList) this.entitiesList[key].onStep(delta);
+				for(var key in this.entitiesList) {
+					this.entitiesList[key].onStep(delta);
+					var pos = this.entitiesList[key].position;
+					var pos = new Array(pos.x, pos.y);
+					if(activeTilesList.exists(pos, true)) {
+						this.entitiesList[key].opacity = 0.5;
+					} 
+				}
 			}
 		},
 		onMouseUp: function (x, y) {
-
-			//this.mapMove = false;
-			
 			tmp = this.cursorPosition;
 			this.player.setMoveTarget(tmp.x, tmp.y);
 			console.log(tmp);
-			console.log(this.getScreenCoordinates(tmp.x, tmp.y, true));
-			//console.log();
-
 		},
 
 		onMouseDown: function (x, y) {
-			
-			// this.mapMove = true;
-			
 			this.mouseDownPos = { 
 				x: x - this.worldOffset.x,
 				y: y - this.worldOffset.y
@@ -196,12 +187,6 @@ define([
 		
 		onMouseMove: function (x, y) {
 			this.cursorPosition = this.getMapCoordinates(x, y);
-			
-			// if(this.mapMove) {
-			// 	if(this.map.canvas.width)
-			// 		this.worldOffset.x = Math.max(Math.min(x - this.mouseDownPos.x, 0), this.renderCanvas.canvas.width - this.map.canvas.width);
-			// 		this.worldOffset.y = Math.max(Math.min(y - this.mouseDownPos.y, 0), this.renderCanvas.canvas.height - this.map.canvas.height);
-			// }
 		},
 		
 		//get tile iso position
@@ -222,8 +207,6 @@ define([
 		getScreenCoordinates: function (x, y, raw) {
 			var sx = this.worldOffset.x + ((x - y) * this.sprite.w/2 + this.sprite.w/2) + Map.mapData.width/2 * this.sprite.w;
 			var sy = this.worldOffset.y + ((x + y) * this.sprite.h/2 + this.sprite.h/2);
-			
-			//var tw = (w - 2 * sqrt3)
 
 			return {
 				x: (raw) ? sx : sx | 0,
@@ -233,7 +216,7 @@ define([
 
 		addEntity: function (object) { 
 			this.entitiesList[object.uid] = object; 
-			Logger.info('Adding Entity: ' + object.name, object, this.entitiesList);
+			console.log('Adding Entity: ' + object.name);
 		},
 
 		renderItems: function(ctx) {
@@ -295,25 +278,13 @@ define([
 				ctx.restore();
 			
 			} else if(Map.isLoaded) {
-			 	//this.drawGround(ctx);
 
 			 	ctx.save();
-				//this.renderCanvas.translate(this.worldOffset.x, this.worldOffset.y);
-				
+
 				ctx.drawImage(Map.canvas, this.worldOffset.x, this.worldOffset.y);
 				if(this.pathCanvas) {
 					ctx.drawImage(this.pathCanvas.canvas, this.worldOffset.x, this.worldOffset.y);
 				}
-				//this.renderPath(this.renderCanvas);
-				//this.renderCanvas.save();
-				//this.renderCanvas.translate(this.worldOffset.x, this.worldOffset.y);
-				
-				
-				//this.renderCanvas.drawImage(ctx.canvas, this.worldOffset.x, this.worldOffset.y);//this.renderCanvas.restore();
-				
-				
-				//this.render_test_cube(this.renderCanvas);
-				//this.renderCanvas.drawImage(this.cursorPositionCanvas.canvas,  this.worldOffset.x, this.worldOffset.y);
 				
 				ctx.font("20pt Arial").fillStyle('#fff').fillText(delta, 20, 40);
 				if(this.player) {
@@ -333,21 +304,13 @@ define([
 		},
 
 		resize: function (event) {
-			// Engine.scale = Math.min(window.innerWidth, window.innerHeight) / 10;
-			// Engine.sprite = {
-			// 	w: Math.sqrt(3) * Engine.scale,
-			// 	h: Engine.scale
-			// }
-			// Map.refresh();
-			// Engine.map = Map.draw(Engine.images.tiles);
-			// Logger.info('cale', Engine.scale);
+
 			Engine.renderCanvas.canvas.width = Engine.buffer.canvas.width = window.innerWidth;
 			Engine.renderCanvas.canvas.height = Engine.buffer.canvas.height = window.innerHeight;
 		}
 	};
 	
-	Logger.info('-> ', Engine);
-	Logger.groupEnd();
+	console.log('										...loaded.');
 	
 	return Engine;
 });

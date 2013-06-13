@@ -1,8 +1,17 @@
-//	@sprite module
-//  @author: Pawel Waleczek | pawel@thisismyasterisk.org
-define([
-	'Logger',
-], function(Logger) {
+/*
+	@file: sprite.js
+	
+	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
+
+	THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF
+	ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+	IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+	PURPOSE.
+
+	Please see the license.txt file for more information.
+*/
+define(function() {
+	console.log('Loading Sprite module for Engine...');
 	var Sprite = function(type, image, w, h) {
 		// if(typeof image !== 'Image' || typeof image !== 'object') {
 		// 	Logger.error('No proper image given!', typeof image);
@@ -53,7 +62,7 @@ define([
 		}
 	}
 
-	Logger.info('-> ', Sprite);
-	Logger.groupEnd();
+	console.log('										...loaded.');
+
 	return Sprite;
 });

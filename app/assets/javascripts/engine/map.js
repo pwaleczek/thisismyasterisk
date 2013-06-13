@@ -1,14 +1,21 @@
-//	@map module
-//  @author: Pawel Waleczek | pawel@thisismyasterisk.org
+/*
+	@file: map.js
+	
+	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
 
-//drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
+	THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF
+	ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+	IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+	PURPOSE.
+
+	Please see the license.txt file for more information.
+*/
 
 define([
-	'Logger',
-	'Utils',
+	'utils',
 	'engine/sprite'
-], function(Logger, Utils, Sprite) {
-	Logger.group('Loading Map module for Engine...');
+], function(Utils, Sprite) {
+	console.log('Loading Map module for Engine...');
 	//generate random map
 	var sqrt3 = Utils.sqrt3;
 	var sqrt3h = sqrt3/2;
@@ -104,16 +111,15 @@ define([
 			this.tw = Engine.sprite.w;
 			this.th = Engine.sprite.h;
 			this.td = Engine.sprite.d;
-			Logger.info('MAP: ', this);
+
 			this.scale = Engine.scale;
 			this.isLoaded = false;
 		},
 		
 		load: function(name) {
-			Logger.info('Loading map "' + name + '".')
+			console.log('Loading map "' + name + '".')
 			this.mapData = JSON.parse(tempMapData);
 			Utils.imagePreloader([this.mapData.tileset + '_tileset'], function(imageList) {
-				Logger.info('imageList', imageList);
 				Map.spriteList = new Sprite('tileset', imageList[Map.mapData.tileset + '_tileset'], 38, 28);
 				console.log(Map.spriteList);
 				Map.isLoaded = true;
@@ -142,7 +148,7 @@ define([
 
 				var offset = this.tw * this.mapData.width/2,
 					mapCanvas = cq(this.mapData.width * this.tw + this.tw/2, this.mapData.height * 2*this.th);
-					Logger.info('mapCanvas', mapCanvas, this, scale);
+					debug.info('mapCanvas', mapCanvas, this, scale);
 
 				//console.log(Map.spriteList);
 				for(var i = 0; i < this.mapData.width; i++)
@@ -162,7 +168,6 @@ define([
 		}
 	}
 	
-	Logger.info('-> ', Map);
-	Logger.groupEnd();
+	console.log('										...loaded.');
 	return Map;
 });
