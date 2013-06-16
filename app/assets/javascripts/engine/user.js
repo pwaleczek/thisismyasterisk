@@ -32,7 +32,7 @@ define([
 			y: spawnPosition.y,
 			raw: Engine.getScreenCoordinates(spawnPosition.x, spawnPosition.y)
 		};
-		this.speed = 70;
+		this.speed = this.baseSpeed = 70;
 		this.color = userColor;
 		this.movingDirection = 0;
 		this.uid = userId;
@@ -112,16 +112,14 @@ define([
 		},
 
 		onStep: function (delta) {
-			
 			if(this.moving) {	
 				this.animationStep += 0.5 * this.speed * delta/1000;
 				if(this.animationStep >= 9) {
 					this.animationStep = 0;
 					this.moveProggres++;
-					if(this.moveProggres == this.movePath.length - 1) {
+					if(this.moveProggres === this.movePath.length - 1) {
 						this.moving = false;
 						console.log('stop moving ' + this.moveProggres);
-						
 					} else {
 						var xDir = (this.movePath[this.moveProggres].x < this.movePath[this.moveProggres+1].x) ? '' : '-';
 						var yDir = (this.movePath[this.moveProggres].y < this.movePath[this.moveProggres+1].y) ? '' : '-';
@@ -130,6 +128,15 @@ define([
 					this.position.x = this.movePath[this.moveProggres].x;
 					this.position.y = this.movePath[this.moveProggres].y;
 					this.position.raw = Engine.getScreenCoordinates(this.position.x, this.position.y);
+
+					if(this.movePath.length > 10) {
+						if(this.moveProggres < 5 /*&& this.speed < 95*/) {
+							this.speed += 15;
+						} else if(this.moveProggres > this.movePath.length - 3) {
+							this.speed -= 30;
+						}
+					}
+
 
 					console.log(this.moveProggres + '/' + (this.movePath.length - 1) + ' ' + this.movingDirection + '  ' + this.position.x + ';' + this.position.y);
 				}

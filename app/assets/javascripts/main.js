@@ -35,7 +35,6 @@ define([
 
 			
 			UI.initialize();
-			//this.router = new UI.Router();
 
 			Backbone.history.start({pushState: true});	
 		}	

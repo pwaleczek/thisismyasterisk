@@ -12,7 +12,7 @@
 */
 
 define(function() {
-	console.log('Loading Utilities module for anything...');
+	console.log('Loading Utilities module...');
 
 	// do some math
 	Math.fact = function(m) {
@@ -31,18 +31,12 @@ define(function() {
 		return Math.fact(j) / (Math.fact(k) * Math.fact(j -1));
 	}
 
-	//Array.prototype;
-
 	Array.prototype.exists = function(o, index) {
-		//console.log(o instanceof Array);
 		index = !!index;
 		for(var i = 0; i < this.length; i++)
 			if(o instanceof Array) {
-				
 				if(this[i][0] === o[0] && this[i][1] === o[1]) {
 					return (index) ? true : i;
-					console.log('exists: ' + o);
-					console.log(this);
 				}
 			} else {
 				if(this[i] === o)
@@ -53,10 +47,7 @@ define(function() {
 
 	// Utilities
 	var Utils = {
-		name: 'Utilities',
-		
-		sqrt3: Math.sqrt(3),
-		
+
 		aStar: {
 			/*
 			Copyright (C) 2009 by Benjamin Hardin
@@ -82,7 +73,7 @@ define(function() {
 			@modified for own purpoues
 
 			*/
-			searchPath: function (start, destination, board /*, columns, rows, allow_diagonals*/)
+			searchPath: function (start, destination, board)
 			{
 				//Create start and destination as true nodes
 				var allow_diagonals = false;//!!allow_diagonals;
@@ -207,7 +198,7 @@ define(function() {
 				//return Math.floor(Math.sqrt(Math.pow(current_node.x-destination.x, 2)+Math.pow(current_node.y-destination.y, 2)));
 				var x = current_node.x-destination.x;
 				var y = current_node.y-destination.y;
-				return x*x+y*y;
+				return x * x + y * y;
 			},
 
 
@@ -244,36 +235,25 @@ define(function() {
 		},
 
 		transposeArray: function(array) {
-		// Calculate the width and height of the Array
-			var a = array,
-			w = a.length ? a.length : 0,
-			h = a[0] instanceof Array ? a[0].length : 0;
+		
+			
+			var width = array.length ? array.length : 0,
+					height = array[0] instanceof Array ? array[0].length : 0;
 
-			// In case it is a zero matrix, no transpose routine needed.
-			if(h === 0 || w === 0) { return []; }
-
-			/**
-			* @var {Number} i Counter
-			* @var {Number} j Counter
-			* @var {Array} t Transposed data is stored in this array.
-			*/
-			var i, j, t = [];
-
-			// Loop through every item in the outer array (height)
-			for(i=0; i<h; i++) {
-
-			// Insert a new row (array)
-			t[i] = [];
-
-			// Loop through every item per item in outer array (width)
-			for(j=0; j<w; j++) {
-
-			  // Save transposed data.
-			  t[i][j] = a[j][i];
+			if(height === 0 || width === 0) { 
+				return []; 
 			}
+
+			var transposed = [];
+
+			
+			for(var i = 0; i < height; i++) {
+				transposed[i] = [];
+				for(var j = 0; j < width; j++) {
+			  	transposed[i][j] = array[j][i];
+				}
 			}
-			console.log(t);
-			return t;
+			return transposed;
 		},
 
 		imagePreloader: function() {
@@ -328,7 +308,7 @@ define(function() {
 				position.x = Math.pow(1 - t, 2) * points[0][0] + 2 * (1 - t) * t * points[1][0] + Math.pow(t, 2) * points[2][0];
 				position.y = Math.pow(1 - t, 2) * points[0][1] + 2 * (1 - t) * t * points[1][1] + Math.pow(t, 2) * points[2][1];
 			} else {
-				debug.error('3 points have to be specified.');
+				console.error('3 points have to be specified.');
 			}
 			return position;
 		},

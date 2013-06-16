@@ -15,7 +15,6 @@ define(function () {
 	console.log('Loading Server module for Engine...');
 
 	var Server = {
-		name: 'Server',
 
 		serviceURL: (env == 'production') ? 'http://service.thisismyasterisk.org:80' : 'http://localhost:4000', 
 

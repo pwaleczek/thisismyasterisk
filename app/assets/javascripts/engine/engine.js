@@ -41,7 +41,6 @@ define([
 		},
 		label: '',
 		entitiesList: {},
-		name: 'Engine',
 		time: 0,
 		mapMove: false,
 		mouseDownPos: {
@@ -297,6 +296,7 @@ define([
 
 					ctx.font("10pt Arial").fillText('[' + this.player.position.raw.x + ', ' + this.player.position.raw.y + ']', 20, 60);
 					ctx.font("10pt Arial").fillText('progress: ' + this.player.moveProggres, 20, 80);
+					ctx.font("10pt Arial").fillText('speed: ' + this.player.speed, 20, 100);
 					ctx.font("16pt Arial").fillText(this.label, 20, window.innerHeight - 20);
 				}
 				ctx.restore();

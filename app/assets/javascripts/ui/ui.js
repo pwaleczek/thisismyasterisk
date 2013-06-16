@@ -13,6 +13,7 @@
 
 define([
 	'engine/engine',
+	'underscore'
 	'ui/router',
 	// models and collections
 	'ui/collections/game',
@@ -21,7 +22,7 @@ define([
 	// controllers
 	'ui/controllers/index',
 	'ui/controllers/about'
-], function (Engine, router, game, timber, index, about) {
+], function (Engine, _, router, game, timber, index, about) {
 	console.log('Loadeing UI...');
 	window.UI = {
 		
@@ -29,8 +30,8 @@ define([
 
 		Controllers: {},
 		Collections: {},
-		
-		//Router: router,
+
+		Router: null
 		
 		initialize: function() {
 			console.log('starting ui init.');
