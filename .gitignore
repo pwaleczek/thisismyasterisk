@@ -3,6 +3,7 @@
 /tmp
 /log
 
+*.lock
 *.rbc
 *.sassc
 .sass-cache
