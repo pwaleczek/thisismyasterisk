@@ -15,7 +15,34 @@ define(function () {
 	console.log('Loading Server module for Engine...');
 
 	var Server = {
-		name: 'Server',
+
+		serviceURL: (env == 'production') ? 'http://service.thisismyasterisk.org:80' : 'http://localhost:4000', 
+
+		initialize: function(callback) {
+			console.log('server init...');
+			// $.getScript(this.serviceURL + '/socket.io/socket.io.js')
+			// 	.done(function(script, textStatus) {
+			// 	  console.log('loaded %s', textStatus );
+			// 	  callback();
+			// 	})
+			// 	.fail(function(jqxhr, settings, exception) {
+			// 	  console.log('not loaded %s', exception);
+			// 	});
+			
+			var head = document.getElementsByTagName('head')[0],		   		
+				script = document.createElement('script');
+
+			script.type = 'text/javascript';
+			script.onerror = function() {
+				//throw new Error('can\'t find '+arr[iter]);
+				console.log('failed to load script');
+			}
+			script.onload = script.onreadystatechange = function() {
+				callback();
+			}
+			script.src = this.serviceURL + '/socket.io/socket.io.js';
+			head.appendChild(script);
+		},
 
 		resetUsersList: function() {
 			this.socket.emit('reset_userlist', {});
@@ -23,7 +50,7 @@ define(function () {
 
 		connect: function (callback) {
 			var _server = this;
-			this.socket = io.connect((env == 'production') ? 'http://service.thisismyasterisk.org:80' : 'http://localhost:4000');
+			this.socket = io.connect(this.serviceURL);
 			
 			this.socket.on('connect', function () {
 				var player = { 

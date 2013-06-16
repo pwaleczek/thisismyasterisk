@@ -41,7 +41,6 @@ define([
 		},
 		label: '',
 		entitiesList: {},
-		name: 'Engine',
 		time: 0,
 		mapMove: false,
 		mouseDownPos: {
@@ -84,51 +83,53 @@ define([
 				//_engine.Map.draw();
 			//	console.log('loaded');
 				_engine.resize();
-				Server.connect(function (playerUID, users) {
-					Logger.info('server data', playerUID, users);
+				Server.initialize(function () {
+					Server.connect(function (playerUID, users) {
+						console.log('server data %s %s', playerUID, users);
 
-					var _player = users[playerUID];
+						var _player = users[playerUID];
 
-					for(var UID in users) {
-						if(users[UID].uid !== playerUID) {
-							var _user = users[UID];
-							//console.log(_user);
-							new User('user', _user.uid, _user.position, _user.color);
-						
+						for(var UID in users) {
+							if(users[UID].uid !== playerUID) {
+								var _user = users[UID];
+								//console.log(_user);
+								new User('user', _user.uid, _user.position, _user.color);
+							
+							}
 						}
-					}
-					_engine.player = new User('player', _player.uid, _player.position, _player.color);
-					//_engine.player.generateSprites();
-					//console.log(_player);
-					Utils.attachEvent(window, 'blur', function (event) {
-						console.log('got Blur event');
-						_engine.player.active = false;
-						Server.socket.emit('player_active_state', {
-							uid: _engine.player.uid,
-							active: _engine.player.active 
+						_engine.player = new User('player', _player.uid, _player.position, _player.color);
+						//_engine.player.generateSprites();
+						//console.log(_player);
+						Utils.attachEvent(window, 'blur', function (event) {
+							console.log('got Blur event');
+							_engine.player.active = false;
+							Server.socket.emit('player_active_state', {
+								uid: _engine.player.uid,
+								active: _engine.player.active 
+							});
 						});
-					});
-					
-					Utils.attachEvent(window, 'focus', function (event) {
-						console.log('got Focus event');
-						_engine.player.active = true;
-						Server.socket.emit('player_active_state', {
-							uid: _engine.player.uid,
-							active: _engine.player.active 
+						
+						Utils.attachEvent(window, 'focus', function (event) {
+							console.log('got Focus event');
+							_engine.player.active = true;
+							Server.socket.emit('player_active_state', {
+								uid: _engine.player.uid,
+								active: _engine.player.active 
+							});
 						});
+						_engine.cursorTile = _engine.makeTile(imageList['mark_tiles'], 0, 0);
+						_engine.pathTile = _engine.makeTile(imageList['mark_tiles'], 38, 0);
+						_engine.activeTile = _engine.makeTile(imageList['mark_tiles'], 76, 0);
+						// setInterval(function() {
+						// 	console.log(Engine.player.position.raw);
+						// }, 1000);
+						// Utils.attachEvent(document, 'beforeunload', function (event) {
+						// 	event.preventDefault();
+						// 	Logger.info('unload', event);
+						// 	Server.disconnect('message text');
+						// 	return 'fdsdfsdfsdgsdhs';
+						// });
 					});
-					_engine.cursorTile = _engine.makeTile(imageList['mark_tiles'], 0, 0);
-					_engine.pathTile = _engine.makeTile(imageList['mark_tiles'], 38, 0);
-					_engine.activeTile = _engine.makeTile(imageList['mark_tiles'], 76, 0);
-					// setInterval(function() {
-					// 	console.log(Engine.player.position.raw);
-					// }, 1000);
-					// Utils.attachEvent(document, 'beforeunload', function (event) {
-					// 	event.preventDefault();
-					// 	Logger.info('unload', event);
-					// 	Server.disconnect('message text');
-					// 	return 'fdsdfsdfsdgsdhs';
-					// });
 				});
 			});
 			
@@ -143,7 +144,6 @@ define([
 			}).onMouseMove(function (x, y) {
 				Engine.onMouseMove(x, y);
 			});
-			debug.info('Engine: ', this);
 
 		},
 
@@ -236,7 +236,7 @@ define([
 						.drawImage(this.activeTile, pos.x - this.sprite.w/2, pos.y - (this.sprite.h)/2)
 					.restore();
 				}
-				console.log(this.itemCanvas.canvas.toDataURL());
+				//console.log(this.itemCanvas.canvas.toDataURL());
 			}
 		},
 
@@ -296,6 +296,7 @@ define([
 
 					ctx.font("10pt Arial").fillText('[' + this.player.position.raw.x + ', ' + this.player.position.raw.y + ']', 20, 60);
 					ctx.font("10pt Arial").fillText('progress: ' + this.player.moveProggres, 20, 80);
+					ctx.font("10pt Arial").fillText('speed: ' + this.player.speed, 20, 100);
 					ctx.font("16pt Arial").fillText(this.label, 20, window.innerHeight - 20);
 				}
 				ctx.restore();

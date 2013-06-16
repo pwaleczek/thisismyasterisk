@@ -4,10 +4,10 @@ define([
 	'underscore',
 	'localstorage'
 ], function(Utils, Backbone, _) {
+	
 	console.log('Loading timber collection module for UI...');
-	var TimberModel = Backbone.Model.extend({
-
-	});
+	
+	var TimberModel = Backbone.Model.extend({});
 	
 	var TimberCollection = Backbone.Collection.extend({
 		initialize: function() {

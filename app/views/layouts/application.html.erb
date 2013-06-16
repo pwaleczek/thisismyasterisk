@@ -4,11 +4,7 @@
   <title>Thisismyasterisk</title>
   <meta name="app_env" content="<%= ENV['RAILS_ENV'] %>" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <% if ENV['RAILS_ENV'] == 'production' %>
-  	<script type="text/javascript" src="http://service.thisismyasterisk.org:80/socket.io/socket.io.js"></script>
-  <% else %>
-  	<script type="text/javascript" src="http://localhost:4000/socket.io/socket.io.js"></script>
-  <% end %>
+  
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= requirejs_include_tag "boot" %>
   <%= csrf_meta_tags %>

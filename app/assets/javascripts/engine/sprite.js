@@ -10,8 +10,11 @@
 
 	Please see the license.txt file for more information.
 */
+
 define(function() {
+	
 	console.log('Loading Sprite module for Engine...');
+	
 	var Sprite = function(type, image, w, h) {
 		// if(typeof image !== 'Image' || typeof image !== 'object') {
 		// 	Logger.error('No proper image given!', typeof image);

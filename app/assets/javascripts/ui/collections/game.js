@@ -7,9 +7,7 @@ define([
 	
 	console.log('Loading game collection module for UI...');
 	
-	var GameModel = Backbone.Model.extend({
-
-	});
+	var GameModel = Backbone.Model.extend({});
 	
 	var GameCollection = Backbone.Collection.extend({
 		localStorage: new Backbone.LocalStorage('gameData'),
