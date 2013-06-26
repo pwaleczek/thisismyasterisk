@@ -25,13 +25,40 @@ define([
 
 		template: _.template(view),
 
-		initialize: function (options) {
-			this.render();
+		events: {
+			'click ul a'			: 'loadPage'
 		},
 
-		render: function() {
-			$(this.el).append(this.template);
+		initialize: function (options) {
+			//this.render();
+			$(document).on('click', '#index ul a', this.loadPage);
+		},
+
+		render: function(callback) {
+
+			if(!UI.isRunning)	{
+				var _template = this.template;
+
+				$(this.el).fadeOut(UI.speed, function() {
+					$(this).html(_template).fadeIn(UI.speed, function() {
+						UI.isRunning = true;
+						callback();
+					});
+				});
+			} else {
+				callback();
+			}
+		},
+
+		loadPage: function(event) {
+			$('ul a').removeClass('active');
+
+			var id = $(event.target).attr('id');
+			
+			var page = (id == 'timber') ? '' : id;
+			UI.Router.navigate(page, true);
 		}
+
 	});
 	console.log('										...loaded.');
 	return Index;

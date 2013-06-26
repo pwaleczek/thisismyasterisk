@@ -22,11 +22,9 @@ modules:
   - name: 'boot'
     exclude: ['main', 'utils', 'cq']
   - name: 'main'
-    exclude: ['engine/engine', 'ui/ui', 'utils', 'backbone']
-  - name: 'engine/engine'
-    exclude: ['utils', 'cq']
+    exclude: [ 'ui/ui', 'utils', 'backbone']
   - name: 'ui/ui'
-    exclude: ['engine/engine', 'utils', 'backbone', 'underscore']
+    exclude: [ 'utils', 'backbone', 'underscore']
 
 paths:
   logger: lib/console/console

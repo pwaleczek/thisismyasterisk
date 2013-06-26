@@ -41,7 +41,7 @@ define(function() {
 	}
 
 	if(browserFit()) {	
-		define([
+		require([
 			'main',
 			'utils',
 			'cq',

@@ -1,5 +1,5 @@
 /*
-	@file: about.js
+	@file: lab.js
 	
 	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
 
@@ -15,15 +15,15 @@ define([
 	'utils',
 	'backbone',
 	'underscore',
-	'text!ui/views/about.html'
+	'text!ui/views/lab.html'
 ], function (Utils, Backbone, _, view) {
 	
-	console.log('Loading about controller module for UI...');
+	console.log('Loading timber controller module for UI...');
 	
-	var About = Backbone.View.extend({
+	var Lab = Backbone.View.extend({
 		el: '.contents',
 
-		name: 'about',
+		name: 'lab',
 
 		template: _.template(view),
 
@@ -32,10 +32,9 @@ define([
 		},
 
 		render: function() {
-			
 			var _template = this.template;
 			var _name = this.name;
-
+				
 				$('.contents').fadeOut(UI.speed, function() {
 					$('body').attr('class', '').addClass(_name);
 					$('ul a#' + _name).addClass('active');
@@ -44,5 +43,5 @@ define([
 		}
 	});
 	console.log('										...loaded.');
-	return About;
+	return Lab;
 });

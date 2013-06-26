@@ -12,8 +12,7 @@
 */
 
 define([
-	'engine/engine',
-	'underscore'
+	'underscore',
 	'ui/router',
 	// models and collections
 	'ui/collections/game',
@@ -21,28 +20,47 @@ define([
 
 	// controllers
 	'ui/controllers/index',
-	'ui/controllers/about'
-], function (Engine, _, router, game, timber, index, about) {
+	'ui/controllers/timber',
+	'ui/controllers/bad',
+	'ui/controllers/about',
+	'ui/controllers/work',
+	'ui/controllers/asterisk',
+	'ui/controllers/lab'
+
+], function (_, router, game, timber, index, timber, bad, about, work, asterisk, lab) {
 	console.log('Loadeing UI...');
 	window.UI = {
 		
+		speed: 200, // transitions base speed
 		isRunning: false,
+
+		Links: {
+			GitHubIssues: 'http://github.com/pwaleczek/thisismyasterisk/issues'
+		},
 
 		Controllers: {},
 		Collections: {},
 
-		Router: null
+		Router: null,
 		
 		initialize: function() {
 			console.log('starting ui init.');
 			
+			//Backbone.history.start({pushState: true});
+			
 			this.Router = new router;
 			
-			this.isRunning = true;
+			//this.isRunning = true;
+
 			
 			this.Controllers = {
 				Index: new index,
-				About: new about
+				Timber: new timber,
+				About: new about,
+				Bad: new bad,
+				Lab: new lab,
+				Work: new work,
+				Asterisk: new asterisk
 			};
 		
 			this.Collections = {

@@ -1,5 +1,5 @@
 /*
-	@file: about.js
+	@file: work.js
 	
 	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
 
@@ -15,15 +15,15 @@ define([
 	'utils',
 	'backbone',
 	'underscore',
-	'text!ui/views/about.html'
+	'text!ui/views/work.html'
 ], function (Utils, Backbone, _, view) {
 	
 	console.log('Loading about controller module for UI...');
 	
-	var About = Backbone.View.extend({
+	var Work = Backbone.View.extend({
 		el: '.contents',
 
-		name: 'about',
+		name: 'work',
 
 		template: _.template(view),
 
@@ -44,5 +44,5 @@ define([
 		}
 	});
 	console.log('										...loaded.');
-	return About;
+	return Work;
 });

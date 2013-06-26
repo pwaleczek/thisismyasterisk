@@ -14,9 +14,9 @@
 define([
 	'backbone',
 	'utils',
-	'engine/engine',
+//	'engine/engine',
 	'ui/ui'
-], function(Backbone, Utils,  Engine) {
+], function(Backbone, Utils) {
 	'use strict';
 	console.log('Loading Application module...');
 
@@ -25,13 +25,11 @@ define([
 		initialize: function () {
 			
 
-			window.Engine = Engine;
+			//window.Engine = Engine;
 
 			console.log('Application init.');
-			
-			this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
 
-			Engine.initialize();
+			//Engine.initialize();
 
 			
 			UI.initialize();

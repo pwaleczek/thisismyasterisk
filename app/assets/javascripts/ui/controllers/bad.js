@@ -1,5 +1,5 @@
 /*
-	@file: about.js
+	@file: bad.js
 	
 	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
 
@@ -15,34 +15,45 @@ define([
 	'utils',
 	'backbone',
 	'underscore',
-	'text!ui/views/about.html'
+	'text!ui/views/bad.html'
 ], function (Utils, Backbone, _, view) {
 	
-	console.log('Loading about controller module for UI...');
+	console.log('Loading bad controller module for UI...');
 	
-	var About = Backbone.View.extend({
-		el: '.contents',
-
-		name: 'about',
+	var Bad = Backbone.View.extend({
+		el: 'body',
+		
+		events: {
+			'click a#goHome'			: 'home',
+			'click a#bugReport'		: 'bugReport'
+		},
 
 		template: _.template(view),
 
 		initialize: function (options) {
-
+			
 		},
 
 		render: function() {
-			
+			UI.isRunning = false;
 			var _template = this.template;
-			var _name = this.name;
+			$(this.el).fadeOut(UI.speed, function() {
+				$('body').attr('class', '').addClass('bad');
+				$(this).html(_template).fadeIn(UI.speed);
+			});
+			
+		},
+		
+		home: function() {
+			UI.Router.navigate('', true);
+		},
 
-				$('.contents').fadeOut(UI.speed, function() {
-					$('body').attr('class', '').addClass(_name);
-					$('ul a#' + _name).addClass('active');
-					$('.contents').html(_template).fadeIn(UI.speed);
-				});
+		bugReport: function() {
+			window.open(UI.Links.GitHubIssues);
+			UI.Router.navigate('', true);
 		}
+
 	});
 	console.log('										...loaded.');
-	return About;
+	return Bad;
 });

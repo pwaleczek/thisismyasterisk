@@ -4,7 +4,7 @@
   <title>Thisismyasterisk</title>
   <meta name="app_env" content="<%= ENV['RAILS_ENV'] %>" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
+  <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= requirejs_include_tag "boot" %>
   <%= csrf_meta_tags %>
@@ -13,6 +13,6 @@
   </script>
 </head>
 <body>
-<%= yield %>
+	<%= yield %>
 </body>
 </html>

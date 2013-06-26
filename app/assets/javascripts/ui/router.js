@@ -1,53 +1,82 @@
 /*
-	@file: router.js
-	
-	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
+  @file: router.js
+  
+  Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
 
-	THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF
-	ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-	IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
-	PURPOSE.
+  THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF
+  ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR
+  PURPOSE.
 
-	Please see the license.txt file for more information.
+  Please see the license.txt file for more information.
 */
 define([
-	'utils',
-	'backbone',
+  'utils',
+  'backbone',
 ], function (Utils, Backbone) {
-	
-	console.log('Loading Router module for UI...');
-	
-	var Router = Backbone.Router.extend({
+  
+  console.log('Loading Router module for UI...');
+  
+  var Router = Backbone.Router.extend({
 
-		initialize: function(options) {
+    initialize: function(options) {
+      this.bind('route', this.trackPageview);
+    },
 
-		},
+    routes: {
+      ''          : 'index',
+      'about'     : 'about',
+      'lab'       : 'lab',
+      'work'      : 'work',
+      'asterisk'  : 'asterisk',
+      '*path'     : 'bad'
+    },
 
-		routes: {
-			''				: 'index',
-			'about'			: 'about',
-			'timber'		: 'timber',
-			'lab'			: 'lab'
-		},
+    index: function() {
+      UI.Controllers.Index.render( function() {
+        UI.Controllers.Timber.render();
+      });
+    },
 
-		index: function() {
+    about: function() {
+      UI.Controllers.Index.render( function() {
+        UI.Controllers.About.render();
+      });
+    },
 
-		},
+    lab: function() {
+      UI.Controllers.Index.render( function() {
+        UI.Controllers.Lab.render();
+      });
+    },
+    
+    work: function() {
+      UI.Controllers.Index.render( function() {
+        UI.Controllers.Work.render();
+      });
+    },
 
-		about: function() {
+    asterisk: function() {
+      UI.Controllers.Index.render( function() {
+        UI.Controllers.Asterisk.render();
+      });
+    },
 
-		},
+    bad: function() {
+      UI.Controllers.Bad.render();
+    },
 
-		timber: function() {
+    trackPageview: function () {
+        var url = Backbone.history.fragment;
 
-		},
+        if (!/^\//.test(url) && url != '') {
+            url = "/" + url;
+        }
+        _gaq.push(['_trackPageview', url]);
+    }
 
-		lab: function() {
+  });
+  console.log('                             ...loaded.');
 
-		}
-
-	});
-	console.log('										...loaded.');
-
-	return Router;
+  return Router;
 });
