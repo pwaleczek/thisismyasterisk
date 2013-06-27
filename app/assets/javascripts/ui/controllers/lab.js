@@ -15,7 +15,7 @@ define([
 	'utils',
 	'backbone',
 	'underscore',
-	'text!ui/views/lab.html'
+	'text!ui/views/lab.html',
 ], function (Utils, Backbone, _, view) {
 	
 	console.log('Loading timber controller module for UI...');
@@ -29,11 +29,12 @@ define([
 			'click #labList .labElem'	: 'loadLabView'
 		},
 
-		labList: {},
-
 		template: _.template(view),
 
 		initialize: function (options) {
+			this.collection.bind('reset', this.render, this);
+			this.collection.bind('add', this.addLogToList, this);
+
 			$(document).on('click', '.labElem', function(event) {
 				var id = $(event.target).attr('id');
 				UI.Router.navigate('lab/' + id, true);
@@ -47,15 +48,21 @@ define([
 			var _template = this.template;
 			var _name = this.name;
 			var _this = this;
-				$('.contents').fadeOut(UI.speed, function() {
-					$('body').attr('class', '').addClass(_name);
-					$('ul a#' + _name).addClass('active');
-					$('.contents').html(_template).fadeIn(UI.speed, function() {
-						if(loadView) {
-							_this.loadLabView(loadView);
-						}
+			$('.contents').fadeOut(UI.speed, function() {
+				$('body').attr('class', '').addClass(_name);
+				$('ul a#' + _name).addClass('active');
+				$('.contents').html(_template).fadeIn(UI.speed, function() {
+					if(loadView) {
+						_this.loadLabView(loadView);
+					}
+					_this.collection.each(function(labElem){
+						var view = new UI.Controllers.Log({model: labElem});
+						console.log(log);
+						console.log(view.render().el);
+						$('#labList').append(view.render().el);
 					});
 				});
+			});
 			return this;
 		},
 
@@ -74,8 +81,8 @@ define([
 			
 			$('#labView').fadeOut(UI.speed, function() {
 				
-				if(labList[labId]) {
-					$(this).html(labList[labId].body + backButton).fadeIn(UI.speed);
+				if(UI.Collections.Lab.get(labId)) {
+					$(this).html(UI.Collections.Lab.get(labId).view + backButton).fadeIn(UI.speed);
 				} else {
 					UI.Router.navigate('bad', true);
 				}

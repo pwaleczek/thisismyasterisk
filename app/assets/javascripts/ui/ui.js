@@ -16,6 +16,7 @@ define([
 	'ui/router',
 	// models and collections
 	'ui/collections/timber',
+	'ui/collections/lab',
 
 	// controllers
 	'ui/controllers/index',
@@ -25,9 +26,10 @@ define([
 	'ui/controllers/about',
 	'ui/controllers/work',
 	'ui/controllers/asterisk',
-	'ui/controllers/lab'
+	'ui/controllers/lab',
+	'ui/controllers/lab_elem'
 
-], function (_, router, timberCollection, index, timber, log, bad, about, work, asterisk, lab) {
+], function (_, router, timberCollection, labCollection, index, timber, log, bad, about, work, asterisk, lab, labElem) {
 	console.log('Loadeing UI...');
 	window.UI = {
 		
@@ -37,17 +39,20 @@ define([
 		fetchTimberCount: 0,
 		fetchTimberInProgress: 0,
 
+		fetchLabCount: 0,
+		fetchLabInProgress: 0,
+
 		Links: {
 			GitHubIssues: 'http://github.com/pwaleczek/thisismyasterisk/issues',
 			GitHub: 'http://github.com/pwaleczek',
 			LinkedIn: 'http://pl.linkedin.com/pub/pawe%C5%82-waleczek/53/316/533',
 			facebook: 'http://facebook.com/pawel.waleczek'
 		},
-
-		Controllers: {},
+		
 		Collections: {},
-
-		Router: null,
+		Controllers: {},
+		
+		Router: {},
 		
 		initialize: function() {
 			console.log('starting ui init.');
@@ -56,20 +61,23 @@ define([
 			
 			this.Router = new router;
 			
-			//this.isRunning = true;
+			// Collections
 			this.Collections = {
-				Timber: new timberCollection
+				Timber: new timberCollection,
+				Lab: new labCollection
 			};
 			
+			// Controllers
 			this.Controllers = {
 				Index: new index,
 				Timber: new timber({collection: this.Collections.Timber}),
 				About: new about,
 				Bad: new bad,
-				Lab: new lab,
+				Lab: new lab({collection: this.Collections.Lab}),
 				Work: new work,
 				Asterisk: new asterisk,
-				Log: log
+				Log: log,
+				LabElem: labElem
 			};
 		
 

@@ -11,16 +11,9 @@ Thisismyasterisk::Application.routes.draw do
 
   match '(*url)' => 'main#index', :constraints => XHRConstraint.new
 
-  
-
-  # scope "admin", :as => "admin" do
-  #   resources :timber
-  #   resources :labs
-  #   resources :works
-  # end
 
   resources :timber, :only => [:show, :index]
-  # resources :labs, :only => [:show, :index]
+  resources :labs, :only => [:show, :index]
   # resources :works, :only => [:show, :index]
 
   # match "/rss" => "main#rss", :as => :rss_feed

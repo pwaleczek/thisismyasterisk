@@ -38,6 +38,10 @@ define([
 			if(UI.Collections.Timber.length == 0) {
 				UI.Collections.Timber.fetch({});
 			}
+
+			if(UI.Collections.Lab.length == 0) {
+				UI.Collections.Lab.fetch({});
+			}
 			if(!UI.isRunning)	{
 				var _template = this.template;
 
