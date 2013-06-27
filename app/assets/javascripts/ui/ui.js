@@ -57,7 +57,6 @@ define([
 		initialize: function() {
 			console.log('starting ui init.');
 			
-			//Backbone.history.start({pushState: true});
 			
 			this.Router = new router;
 			
@@ -85,5 +84,5 @@ define([
 	};
 
 	console.log('										...loaded.');
-	//return UI;
+
 });
