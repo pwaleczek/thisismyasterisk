@@ -4,14 +4,11 @@
 
 //colors
 
-$darkRed: #690D24;
-$red: #D6042B;
-$gold: #F0CDA4;
-$teal: #5A8A87;
-$darkTeal: #021B26; 
 
-
-$background: #fff;
+$text: #eee;
+$pink: #E8175D;
+$palePink: #CC527A;
+$background: #363636;//#A8A7A7;
 $sections: #857b97;
 
 @mixin transition($props...) {
@@ -25,6 +22,21 @@ $sections: #857b97;
 	box-sizing: border-box;
 }
 
+.disabled, .disabled:hover {
+	opacity: 0.5;
+	cursor: default;
+	background-color: transparent;
+}
+
+
+.pink {
+	color: $pink;
+}
+
+.noBorder {
+	border: none!important;
+}
+
 h1.oldBrowser {
 	font-size: 20px;
 	font-family: 'Courier', serif;
@@ -34,42 +46,59 @@ h1.oldBrowser {
 
 a {
 	text-decoration: none;
-	border-bottom: 0.0625em solid #000;
 	background-color: transparent;
+	border-bottom: 0.125em solid $text;
 	cursor: pointer;
-	color: $darkTeal;
+	color: $text;
 	@include transition(color 1s, border 1s, background 1s);
 }
 
 a:hover {
-	border-bottom: 0.0625em solid #000;
-	background-color: $darkTeal;
-	color: $gold;
+	background-color: transparent;
+	color: $text;
 	@include transition(color 0.5s, border 0.5s, background 0.5s);
 }
 
 body, html {
-	background-color: $gold;	
+	background-color: $background;	
 	width: 100%;
+	max-width: 100%;
 	height: 100%;
 	@include transition(background 0.2s);
-
 }
 
 body {
 	display: none;
+	height: auto;
+	min-height: 100% !important;
+	padding-bottom: 1em;
 }
 
 p, a, h1, h2, h3 {
 	font-family: 'Noto Sans', sans-serif;
 	font-size: 1em;
-	color: $darkTeal;
+	color: $text;
+}
+
+h1, h2, h3 {
+	display: inline-block;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+h2 {
+	font-size: 2em;
+}
+h3 {
+	font-size: 1.5em;
 }
 // h1, h2, h3 {
 // 	font-family: 'Noto Serif', serif;
 // 	font-size: 1em;
 // 	color: $darkTeal;
 // }
+
 
 p.splash {
 	font-family: serif;
@@ -88,7 +117,7 @@ code, pre {
 	padding: 1em;
 
 	h1 {
-		color: $red;
+		color: $pink;
 		font-size: 3em;
 		margin-bottom: 0.5em;
 
@@ -97,18 +126,23 @@ code, pre {
 		}
 	}
 	a:hover {
-		background-color: $red;
+		background-color: $pink;
+		border-bottom: 0em;
 	}
 }
 
 ul {
+	z-index: 10;
 	overflow: hidden;
-	padding: 1em 0 1em 1em;	
-	width: 30%;
-	height: 100%;
-	float: left;
+	margin: 1em 0 1em 1em;	
+	width: 20%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
 	display: block;
 	@include boxSize;
+	border-right: 0.125em solid $text;
 
 	li {
 		float: left;
@@ -124,125 +158,229 @@ ul {
 			padding: 0.25em 1.5em 0.25em 0.25em;	
 			display: block;
 			text-align: right;
-			background-image: url('/assets/dither_left.png');
-			background-position: left top;
-			background-repeat: repeat-y;
-			opacity: 1;
-			@include transition(opacity 0.5s);
-		}
-
-		a, a:hover {
+			@include transition(all 0.5s);
 			border: none;
-			color: $gold;
+			color: $text;
 			
 		}
 		a:hover {
-			opacity: 0.5;
-			@include transition(opacity 0.2s);
+			background-color: $text;
+			@include transition(all 0.2s);
+			color: $pink;
 		}
 
-		a.active {
-			color: $gold;
-		}
-		
+		a.active, a.active:hover {
+				border-left: 0.125em solid $pink;
+				background-color: transparent;
+				color: $pink;
+			}
+			
 		a.active:hover {
-			opacity: 1;
+			cursor: default;
+
 		}
 
-
 	}
-	a#timber, a#timber.active{
-		background-color: $darkRed;
+	li.header {
+		min-height: 2.5em;
+		height: 3.25em;
+		padding-right: 1.5em;
 	}
-	a#about, a#about.active {
-		background-color: $red;
-		color: $gold;
-	}
-	a#lab, a#lab.active, a#lab.active:hover {
-		background-color: $gold;
-		color: $darkTeal;
-	}
-	a#lab:hover {
-		background-color: $darkTeal;
-		color: $gold;
-	}
-	a#work, a#work.active{
-		background-color: $teal;
-	}
-	a#asterisk, a#asterisk.active{
-		background-color: $darkTeal;
-		color: $gold;
-	}
+	// a#timber, a#timber.active{
+	// 	background-color: $darkRed;
+	// }
+	// a#about, a#about.active {
+	// 	background-color: $red;
+	// 	color: $gold;
+	// }
+	// a#lab, a#lab.active, a#lab.active:hover {
+	// 	background-color: $gold;
+	// 	color: $darkTeal;
+	// }
+	// a#lab:hover {
+	// 	background-color: $darkTeal;
+	// 	color: $gold;
+	// }
+	// a#work, a#work.active{
+	// 	background-color: $teal;
+	// }
+	// a#asterisk, a#asterisk.active{
+	// 	background-color: $darkTeal;
+	// 	color: $gold;
+	// }
 
 }
-.dither {
-	float: left;
-	width: 5%;
-	display: block;
-	height: 100%;
-	width: 2em;
-	background-image: url('/assets/dither_right.png');
-	background-position: top right;
-	background-repeat: repeat-y;
-}
+// .dither {
+// 	float: left;
+// 	width: 5%;
+// 	display: block;
+// 	height: 100%;
+// 	width: 2em;
+// 	background-image: url('/assets/dither_right.png');
+// 	background-position: top right;
+// 	background-repeat: repeat-y;
+// }
 
 .contents {
-	float: right;
-	width: 70%;
-	height: 100%;
+	z-index: 20;
+	width: 73.5%;
+	height: auto;
+	margin: 1em 1em 1em 25%;
 	@include boxSize;
-	padding: 1em;
+	border-right: 0.125em solid $pink;
+	position: relative;
+	display: inline-block;
 	
+	p, a {
+		line-height: 1.5em;
+	}
+	a {
+		border-bottom: 0.125em solid $text;
+	}
+	a:hover, a:active {
+		border-bottom: 0em;
+		background-color: $pink;
+		color: $text;
+	}
 }
 
-body.timber {
-	ul {
-		border-right: 0.5em solid $darkRed;
+body.timber .contents {
+	div {
+		margin-bottom: 1.5em;
+		max-width: 800px;
 	}
-	.dither {
-		background-color: $darkRed;
+	h2 { 
+		border-bottom: 0.0625em solid $pink;
+		margin-bottom: 0.5em;
+	}
+	p {
+		margin-left: 2em;
+	}
+	p.date {
+		font-size: 0.75em;
+		margin: {
+			left: 1em;
+			bottom: 0.75em;
+		}
 	}
 }
 
-body.about {
-	ul {
-		border-right: 0.5em solid $red;
+body.about .contents,
+body.lab .contents, 
+body.work .contents,
+body.asterisk .contents  {
+	h2 {
+		margin-bottom: 0.5em;
+		border-bottom: 0.0625em solid $pink;
 	}
-	.dither {
-		background-color: $red;
+	p {
+		margin-left: 1em;
+		margin-right: 1em;
+
+		a {
+			margin-left: 1em;
+		}
 	}
 }
 
 body.lab {
+	
+	background-color: $text;
+	
 	ul {
-		border-right: 0.5em solid $gold;
+		border-color: $background;
 	}
-	.dither {
-		background-color: transparent;
+	p, a, h1, h2, h3 {
+		color: $background;
+	}
+	a {
+		border: none;		
+	}
+	a:hover {
+		background-color: $background;
+		color: $pink;
+		@include transition(all 0.2s);
+	}
+
+	#labList {
+		width: 100%;
+		height: auto;
+		position: relative;
+		display: inline-block;
+		margin: 1em -0.75% -0.75% -0.75%;
+		@include boxSize;
+		padding-left: 1em;
+		.labElem {
+			float: left;
+			margin: 0.75%;
+			display: inline-block;
+			width: 48.5%;
+			height: 200px;
+			background-color: $background;
+			@include boxSize;
+			position: relative;
+			p {
+				position: absolute;
+				bottom: 0em;
+				left: 0em;
+				margin: 1em;
+				padding: 0.125em 0.5em;
+				color: $background;
+				background-color: $text;
+				border-left: 0.125em solid $pink;
+			}
+		}
+		.labElem:hover {
+			border-bottom: 0.5em solid $pink;
+		}
+		.labElem:active {
+			background-color: $pink;
+		}
+	}
+
+}
+
+body.labView {
+	overflow-x: hidden!important;
+
+	ul {
+		margin-left: -30%;
+	}
+
+	.contents {
+		margin-left: 100%;
 	}
 }
 
-body.work {
-	ul {
-		border-right: 0.5em solid $teal;
-	}
-	.dither {
-		background-color: $teal;
-	}
+a#backButton {
+	z-index: 30;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 5em;
+	height: 1.5em;
+	background-color: $pink;
+	opacity: 0.65; 
+	padding: 0.25em 0.5em 0 0.5em;
+	text-align: center;
+	border: none;
 }
-body.asterisk {
-	ul {
-		border-right: 0.5em solid $darkTeal;
-	}
-	.dither {
-		background-color: $darkTeal;
-	}
+a#backButton:hover {
+	opacity: 1.0;
+}
+
+#labView {
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 }
 
 @media screen and (max-width: 720px) {
-	p, a {
-		line-height: 1.25em;
-	}
+
 
 	ul {
 		margin: 0;
@@ -251,6 +389,7 @@ body.asterisk {
 		height: 3em;
 		padding: 0.5em 0;
 		border-right: 0!important;
+		position: relative;
 
 		li {
 			clear: none;	
@@ -269,50 +408,63 @@ body.asterisk {
 
 			}
 
+			a.active, a.active:hover {
+				border-left: none;
+				border-top: 0.125em solid $text;
+
+			}
+
+		}
+		li.header {
+			display: none;
 		}
 	}
 
-	.dither {
-		width: 100%;
-		height: 2em;
-		background-image: url('/assets/dither_down.png');
-		background-position: bottom left;
-		background-repeat: repeat-x;
-	}
 	.contents {
-		float: left;
+		p, a {
+			line-height: 1.5em;
+		}
 		width: 100%;
 		height: auto;
 		@include boxSize;
-		padding: 1em;
+		padding: 1em 0 0 1em;
+		margin: 0.5em 0 0;
+		border-right: 0.125em solid $pink;
 		
+
 	}
-	body.timber {
-		ul {
-			border-bottom: 0.5em solid $darkRed;
+	body.lab {
+		#labList {
+
+			.labElem {
+				width: 97%;
+				
+			}
 		}
 	}
-
-	body.about {
+	body {
 		ul {
-			border-bottom: 0.5em solid $red;
+			border-bottom: 0.125em solid $pink;
 		}
 	}
 
 	body.lab {
-		ul {
-			border-bottom: 0.5em solid $gold;
-		}
-	}
+		a.active, a.active:hover {
+			border-top: 0.125em solid $background;
 
-	body.work {
-		ul {
-			border-bottom: 0.5em solid $teal;
 		}
 	}
-	body.asterisk {
-		ul {
-			border-bottom: 0.5em solid $darkTeal;
+}
+
+@media screen and (min-width: 1320px) {
+	body.lab {
+		#labList {
+			margin: auto -0.5% -0.5% -0.5%;
+			.labElem {
+				margin: 0.5%;
+				width: 32.2%;
+				
+			}
 		}
 	}
 }

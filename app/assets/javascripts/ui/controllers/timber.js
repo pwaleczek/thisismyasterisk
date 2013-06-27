@@ -15,8 +15,7 @@ define([
 	'utils',
 	'backbone',
 	'underscore',
-	'text!ui/views/timber.html'
-], function (Utils, Backbone, _, view) {
+], function (Utils, Backbone, _) {
 	
 	console.log('Loading timber controller module for UI...');
 	
@@ -24,24 +23,41 @@ define([
 		el: '.contents',
 
 		name: 'timber',
-		
-		template: _.template(view),
 
 		initialize: function (options) {
-
+			this.collection.bind('reset', this.render, this);
+			this.collection.bind('add', this.addLogToList, this);
 		},
 
 		render: function() {
-
-			var _template = this.template;
 			var _name = this.name;
-
-				$('.contents').fadeOut(UI.speed, function() {
-					$('body').attr('class', '').addClass(_name);
-					$('ul a#' + _name).addClass('active');
-					$('.contents').html(_template).fadeIn(UI.speed);
+			var _collection = this.collection;
+			$('.contents').fadeOut(UI.speed, function() {
+				$('.contents').html('');
+				$('body').attr('class', '').addClass(_name);
+				$('ul a#' + _name).addClass('active');			
+				_collection.each(function(log) {
+					var view = new UI.Controllers.Log({model: log});
+					console.log(log);
+					console.log(view.render().el);
+					$('.contents').append(view.render().el);
 				});
+				if(_collection.length == 0) {
+					$('.contents').append('<h3 class="noBorder" style="margin-top: 2em;"><span class="pink">Whoops</span></h3><p>There\'s nothing to render, probaly no entries were found.</p>');
+				}
+				$('.contents').fadeIn(UI.speed);
+			});
+		},
+
+		loadMore: function() {
+			UI.Collections.Timber.fetch({
+				update: true,
+				data: {
+					offset: UI.Collections.Timber.length
+				}
+			});
 		}
+
 	});
 	console.log('										...loaded.');
 	return Timber;

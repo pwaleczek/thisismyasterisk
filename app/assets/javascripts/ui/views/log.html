@@ -1,0 +1,3 @@
+<h2><%= post.get('title') %></h2>
+<p class="date"><%= new Date(post.get('created_at')).setFormat('dd mmmm, yyyy') %></p>
+<p><%= post.get('body') %></p>

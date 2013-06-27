@@ -27,6 +27,7 @@ define([
       ''          : 'index',
       'about'     : 'about',
       'lab'       : 'lab',
+      'lab/:page' : 'labView',
       'work'      : 'work',
       'asterisk'  : 'asterisk',
       '*path'     : 'bad'
@@ -63,7 +64,13 @@ define([
     },
 
     bad: function() {
-      UI.Controllers.Bad.render();
+      UI.Controllers.Bad.render('404');
+    },
+
+    labView: function(page) {
+      UI.Controllers.Index.render( function() {
+        UI.Controllers.Lab.render(page);
+      });
     },
 
     trackPageview: function () {

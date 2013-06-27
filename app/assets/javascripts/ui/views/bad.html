@@ -2,13 +2,17 @@
 	<h1>
 		Oh noes!
 		<br />
-		<span>a 404</span>
+		<span>a <%= error %></span>
 	</h1>
 	<p>
-		Use the links, they work. Try starting again, go <a id="goHome">home</a>. It's not my fault, you're here.
+		<% if(error == '404') { %>
+			Use the links, they work. Try starting again, go <a id="goHome">home</a>. It's not my fault, you're here.
+		<% } else { %>
+			<%= message %>
+		<% } %>
 		<br />
 		<br />
-		If you feel, something's not right, file a bug report on GitHub <a id="bugReport">here</a>.
+		You can file a bug report on GitHub, right <a id="bugReport">here</a>.
 	</p>
 </div>
 <script type="text/javascript">

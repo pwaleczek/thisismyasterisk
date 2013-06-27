@@ -1,5 +1,5 @@
 /*
-	@file: about.js
+	@file: log.js
 	
 	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
 
@@ -15,15 +15,14 @@ define([
 	'utils',
 	'backbone',
 	'underscore',
-	'text!ui/views/about.html'
+	'text!ui/views/log.html'
 ], function (Utils, Backbone, _, view) {
 	
-	console.log('Loading about controller module for UI...');
+	console.log('Loading timber controller module for UI...');
 	
-	var About = Backbone.View.extend({
-		el: '.contents',
+	var Log = Backbone.View.extend({
 
-		name: 'about',
+		name: 'log',
 
 		template: _.template(view),
 
@@ -32,17 +31,15 @@ define([
 		},
 
 		render: function() {
-			
 			var _template = this.template;
-			var _name = this.name;
+			var model = this.model;
+				console.log('render entry');
+				console.log(model);
+			$(this.el).html(_template({post: model}));
 
-				$('.contents').fadeOut(UI.speed, function() {
-					$('body').attr('class', '').addClass(_name);
-					$('ul a#' + _name).addClass('active');
-					$('.contents').html(_template).fadeIn(UI.speed);
-				});
-		},
+			return this;
+		}
 	});
 	console.log('										...loaded.');
-	return About;
+	return Log;
 });

@@ -34,12 +34,13 @@ define([
 			
 		},
 
-		render: function() {
+		render: function(errorCode, errorMessage) {
+			
 			UI.isRunning = false;
 			var _template = this.template;
 			$(this.el).fadeOut(UI.speed, function() {
 				$('body').attr('class', '').addClass('bad');
-				$(this).html(_template).fadeIn(UI.speed);
+				$(this).html(_template({error: errorCode, message: errorMessage})).fadeIn(UI.speed);
 			});
 			
 		},

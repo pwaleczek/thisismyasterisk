@@ -35,7 +35,9 @@ define([
 		},
 
 		render: function(callback) {
-
+			if(UI.Collections.Timber.length == 0) {
+				UI.Collections.Timber.fetch({});
+			}
 			if(!UI.isRunning)	{
 				var _template = this.template;
 
@@ -46,17 +48,20 @@ define([
 					});
 				});
 			} else {
+				console.log('only callback called');
 				callback();
 			}
 		},
 
 		loadPage: function(event) {
-			$('ul a').removeClass('active');
+			if(!$(event.target).hasClass('active')){
+				$('ul a').removeClass('active');
 
-			var id = $(event.target).attr('id');
-			
-			var page = (id == 'timber') ? '' : id;
-			UI.Router.navigate(page, true);
+				var id = $(event.target).attr('id');
+				console.log(page);
+				var page = (id == 'timber') ? '' : id;
+				UI.Router.navigate(page, true);
+			}
 		}
 
 	});

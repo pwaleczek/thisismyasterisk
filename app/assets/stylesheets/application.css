@@ -62,11 +62,3 @@ table {
 div {
 	display: block;
 }
-
-html {
-	overflow: hidden;
-}
-
-body > canvas {
-	box-shadow: 10px;
-}

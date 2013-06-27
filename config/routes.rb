@@ -5,9 +5,13 @@ class XHRConstraint
 end
 
 Thisismyasterisk::Application.routes.draw do
+  root :to => 'main#index'
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   match '(*url)' => 'main#index', :constraints => XHRConstraint.new
 
-  # root :to => 'main#index'
+  
 
   # scope "admin", :as => "admin" do
   #   resources :timber
@@ -15,7 +19,7 @@ Thisismyasterisk::Application.routes.draw do
   #   resources :works
   # end
 
-  # resources :timber, :only => [:show, :index]
+  resources :timber, :only => [:show, :index]
   # resources :labs, :only => [:show, :index]
   # resources :works, :only => [:show, :index]
 

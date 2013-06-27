@@ -1,35 +1,18 @@
 optimize: 'uglify2'
 
-uglify2: 
-  output:
-    beautify: true
-    semicolons: true
-  compress: 
-    sequences: true
-    global_defs: 
-      DEBUG: false
-  warnings: true
-  mangle: false
-
 shim:
   jquery:
     exports: '$'
+  cq:
+    exports: 'cq'
     
 modules:
-  - name: 'utils'
-  - name: 'cq'
-  - name: 'backbone'
   - name: 'boot'
-    exclude: ['main', 'utils', 'cq']
-  - name: 'main'
-    exclude: [ 'ui/ui', 'utils', 'backbone']
-  - name: 'ui/ui'
-    exclude: [ 'utils', 'backbone', 'underscore']
 
 paths:
   logger: lib/console/console
   utils: utils/utils
-  cq: lib/cq/cq
+  cq: lib/cq/canvasquery
   underscore: lib/underscore/underscore
   backbone: lib/backbone/backbone
   localstorage: lib/backbone/localstorage
