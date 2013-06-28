@@ -25,8 +25,8 @@ define([
 		name: 'timber',
 
 		initialize: function (options) {
-			this.collection.bind('reset', this.render, this);
-			this.collection.bind('add', this.addLogToList, this);
+			//this.collection.bind('reset', this.render, this);
+			//this.collection.bind('add', this.addLogToList, this);
 		},
 
 		render: function() {
@@ -37,10 +37,11 @@ define([
 				$('body').attr('class', '').addClass(_name);
 				$('ul a#' + _name).addClass('active');			
 				_collection.each(function(log) {
-					var view = new UI.Controllers.Log({model: log});
-					console.log(log);
-					console.log(view.render().el);
-					$('.contents').append(view.render().el);
+					new UI.Controllers.Log({model: log}).render();
+					
+					//console.log(log);
+					//console.log(view.render().el);
+					//$('.contents').append(view.render().el);
 				});
 				if(_collection.length == 0) {
 					$('.contents').append('<h3 class="noBorder" style="margin-top: 2em;"><span class="pink">Whoops</span></h3><p>There\'s nothing to render, probaly no entries were found.</p>');

@@ -35,6 +35,7 @@ define([
 		},
 
 		render: function(callback) {
+			
 			$('ul a').removeClass('active');
 			if(UI.Collections.Timber.length == 0) {
 				UI.Collections.Timber.fetch({});
@@ -49,6 +50,10 @@ define([
 				$(this.el).fadeOut(UI.speed, function() {
 					$(this).html(_template).fadeIn(UI.speed, function() {
 						UI.isRunning = true;
+						
+						if(!UI.cookiesPolicyAccepted) {
+							UI.Controllers.CookieNote.render();
+						}
 						callback();
 					});
 				});

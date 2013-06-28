@@ -1,5 +1,5 @@
 /*
-	@file: log.js
+	@file: cookie_note.js
 	
 	Copyright (c) 2013 Pawel Waleczek [pawel@thisismyasterisk.org], All rights reserved.
 
@@ -15,15 +15,20 @@ define([
 	'utils',
 	'backbone',
 	'underscore',
-	'text!ui/views/log.html'
+	'text!ui/views/cookie_note.html'
 ], function (Utils, Backbone, _, view) {
 	
-	console.log('Loading timber controller module for UI...');
+	console.log('Loading about controller module for UI...');
 	
-	var Log = Backbone.View.extend({
+	var CookieNote = Backbone.View.extend({
+		el: 'body',
 
-		name: 'log',
-
+		name: 'cookie_note',
+		
+		events: {
+			'click #closeCookieNote' : 'closeCookieNote'
+		},
+		
 		template: _.template(view),
 
 		initialize: function (options) {
@@ -31,15 +36,21 @@ define([
 		},
 
 		render: function() {
+			
 			var _template = this.template;
-			var model = this.model;
-				console.log('render entry');
-				console.log(model);
-			$('.contents').append(_template({post: model}));
+			var _name = this.name;
 
-			return this;
+				$(this.el).prepend(this.template);
+		},
+
+		closeCookieNote: function() {
+			$('section.cookieNote').addClass('closing');
+			localStorage.setItem('cookiesPolicyAccepted', '1');
+			setTimeout(function() {
+				$(this).remove();
+			}, UI.speed);
 		}
 	});
 	console.log('										...loaded.');
-	return Log;
+	return CookieNote;
 });

@@ -27,14 +27,17 @@ define([
 	'ui/controllers/work',
 	'ui/controllers/asterisk',
 	'ui/controllers/lab',
-	'ui/controllers/lab_elem'
+	'ui/controllers/lab_elem',
+	'ui/controllers/cookie_note'
 
-], function (_, router, timberCollection, labCollection, index, timber, log, bad, about, work, asterisk, lab, labElem) {
+], function (_, router, timberCollection, labCollection, index, timber, log, bad, about, work, asterisk, lab, labElem, cookieNote) {
 	console.log('Loadeing UI...');
 	window.UI = {
 		
 		speed: 200, // transitions base speed
 		isRunning: false,
+
+		cookiesPolicyAccepted: parseInt(localStorage['cookiesPolicyAccepted']),
 
 		isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent),
 		isHandheld: /Mobile|iPhone|iPod|BlackBerry/i.test(navigator.userAgent),
@@ -58,7 +61,7 @@ define([
 		Router: {},
 		
 		initialize: function() {
-			console.log('starting ui init.');
+			console.log('starting ui init. cookies %s', localStorage['cookiesPolicyAccepted']);
 			console.log('mobile: %s, handheld: %s', this.isMobile, this.isHandheld);
 			
 			this.Router = new router;
@@ -79,10 +82,12 @@ define([
 				Work: new work,
 				Asterisk: new asterisk,
 				Log: log,
-				LabElem: labElem
+				LabElem: labElem,
+				CookieNote: new cookieNote
 			};
 		
-
+			if(this.isMobile)
+				alert('mobile!');
 		}
 	};
 

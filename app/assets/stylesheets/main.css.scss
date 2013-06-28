@@ -5,10 +5,10 @@
 //colors
 
 
-$text: #eee;
+$text: #363636;//#eee;
 $pink: #E8175D;
 $palePink: #CC527A;
-$background: #363636;//#A8A7A7;
+$background: #eee;//#363636;//#A8A7A7;
 $sections: #857b97;
 
 @mixin transition($props...) {
@@ -37,6 +37,43 @@ $sections: #857b97;
 	border: none!important;
 }
 
+.cookieNote {
+	//height: 8em;
+	//max-height: 10em;
+	//min-height: 5em;
+	margin-left: 25%;
+	width: 73.5%;
+	background-color: $text;
+	overflow: hidden;
+	p {
+		padding: 1em;
+		line-height: 1.5em;
+	}
+	p, a, h1, h2, h3 {
+		color: $background;
+	}
+	a {
+		border-bottom: 0.125em solid $background;
+	}
+	a:hover {
+		color: $pink;
+	}
+	a#closeCookieNote {
+		border-top: 1em;
+		background-color: $background;
+		padding: 0.25em;
+		color: $pink;
+		border: none;
+	}
+	a#closeCookieNote:hover {
+		background-color: $pink;
+		color: $background;
+	}
+}
+.cookieNote.closing {
+	height: 0em;
+}
+
 h1.oldBrowser {
 	font-size: 20px;
 	font-family: 'Courier', serif;
@@ -51,6 +88,7 @@ a {
 	cursor: pointer;
 	color: $text;
 	@include transition(color 1s, border 1s, background 1s);
+	padding: 0 0.25em;
 }
 
 a:hover {
@@ -97,11 +135,6 @@ h2 {
 h3 {
 	font-size: 1.5em;
 }
-// h1, h2, h3 {
-// 	font-family: 'Noto Serif', serif;
-// 	font-size: 1em;
-// 	color: $darkTeal;
-// }
 
 
 p.splash {
@@ -129,7 +162,7 @@ footer {
 	@include boxSize;
 	p {
 		text-align: right;
-		font-size: 0.5em;
+		font-size: 0.65em;
 	}
 }
 
@@ -212,40 +245,8 @@ ul {
 		height: 3.25em;
 		padding-right: 1.5em;
 	}
-	// a#timber, a#timber.active{
-	// 	background-color: $darkRed;
-	// }
-	// a#about, a#about.active {
-	// 	background-color: $red;
-	// 	color: $gold;
-	// }
-	// a#lab, a#lab.active, a#lab.active:hover {
-	// 	background-color: $gold;
-	// 	color: $darkTeal;
-	// }
-	// a#lab:hover {
-	// 	background-color: $darkTeal;
-	// 	color: $gold;
-	// }
-	// a#work, a#work.active{
-	// 	background-color: $teal;
-	// }
-	// a#asterisk, a#asterisk.active{
-	// 	background-color: $darkTeal;
-	// 	color: $gold;
-	// }
 
 }
-// .dither {
-// 	float: left;
-// 	width: 5%;
-// 	display: block;
-// 	height: 100%;
-// 	width: 2em;
-// 	background-image: url('/assets/dither_right.png');
-// 	background-position: top right;
-// 	background-repeat: repeat-y;
-// }
 
 .contents {
 	z-index: 20;
@@ -271,9 +272,12 @@ ul {
 }
 
 body.timber .contents {
-	div {
-		margin-bottom: 1.5em;
+	.log {
+		padding-bottom: 1.5em;
+		margin-bottom: 2em;
+		margin-right: 1em;
 		max-width: 800px;
+		border-bottom: 0.125em solid $text;
 	}
 	h2 { 
 		border-bottom: 0.0625em solid $pink;
@@ -311,6 +315,29 @@ body.asterisk .contents  {
 
 body.lab {
 	
+	.cookieNote {
+		background-color: $background;
+		
+		p, a, h1, h2, h3 {
+			color: $text;
+		}
+		a {
+			border-bottom: 0.125em solid $text;
+		}
+		a:hover {
+			color: $pink;
+			
+		}
+		a#closeCookieNote {
+			background-color: $text;
+			color: $background;
+		}
+		a#closeCookieNote:hover {
+			background-color: $pink;
+			color: $background;
+		}
+	}
+
 	background-color: $text;
 	
 	footer {
@@ -353,13 +380,13 @@ body.lab {
 			position: relative;
 
 			p {
-				background-color: rgba(238, 238, 238, 0.5);
+				background-color: rgba(238, 238, 238, 0.75);
 				position: absolute;
 				bottom: 0.25em;
 				left: 0em;
 				margin: 1em;
 				padding: 0.5em 0.75em;
-				color: $background;
+				color: $text;
 				//background-color: $text;
 				border-left: 0.125em solid $pink;
 				font-size: 0.75em;
@@ -376,7 +403,7 @@ body.lab {
 			border-bottom: 0.5em solid $pink;
 			
 			p {
-				background-color: rgba(238, 238, 238, 0.85);
+				background-color: rgba(238, 238, 238, 1);
 			}
 		}
 		.labElem:active {
@@ -392,6 +419,14 @@ body.labView {
 }
 
 @media screen and (max-width: 720px) {
+
+	.cookieNote {
+		margin-left: 0;
+		width: 100%;
+		p {
+			font-size: 0.75em;
+		}
+	}
 
 	footer {
 		position: relative;
@@ -447,13 +482,16 @@ body.labView {
 		width: 100%;
 		height: auto;
 		@include boxSize;
-		padding: 1em 0 0 1em;
-		margin: 0.5em 0 0;
+		padding: 0 0 0 1em;
+		margin: 1.5em 0 0;
 		border-right: 0.125em solid $pink;
 		
 
 	}
 	body.lab {
+
+
+
 		#labList {
 
 			.labElem {
