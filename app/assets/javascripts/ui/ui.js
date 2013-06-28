@@ -36,6 +36,9 @@ define([
 		speed: 200, // transitions base speed
 		isRunning: false,
 
+		isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent),
+		isHandheld: /Mobile|iPhone|iPod|BlackBerry/i.test(navigator.userAgent),
+		
 		fetchTimberCount: 0,
 		fetchTimberInProgress: 0,
 
@@ -56,7 +59,7 @@ define([
 		
 		initialize: function() {
 			console.log('starting ui init.');
-			
+			console.log('mobile: %s, handheld: %s', this.isMobile, this.isHandheld);
 			
 			this.Router = new router;
 			

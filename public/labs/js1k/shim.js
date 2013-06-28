@@ -1,108 +1,111 @@
-var b = document.body;
-var c = document.getElementsByTagName('canvas')[0];
-var a = c.getContext('2d');
-// document.body.clientWidth; // fix bug in webkit: http://qfox.nl/weblog/218
+var Shim = function() {
+	var b = document.body;
+	var c = document.getElementsByTagName('canvas')[0];
+	var a = c.getContext('2d');
+	document.body.clientWidth; // fix bug in webkit: http://qfox.nl/weblog/218
 
-// defines
-b.style.margin = "0";
-w = window;
-P = w.innerWidth;
-H = w.innerHeight;
-c.width = P;
-c.height = H;
-M = Math;
-s = M.sin;
-f = M.cos;
-y = M.ceil;
-r = M.random;
-W = v = [];
-D = M.PI / 180;
-G = "globalCompositeOperation";
-C = V = N = B = Z = Q = 0;
-a.a = a.fillRect;
-d = 20;
+	// defines
+	b.style.margin = "0";
+	w = window;
+	P = w.innerWidth;
+	H = w.innerHeight;
+	c.width = P;
+	c.height = H;
+	M = Math;
+	s = M.sin;
+	f = M.cos;
+	y = M.ceil;
+	r = M.random;
+	W = v = [];
+	D = M.PI / 180;
+	G = "globalCompositeOperation";
+	C = V = N = B = Z = Q = 0;
+	a.a = a.fillRect;
+	d = 20;
 
-// generate random plasma gradient
-function I() {
-	for (u = 6; u--;) v[u] = y(3 * r());
-}
-
-I();
-
-// fill the ripple queue
-b.onmousemove = function (e) {
-	W.push([y(e.pageX/d-1)*d,y(e.pageY/d-1)*d,0])
-};
-
-// reset action to make another random plasma gradient
-b.onclick = function(e) {
-	Z = 1;
-}
-
-// draw it all
-setInterval(function () {
-	a.save();
-
-	// the plasma
-	for (i = y(P/d); i >= 0; i--) {
-		C += 5E-4 * f(D * i * v[1]);
-		N += 0.001 * s(D * (d - i) * v[3]);
-		for (j = y(H/d); j >= 0;j--) { 
-
-			V += 0.001 * f(D * i * v[4]); 
-			B += 0.001 * s(D * (d - i) * v[2]);
-			h = (v[2] * 4 + 1) * i * f(D) + 100 * v[3] * f(D * (C + V) * v[1] + v[4]);
-			t = (v[2] * 4 + 1) * j * f((3 < v[1]) ? f(1/h) : f(1 / D)) + 100 * v[4] * s(D * (N + B) * v[5] / 720);
-
-			k = ((v[3] + 1) * (i + j) * v[3] * v[1]) * 50 * s(D * ((d - i) * h + (j - d) * h) * v[4] / 720);
-
-			h = (v[4] * 13 + 3) * f(D * h) + 30/v[3] * f(D * j);
-
-			K = y(40 * v[4] * v[1]) + y(9 * v[1] * f(D * t) + h);
-			L = y(40 * v[2]) + y(9 * v[3] * f(D * k) + h);
-
-			a.fillStyle = "rgb(" + K + "," + L + "," + y((K + L) / 2 - h * v[4]) + ")";
-			a.a(i * d + Z / 2, j * d + Z / 2, d - Z, d - Z);
-
-			// animate transition between old and new plasma gradients
-			if(Z >= 0 && Z < d){
-				if(0 == Q) {
-					Z += 0.001;
-					if(Z >= d) {
-						Q = 1;
-						I();
-					}	
-				} if(1 == Q) {
-					Z -= 0.001;
-					if(Z <= 0) {
-						Q = 0;
-					}
-				} 
-			}
-		}	 
+	// generate random plasma gradient
+	function I() {
+		for (u = 6; u--;) v[u] = y(3 * r());
 	}
 
-	// set composite operations to lighter (looks better this way)
-	a[G] = "lighter";
+	I();
 
-	// draw ripples under cursor (from the ripple queue)
-	U = W.length;
+	// fill the ripple queue
+	b.onmousemove = function (e) {
+		W.push([y(e.pageX/d-1)*d,y(e.pageY/d-1)*d,0])
+	};
 
-	while(U--){
-		O = W[U];
+	// reset action to make another random plasma gradient
+	b.onclick = function(e) {
+		Z = 1;
+	}
 
-		for (R = -O[2] * d; R < O[2] * d; R++) {
-			S = (M.sqrt(O[2] * O[2] - R * R)) * d;
+	// draw it all
+	setInterval(function () {
+		a.save();
 
-			a.fillStyle = 'rgba(105,105,105,' + ((O[2] - 6) / -10) + ')';
-			a.a(O[0] + R * d, O[1] + S, d, d);
-			a.a(O[0] - R * d, O[1] - S, d, d);
+		// the plasma
+		for (i = y(P/d); i >= 0; i--) {
+			C += 5E-4 * f(D * i * v[1]);
+			N += 0.001 * s(D * (d - i) * v[3]);
+			for (j = y(H/d); j >= 0;j--) { 
+
+				V += 0.001 * f(D * i * v[4]); 
+				B += 0.001 * s(D * (d - i) * v[2]);
+				h = (v[2] * 4 + 1) * i * f(D) + 100 * v[3] * f(D * (C + V) * v[1] + v[4]);
+				t = (v[2] * 4 + 1) * j * f((3 < v[1]) ? f(1/h) : f(1 / D)) + 100 * v[4] * s(D * (N + B) * v[5] / 720);
+
+				k = ((v[3] + 1) * (i + j) * v[3] * v[1]) * 50 * s(D * ((d - i) * h + (j - d) * h) * v[4] / 720);
+
+				h = (v[4] * 13 + 3) * f(D * h) + 30/v[3] * f(D * j);
+
+				K = y(40 * v[4] * v[1]) + y(9 * v[1] * f(D * t) + h);
+				L = y(40 * v[2]) + y(9 * v[3] * f(D * k) + h);
+
+				a.fillStyle = "rgb(" + K + "," + L + "," + y((K + L) / 2 - h * v[4]) + ")";
+				a.a(i * d + Z / 2, j * d + Z / 2, d - Z, d - Z);
+
+				// animate transition between old and new plasma gradients
+				if(Z >= 0 && Z < d){
+					if(0 == Q) {
+						Z += 0.001;
+						if(Z >= d) {
+							Q = 1;
+							I();
+						}	
+					} if(1 == Q) {
+						Z -= 0.001;
+						if(Z <= 0) {
+							Q = 0;
+						}
+					} 
+				}
+			}	 
 		}
 
-		O[2] += 0.33;
-		if(O[2] >= 6) W.splice(U, 1);
-	}
+		// set composite operations to lighter (looks better this way)
+		a[G] = "lighter";
 
-	a.restore();
+		// draw ripples under cursor (from the ripple queue)
+		U = W.length;
 
-}, 33); // 33 - magic
+		while(U--){
+			O = W[U];
+
+			for (R = -O[2] * d; R < O[2] * d; R++) {
+				S = (M.sqrt(O[2] * O[2] - R * R)) * d;
+
+				a.fillStyle = 'rgba(105,105,105,' + ((O[2] - 6) / -10) + ')';
+				a.a(O[0] + R * d, O[1] + S, d, d);
+				a.a(O[0] - R * d, O[1] - S, d, d);
+			}
+
+			O[2] += 0.33;
+			if(O[2] >= 6) W.splice(U, 1);
+		}
+
+		a.restore();
+
+	}, 33); // 33 - magic
+}
+Shim();

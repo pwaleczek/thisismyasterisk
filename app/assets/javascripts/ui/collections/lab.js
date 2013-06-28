@@ -30,8 +30,8 @@ define([
 		url: '/lab',
 
 	  comparator: function(lab) {
-	   	var lab = new Date(log.get('created_at'));
-	    return -lab.getTime();
+	   	var lab = new Date(lab.get('created_at'));
+	    return lab.getTime();
 	  },
 	  fetch: function(options) {
 	    if (typeof options.data === 'undefined') {

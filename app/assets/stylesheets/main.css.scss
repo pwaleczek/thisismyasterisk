@@ -59,6 +59,10 @@ a:hover {
 	@include transition(color 0.5s, border 0.5s, background 0.5s);
 }
 
+html {
+	overflow-x: hidden;
+}
+
 body, html {
 	background-color: $background;	
 	width: 100%;
@@ -71,7 +75,7 @@ body {
 	display: none;
 	height: auto;
 	min-height: 100% !important;
-	padding-bottom: 1em;
+	max-width: 1500px;
 }
 
 p, a, h1, h2, h3 {
@@ -109,6 +113,26 @@ p.splash {
 	display: block;
 }
 
+header {
+	@extend h3;
+}
+
+footer {
+	padding-right: 1.5em;
+	position: fixed;
+	width: 20%;
+	max-width: 300px;
+	bottom: 1em;
+	left: 1em;
+	border-right: 0.125em solid $text;
+	display: block;
+	@include boxSize;
+	p {
+		text-align: right;
+		font-size: 0.5em;
+	}
+}
+
 code, pre {
 	font-family: monospace;
 }
@@ -143,6 +167,7 @@ ul {
 	display: block;
 	@include boxSize;
 	border-right: 0.125em solid $text;
+	max-width: 300px;
 
 	li {
 		float: left;
@@ -181,6 +206,7 @@ ul {
 		}
 
 	}
+
 	li.header {
 		min-height: 2.5em;
 		height: 3.25em;
@@ -287,11 +313,16 @@ body.lab {
 	
 	background-color: $text;
 	
+	footer {
+		border-right: 0.125em solid $background;
+	}
+
 	ul {
 		border-color: $background;
 	}
 	p, a, h1, h2, h3 {
 		color: $background;
+
 	}
 	a {
 		border: none;		
@@ -310,28 +341,43 @@ body.lab {
 		margin: 1em -0.75% -0.75% -0.75%;
 		@include boxSize;
 		padding-left: 1em;
+
 		.labElem {
 			float: left;
 			margin: 0.75%;
 			display: inline-block;
 			width: 48.5%;
-			height: 200px;
+			height: 280px;
 			background-color: $background;
 			@include boxSize;
 			position: relative;
+
 			p {
+				background-color: rgba(238, 238, 238, 0.5);
 				position: absolute;
-				bottom: 0em;
+				bottom: 0.25em;
 				left: 0em;
 				margin: 1em;
-				padding: 0.125em 0.5em;
+				padding: 0.5em 0.75em;
 				color: $background;
-				background-color: $text;
+				//background-color: $text;
 				border-left: 0.125em solid $pink;
+				font-size: 0.75em;
+				
+				.title {
+					margin: 0.25em 0 0.75em 0;
+					font-size: 1.5em;
+					font-weight: 700;
+					display: block;
+				}
 			}
 		}
 		.labElem:hover {
 			border-bottom: 0.5em solid $pink;
+			
+			p {
+				background-color: rgba(238, 238, 238, 0.85);
+			}
 		}
 		.labElem:active {
 			background-color: $pink;
@@ -343,44 +389,17 @@ body.lab {
 body.labView {
 	overflow-x: hidden!important;
 
-	ul {
-		margin-left: -30%;
-	}
-
-	.contents {
-		margin-left: 100%;
-	}
-}
-
-a#backButton {
-	z-index: 30;
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	width: 5em;
-	height: 1.5em;
-	background-color: $pink;
-	opacity: 0.65; 
-	padding: 0.25em 0.5em 0 0.5em;
-	text-align: center;
-	border: none;
-}
-a#backButton:hover {
-	opacity: 1.0;
-}
-
-#labView {
-	z-index: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
 }
 
 @media screen and (max-width: 720px) {
 
+	footer {
+		position: relative;
+		width: 100%;
+		margin: 2em 1em 0.5em 0;
+		max-width: 100%;
+		left: 0;
+	}
 
 	ul {
 		margin: 0;
@@ -390,6 +409,7 @@ a#backButton:hover {
 		padding: 0.5em 0;
 		border-right: 0!important;
 		position: relative;
+		max-width: 100%;
 
 		li {
 			clear: none;	
@@ -410,7 +430,7 @@ a#backButton:hover {
 
 			a.active, a.active:hover {
 				border-left: none;
-				border-top: 0.125em solid $text;
+				border-top: 0.125em solid $pink;
 
 			}
 
@@ -444,16 +464,16 @@ a#backButton:hover {
 	}
 	body {
 		ul {
-			border-bottom: 0.125em solid $pink;
+			border-bottom: 0.125em solid $text;
 		}
 	}
 
-	body.lab {
-		a.active, a.active:hover {
-			border-top: 0.125em solid $background;
+	// body.lab {
+	// 	a.active, a.active:hover {
+	// 		border-top: 0.125em solid $background;
 
-		}
-	}
+	// 	}
+	// }
 }
 
 @media screen and (min-width: 1320px) {

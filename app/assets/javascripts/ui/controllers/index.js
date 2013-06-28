@@ -35,6 +35,7 @@ define([
 		},
 
 		render: function(callback) {
+			$('ul a').removeClass('active');
 			if(UI.Collections.Timber.length == 0) {
 				UI.Collections.Timber.fetch({});
 			}
@@ -58,9 +59,8 @@ define([
 		},
 
 		loadPage: function(event) {
-			if(!$(event.target).hasClass('active')){
+			if(!$(event.target).hasClass('active')) {
 				$('ul a').removeClass('active');
-
 				var id = $(event.target).attr('id');
 				console.log(page);
 				var page = (id == 'timber') ? '' : id;
