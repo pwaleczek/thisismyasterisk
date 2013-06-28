@@ -454,8 +454,8 @@ var Engine = {
 			x: 0,
 			y: 0
 		}
-		//document.body.appendChild(this.renderCanvas.canvas);
-		$('#labView').append(this.renderCanvas.canvas);
+		document.body.appendChild(this.renderCanvas.canvas);
+	
 		
 		Utils.attachEvent(window, 'resize', this.resize);
 		Map.initialize();
@@ -980,7 +980,7 @@ var Utils = {
 			var imageName = arguments[0][i];
 			var image = new Image;
 			addLoad(image, imageName);
-			image.src = '/labs/engine_proto/' + imageName + '.png';
+			image.src = imageName + '.png';
 			imageList[imageName] = image;
 		}
 

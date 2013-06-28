@@ -14,6 +14,14 @@
 define(function() {
 	console.log('Loading Utilities module...');
 
+	var Utils = {
+		releasePool: function(releasePool) {
+			for(var i = 0; i < releasePool.length; i++) {
+				delete window[releasePool[i]];
+			}
+		}
+	}
+
 	var dateFormat = function () {
 		var	token = /d{1,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\1?|[LloSZ]|"[^"]*"|'[^']*'/g,
 			timezone = /\b(?:[PMCEA][SDP]T|(?:Pacific|Mountain|Central|Eastern|Atlantic) (?:Standard|Daylight|Prevailing) Time|(?:GMT|UTC)(?:[-+]\d{4})?)\b/g,
@@ -127,5 +135,5 @@ define(function() {
 		return dateFormat(this, mask, utc);
 	};
 
-	return {};
+	return Utils;
 });

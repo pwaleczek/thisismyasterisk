@@ -1,9 +1,8 @@
-	<a id="<%= labElem.get('labId') %>" class="labElem" style="background-image: url('<%= labElem.get('image') %>');">
+	<a id="<%= labElem.get('labId') %>" class="labElem" style="background-image: url('http://static.thisismyasterisk.org/labs/<%= labElem.get('labId') %>/<%= labElem.get('labId') %>.png');">
 		<p>
 			<span class="title">
-				<%= labElem.get('title') %>
+				<%= labElem.get('name') %>
 			</span>
-			<br />
 			<%= labElem.get('description') %>
 		</p>
 	

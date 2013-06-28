@@ -13,7 +13,7 @@ Thisismyasterisk::Application.routes.draw do
 
 
   resources :timber, :only => [:show, :index]
-  resources :labs, :only => [:show, :index]
+  resources :lab, :only => [:show, :index]
   # resources :works, :only => [:show, :index]
 
   # match "/rss" => "main#rss", :as => :rss_feed
