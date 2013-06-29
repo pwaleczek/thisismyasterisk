@@ -19,8 +19,14 @@ define(function() {
 			for(var i = 0; i < releasePool.length; i++) {
 				delete window[releasePool[i]];
 			}
+		},
+
+		arrayShuffle: function(o){
+			for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+			return o;
 		}
 	}
+
 
 	var dateFormat = function () {
 		var	token = /d{1,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\1?|[LloSZ]|"[^"]*"|'[^']*'/g,

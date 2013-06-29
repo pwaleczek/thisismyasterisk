@@ -50,6 +50,7 @@ define([
 				$('body').attr('class', '').addClass(_name);				
 				$('ul a#' + _name).addClass('active');
 				$('.contents').html(_template).fadeIn(UI.speed, function() {
+						//UI.Background.staticBuffer.clear();
 						_this.collection.each(function(labElem){
 							var view = new UI.Controllers.LabElem({model: labElem});
 							console.log(labElem);
