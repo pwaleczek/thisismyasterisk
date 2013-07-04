@@ -133,9 +133,9 @@ define([
 				this.lineWidth = 4;
 				this.staticBuffer = cq(window.innerWidth * 2, window.innerHeight * 2);
 				
-				this.shape1Canvas = new this.shapeCanvas('rgb(232, 23, 93)');
-				this.shape2Canvas = new this.shapeCanvas('rgb(238, 238, 238)');
-				this.shape3Canvas = new this.shapeCanvas('rgb(54, 54, 54)');
+				this.shape1 = new this.shapeCanvas('rgb(232, 23, 93)');
+				this.shape2 = new this.shapeCanvas('rgb(238, 238, 238)');
+				this.shape3 = new this.shapeCanvas('rgb(54, 54, 54)');
 
 				for(var i = 0; i < (Math.random() * 10 + 6) | 0; i++) {
 
@@ -225,6 +225,9 @@ define([
 				this.renderCanvas.drawImage(ctx.canvas, 0, 0);
 			},
 			resize: function (event) {
+				if(window.innerHeight < 200 && !$(body).hasClass('bad')) {
+					UI.Controllers.Bad.render('!!!', 'you mad? noone does that.');
+				}
 				UI.Background.renderCanvas.canvas.width = UI.Background.buffer.canvas.width = window.innerWidth;
 				UI.Background.renderCanvas.canvas.height = UI.Background.buffer.canvas.height = window.innerHeight;
 			}
