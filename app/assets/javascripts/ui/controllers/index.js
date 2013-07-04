@@ -50,7 +50,7 @@ define([
 				$(this.el).fadeOut(UI.speed, function() {
 					$(this).html(_template).fadeIn(UI.speed, function() {
 						UI.isRunning = true;
-						UI.Background.initialize();
+						//UI.Background.initialize();
 
 						if(!UI.cookiesPolicyAccepted) {
 							UI.Controllers.CookieNote.render();
@@ -62,6 +62,8 @@ define([
 				console.log('only callback called');
 				callback();
 			}
+			//UI.Background.loadColorScheme(/*UI.CurrentPage*/);
+
 		},
 
 		loadPage: function(event) {
@@ -70,7 +72,7 @@ define([
 				var id = $(event.target).attr('id');
 				console.log(page);
 				var page = (id == 'timber') ? '' : id;
-				UI.Router.navigate(page, true);
+				UI.Navigate(page);
 			}
 		}
 

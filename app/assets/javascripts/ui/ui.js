@@ -49,6 +49,8 @@ define([
 		fetchLabCount: 0,
 		fetchLabInProgress: 0,
 
+		CurrentPage: Backbone.history.fragment,
+
 		Links: {
 			GitHubIssues: 'http://github.com/pwaleczek/thisismyasterisk/issues',
 			GitHub: 'http://github.com/pwaleczek',
@@ -87,13 +89,19 @@ define([
 				CookieNote: new cookieNote
 			};
 		},
+
+		Navigate: function(page, trigger) {
+			trigger = trigger || true;
+			this.Router.navigate(page, trigger);
+			this.CurrentPage = page;
+		},
 		
 		Background: {
-			makeShapesCanvas: function(color) {
+			shapeCanvas: function(color) {
 				var	SHAPE_W = 300,
 						SHAPE_H = 300;
 
-				var cw = cq(SHAPE_W, SHAPE_H)
+				this.cw = cq(SHAPE_W, SHAPE_H)
 					.clear()
 					.strokeStyle(color)
 					.fillStyle(color)
@@ -102,32 +110,38 @@ define([
 					.beginPath()
 					.moveTo(Math.random() * SHAPE_W, Math.random() * SHAPE_H);
 				for(var i = 0; i < (Math.random() * 20 + 3) | 0; i++){
-					cw.lineTo(Math.random() * SHAPE_W, Math.random() * SHAPE_H);
+					this.cw.lineTo(Math.random() * SHAPE_W, Math.random() * SHAPE_H);
 				}
-				cw.fill()
+				this.cw.fill()
 					.stroke();
 
-				return cw;
+
+				this.offset = {
+					x: 0,
+					y: 0
+				}
+				//return {cw: cw, offset: { x: 0, y: 0}};
 			},
 
 			initialize: function() {
 				console.log('init!');
 
-	
+				alert(window.screen.width);
+				alert(window.screen.height);
+
+
 				this.lineWidth = 4;
-				this.offset = {
-					x: 0,
-					y: 0
-				}
 				this.staticBuffer = cq(window.innerWidth * 2, window.innerHeight * 2);
 				
-				this.shape1Canvas = this.makeShapesCanvas('rgb(232, 23, 93)');
-				this.shape2Canvas = this.makeShapesCanvas('rgb(238, 238, 238)');
+				this.shape1Canvas = new this.shapeCanvas('rgb(232, 23, 93)');
+				this.shape2Canvas = new this.shapeCanvas('rgb(238, 238, 238)');
+				this.shape3Canvas = new this.shapeCanvas('rgb(54, 54, 54)');
 
 				for(var i = 0; i < (Math.random() * 10 + 6) | 0; i++) {
 
-					this.staticBuffer.drawImage(this.shape1Canvas.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
-					this.staticBuffer.drawImage(this.shape2Canvas.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+					this.staticBuffer.drawImage(this.shape1Canvas.cw.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+					this.staticBuffer.drawImage(this.shape2Canvas.cw.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+					this.staticBuffer.drawImage(this.shape3Canvas.cw.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
 				}
 
 				// this.staticBuffer.strokeStyle('#eee').lineWidth(2);
@@ -161,6 +175,13 @@ define([
 				this.moveDirectionChangeInterval = setInterval(function() {
 					_this.moveDirection = Math.random();
 				}, 3000);
+				_this.moveDirection = Math.random();
+			},
+
+			loadColorScheme: function() {
+				var page = UI.CurrentPage;
+
+				UI.renderCanvas.shiftHsl(1, null, null);
 			},
 
 			getPixels: function(image) {
@@ -187,10 +208,19 @@ define([
 					this.offset.x -= Math.random() * 0.01;
 					this.offset.y += Math.random() * 0.02;
 				}
+				if(this.offset.x > window.innerWidth * 2/3)
+					this.offset.x = 0;
+
+				if (this.offset.y > window.innerHeight * 2/3)
+					this.offset.y = 0;
 			},
 
 			render: function(ctx, delta) {
-				ctx.clear();
+				
+				this.staticBuffer.drawImage(this.shape1Canvas.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+				this.staticBuffer.drawImage(this.shape2Canvas.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+				this.staticBuffer.drawImage(this.shape3Canvas.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+
 				ctx.drawImage(this.staticBuffer.canvas, this.offset.x, this.offset.y);
 				this.renderCanvas.drawImage(ctx.canvas, 0, 0);
 			},

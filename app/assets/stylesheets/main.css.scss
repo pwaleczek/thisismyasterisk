@@ -11,9 +11,13 @@ $palePink: #CC527A;
 $background: #363636;//#A8A7A7;
 $sections: #857b97;
 
+$white: #fff;
+$gold: #c8b57f;
+$black: #000;
+
 @mixin transition($props...) {
 	transition: $props;
-	-webkit-transition: $props; /* Safari */
+	-webkit-transition: $props;
 }
 
 @mixin boxSize {
@@ -66,12 +70,14 @@ div.canvasCover {
 	width: 73.5%;
 	background-color: $text;
 	overflow: hidden;
+	position: relative;
 	p {
 		padding: 1em;
 		line-height: 1.5em;
 	}
 	p, a, h1, h2, h3 {
 		color: $background;
+		background-color: transparent;
 		
 	}
 	a {
@@ -86,6 +92,7 @@ div.canvasCover {
 		padding: 0.25em;
 		color: $pink;
 		border: none;
+
 	}
 	a#closeCookieNote:hover {
 		background-color: $pink;
@@ -260,7 +267,6 @@ ul {
 				background-color: rgba(54, 54, 54, 0.75);
 				color: $pink;
 			}
-		a.active:hi
 		a.active:hover {
 			cursor: default;
 
@@ -288,6 +294,7 @@ ul {
 	
 	p, a {
 		line-height: 1.5em;
+		background-color: transparent;
 	}
 	a {
 		border-bottom: 0.125em solid $text;
@@ -341,33 +348,85 @@ body.asterisk .contents  {
 	}
 }
 
-body.lab {
+
+
+body.asterisk {
 	
+
 	div.canvasCover {
 		background-color: $text;
 	}
 
+	background-color: $black;
+	
+	footer {
+		border-right: 0.125em solid $white;
+	}
+
+	ul {
+		border-color: $white;
+	}
+	p, a, h1, h2, h3 {
+		color: $white;
+		background-color: rgba(0, 0, 0, 0.75);
+	}
+	a {
+		border: none;		
+	}
+	a:hover {
+		background-color: $gold;
+		color: $black;
+		@include transition(all 0.2s);
+	}
+	a.active, a.active:hover {
+		background-color: rgba(0, 0, 0, 0.75);
+		border-left: 0.125em solid $gold;
+
+		color: $gold;
+	}
+
 	.cookieNote {
-		background-color: $background;
+		background-color: $white;
 		
 		p, a, h1, h2, h3 {
-			color: $text;
+			color: $black;
+			background-color: transparent;
 		}
 		a {
-			border-bottom: 0.125em solid $text;
+			border-bottom: 0.125em solid $gold;
+
 		}
 		a:hover {
-			color: $pink;
+			color: $gold;
 			
 		}
 		a#closeCookieNote {
-			background-color: $text;
-			color: $background;
+			background-color: $black;
+			color: $gold;
 		}
 		a#closeCookieNote:hover {
-			background-color: $pink;
-			color: $background;
+			background-color: $gold;
+			color: $black;
 		}
+	}
+
+	.contents {
+		border-right: 0.125em solid $gold;
+
+		h2 {
+			border-bottom: 0.0625em solid $gold;
+		}
+	}
+}
+
+
+
+
+
+body.lab {
+	
+	div.canvasCover {
+		background-color: $text;
 	}
 
 	background-color: $text;
@@ -445,6 +504,29 @@ body.lab {
 		}
 	}
 
+	.cookieNote {
+		background-color: $background;
+		
+		p, a, h1, h2, h3 {
+			color: $text;
+			background-color: transparent;
+		}
+		a {
+			border-bottom: 0.125em solid $text;
+		}
+		a:hover {
+			color: $pink;
+			
+		}
+		a#closeCookieNote {
+			background-color: $text;
+			color: $background;
+		}
+		a#closeCookieNote:hover {
+			background-color: $pink;
+			color: $background;
+		}
+	}
 }
 
 body.labView {
@@ -532,6 +614,20 @@ body.labView {
 			}
 		}
 	}
+
+	body.asterisk {
+		ul {
+			li {
+				a.active, a.active:hover {
+				border-left: none;
+				border-top: 0.125em solid $gold;
+				background-color: transparent;
+
+			}
+			}
+		}
+	}
+
 	body {
 		ul {
 			border-bottom: 0.125em solid $text;

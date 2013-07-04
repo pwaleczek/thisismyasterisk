@@ -14,7 +14,7 @@
 	'use strict';
 
 	console.log('Welcome to thisismyasterisk.org!\r\nCopyright 2013, Pawel Waleczek | pawel@thisismyasterisk.org');
-	console.log('env is: %s.', env);
+	console.log('Starting in %s mode.', env);
 	
 	if (env === 'production' || typeof console === 'undefined') {
 	  console = {
