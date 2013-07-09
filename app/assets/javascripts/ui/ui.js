@@ -116,19 +116,18 @@ define([
 					.stroke();
 
 
-				this.offset = {
-					x: 0,
-					y: 0
-				}
+				
 				//return {cw: cw, offset: { x: 0, y: 0}};
 			},
 
 			initialize: function() {
 				console.log('init!');
 
-				alert(window.screen.width);
-				alert(window.screen.height);
 
+				this.offset = {
+					x: 0,
+					y: 0
+				}
 
 				this.lineWidth = 4;
 				this.staticBuffer = cq(window.innerWidth * 2, window.innerHeight * 2);
@@ -139,9 +138,9 @@ define([
 
 				for(var i = 0; i < (Math.random() * 10 + 6) | 0; i++) {
 
-					this.staticBuffer.drawImage(this.shape1Canvas.cw.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
-					this.staticBuffer.drawImage(this.shape2Canvas.cw.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
-					this.staticBuffer.drawImage(this.shape3Canvas.cw.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+					this.staticBuffer.drawImage(this.shape1.cw.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+					this.staticBuffer.drawImage(this.shape2.cw.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+					this.staticBuffer.drawImage(this.shape3.cw.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
 				}
 
 				// this.staticBuffer.strokeStyle('#eee').lineWidth(2);
@@ -170,7 +169,7 @@ define([
 					});
 				}
 				$(window).on('resize', this.resize);
-				$('canvas#background').fadeIn(UI.speed);
+				//$('canvas#background').fadeIn(UI.speed);
 				
 				this.moveDirectionChangeInterval = setInterval(function() {
 					_this.moveDirection = Math.random();
@@ -217,17 +216,17 @@ define([
 
 			render: function(ctx, delta) {
 				
-				this.staticBuffer.drawImage(this.shape1Canvas.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
-				this.staticBuffer.drawImage(this.shape2Canvas.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
-				this.staticBuffer.drawImage(this.shape3Canvas.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+				// this.staticBuffer.drawImage(this.shape1.cw.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+				// this.staticBuffer.drawImage(this.shape2.cw.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
+				// this.staticBuffer.drawImage(this.shape3.cw.canvas, Math.random() * window.innerWidth, Math.random() * window.innerHeight);
 
 				ctx.drawImage(this.staticBuffer.canvas, this.offset.x, this.offset.y);
 				this.renderCanvas.drawImage(ctx.canvas, 0, 0);
 			},
 			resize: function (event) {
-				if(window.innerHeight < 200 && !$(body).hasClass('bad')) {
-					UI.Controllers.Bad.render('!!!', 'you mad? noone does that.');
-				}
+				// if(window.innerHeight < 200 && !$('body').hasClass('bad')) {
+				// 	UI.Controllers.Bad.render('!!!', 'you mad? noone does that.');
+				// } 
 				UI.Background.renderCanvas.canvas.width = UI.Background.buffer.canvas.width = window.innerWidth;
 				UI.Background.renderCanvas.canvas.height = UI.Background.buffer.canvas.height = window.innerHeight;
 			}

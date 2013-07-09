@@ -33,6 +33,9 @@
 		if(/localstorage|csstransitions|canvas/i.test(document.getElementsByTagName('html')[0].className))
 			return true;
 
+		// if(typeof ArrayBuffer === 'undefined')
+		// 	return false;
+
 		return false;
 	};
 
