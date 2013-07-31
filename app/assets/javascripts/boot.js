@@ -56,7 +56,7 @@
 			console.log("Starting application.");
 			
 			//env = $('meta[name="app_env"]').attr('content');
-			UI.initialize();
+			window.UI = new _UI();
 			window.cq = cq;
 			Backbone.history.start({pushState: true});	
 

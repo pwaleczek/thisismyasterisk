@@ -50,7 +50,7 @@ define([
 				$(this.el).fadeOut(UI.speed, function() {
 					$(this).html(_template).fadeIn(UI.speed, function() {
 						UI.isRunning = true;
-						UI.Background.initialize();
+						UI.Background.run();
 
 						if(!UI.cookiesPolicyAccepted) {
 							UI.Controllers.CookieNote.render();

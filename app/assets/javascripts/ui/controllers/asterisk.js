@@ -39,7 +39,9 @@ define([
 				$('.contents').fadeOut(UI.speed, function() {
 					$('body').attr('class', '').addClass(_name);
 					$('ul a#' + _name).addClass('active');
-					$('.contents').html(_template).fadeIn(UI.speed);
+					$('.contents').html(_template).fadeIn(UI.speed, function() {
+						//this.renderCanvas = cq(document.getElementById('background'));
+					});
 				});
 		}
 	});
