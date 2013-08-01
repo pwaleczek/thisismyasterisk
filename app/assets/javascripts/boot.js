@@ -56,10 +56,12 @@
 			console.log("Starting application.");
 			
 			//env = $('meta[name="app_env"]').attr('content');
+			
 			window.UI = new _UI();
 			window.cq = cq;
-			Backbone.history.start({pushState: true});	
-
+				
+			Backbone.history.start({pushState: true});
+			UI.CurrentPage = Backbone.history.fragment;
 		});
 	} else {
 		showNotWorkingMessage();

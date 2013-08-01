@@ -67,6 +67,9 @@ define([
 				CookieNote: new cookieNote()
 			}
 		});
+
+		//console.log(Backbone.history.fragment);
+
 	}
 
 	window._UI.prototype = {
@@ -85,7 +88,7 @@ define([
 		fetchLabCount: 0,
 		fetchLabInProgress: 0,
 
-		CurrentPage: Backbone.history.fragment,
+		
 
 		Links: {
 			GitHubIssues: 'http://github.com/pwaleczek/thisismyasterisk/issues',
@@ -95,10 +98,19 @@ define([
 		},
 
 		Navigate: function(page, trigger) {
+			console.log('current: %s, next: %s', this.CurrentPage, page);
 			trigger = trigger || true;
+			if(this.CurrentPage == 'asterisk') {
+				console.log('clearing!!!!!');
+				UI.Background.clearCanvas = true;
+				UI.Background.textsOpacity = 0;
+			//	clearInterval(UI.Background.textsInterval);
+			}
 			this.Router.navigate(page, trigger);
 			this.CurrentPage = page;
-		} 
+			
+		}
+			
 	}
 
 	console.log('										...loaded.');

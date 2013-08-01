@@ -15,6 +15,11 @@ define(function() {
 	console.log('Loading Utilities module...');
 
 	var Utils = {
+		easeInOut: function (x, t, b, c, d) {
+			if ((t/=d/2) < 1) return c/2*t*t + b;
+			return -c/2 * ((--t)*(t-2) - 1) + b;
+		},
+
 		releasePool: function(releasePool) {
 			for(var i = 0; i < releasePool.length; i++) {
 				delete window[releasePool[i]];

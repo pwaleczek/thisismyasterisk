@@ -21,6 +21,7 @@ define([
 
     initialize: function(options) {
       this.bind('route', this.trackPageview);
+      
     },
 
     routes: {
@@ -75,7 +76,7 @@ define([
 
     trackPageview: function () {
         var url = Backbone.history.fragment;
-
+        //console.log(url);
         if (!/^\//.test(url) && url != '') {
             url = "/" + url;
         }

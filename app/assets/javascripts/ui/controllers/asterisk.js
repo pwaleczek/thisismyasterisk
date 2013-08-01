@@ -35,7 +35,11 @@ define([
 			
 			var _template = this.template;
 			var _name = this.name;
-
+			setTimeout(function() {
+        UI.Background.fadeInTexts = true;
+        UI.Background.textsOpacity = 0;
+        UI.Background.textsIndex = 0;
+      }, 250);
 				$('.contents').fadeOut(UI.speed, function() {
 					$('body').attr('class', '').addClass(_name);
 					$('ul a#' + _name).addClass('active');

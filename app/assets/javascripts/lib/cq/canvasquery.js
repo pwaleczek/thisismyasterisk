@@ -878,7 +878,7 @@
       this.context.fillStyle = fillStyle;
       return this;
     },
-
+    
     strokeStyle: function(strokeStyle) {
       this.context.strokeStyle = strokeStyle;
       return this;
