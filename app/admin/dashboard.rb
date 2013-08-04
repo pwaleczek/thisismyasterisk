@@ -14,10 +14,24 @@ ActiveAdmin.register_page "Dashboard" do
     #
     columns do
       column do
-        panel "Recent Posts" do
+        panel "Info" do
+          para "Welcome to ActiveAdmin."
+        end
+      end
+      column do
+        panel "Posts" do
           ul do
             Post.all.map do |post|
               li link_to(post.title, admin_post_path(post))
+            end
+          end
+        end
+      end
+      column do
+        panel "Labs" do
+          ul do
+            Lab.all.map do |lab|
+              li link_to(lab.name, admin_post_path(lab))
             end
           end
         end

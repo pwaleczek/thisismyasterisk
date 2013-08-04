@@ -1,0 +1,6 @@
+<% @posts.each do |post| %>
+
+	<h3><%= post.title %></h3>
+	<%= post.body.gsub(/\n/, '<br />').html_safe %>
+
+<% end %>

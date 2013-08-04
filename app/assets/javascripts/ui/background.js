@@ -14,12 +14,16 @@
 define(['utils'], function(Utils) {
     var Background = function(clearColor) {
       console.log('init!');
-      this.textsScale = {x: 1, y: 1};
-      this.textsInterval;
+      
+      this.textsCanvas = cq(window.innerWidth, window.innerHeight);
+      this.textsFadeSpeed = 7.5 / 1000;
+      this.textsInterval = 2 * 1000;
       this.fadeInTexts = false;
       this.fadeOutTexts = false;
       this.textsOpacity = 0;
       this.textsIndex = 0;
+      this.textsScale = 0;
+      
       this.textsArray = [
         ['   __  __    _      _                                 __            _      __                        ',
          '  / /_/ /_  (_)____(_)________ ___  __  ______ ______/ /____  _____(_)____/ /__     ____  _________ _',
@@ -41,28 +45,28 @@ define(['utils'], function(Utils) {
          ' / _, _/  __/ / /_/ /_/ / / / /  __/ /    ',
          '/_/ |_|\\___/ /___/\\____/_/ /_/\\___/_/     '
         ],
-        ['    __                 __',
-         '   / /______ ___  ____/ /',
-         '  / //_/ __ `__ \\/ __  / ',
-         ' / ,< / / / / / / /_/ /  ',
-         '/_/|_/_/ /_/ /_/\\__,_/   '
+        ['    __ __ __  _______ ',
+         '   / //_//  |/  / __ \\',
+         '  / ,<  / /|_/ / / / /',
+         ' / /| |/ /  / / /_/ / ',
+         '/_/ |_/_/  /_/_____/  '
         ],
-        // ['    ___    __ __ ___       ______  ___ ',
-        //  '   /   |  / //_//   |     / / __ \\/   |',
-        //  '  / /| | / ,<  / /| |__  / / / / / /| |',
-        //  ' / ___ |/ /| |/ ___ / /_/ / /_/ / ___ |',
-        //  '/_/  |_/_/ |_/_/  |_\\____/_____/_/  |_|'
-        // ],
         ['        _            __    ',
          '  _____(_)__  ____  / /___ ',
-         ' / ___/ / _ \\/ __` / / __ \\',
+         ' / ___/ / _ \\/ __ \\/ / __ \\',
          '/ /__/ /  __/ /_/ / / /_/ /',
          '\\___/_/\\___/ .___/_/\\____/ ',
          '          /_/             '
         ],
         ['','','',
-         ' ____________________________________',
-         '/___________________________________/'
+         ' ______  _________________________  ______',
+         '/_____/ /________________________/ /_____/'
+        ],
+        ['',
+         '  __/|_   __/|_   __/|_',
+         ' |    /  |    /  |    /',
+         '/_ __|  /_ __|  /_ __| ',
+         ' |/      |/      |/    '
         ]
       ];
 
@@ -93,6 +97,7 @@ define(['utils'], function(Utils) {
 
         Code is modified to be standalone / work with canvas query
       */
+      
       this.test=true;
       this.n = 1000;
       this.star = new Array(this.n);
@@ -158,13 +163,57 @@ define(['utils'], function(Utils) {
         //return {cw: cw, offset: { x: 0, y: 0}};
       },
 
+
+      drawTexts: function(ctx, texts) {
+          //var cw = this.textsCanvas;
+          this.textsCanvas.clear();
+          this.textsCanvas.save();
+          this.textsCanvas.globalAlpha(this.textsOpacity);
+          this.textsCanvas.fillStyle('#fff');
+
+
+          
+          //cw.translate(this.centx, this.centy);//cw.translate(this.centx/2, this.centy/2);
+          if(this.textsArray[this.textsIndex] instanceof Array) {
+            var offset;
+            
+            if (window.innerWidth < 440) {
+              this.textsCanvas.context.font = '3.5pt "Inconsolata"';
+              offset = 4;
+            } else if(window.innerWidth < 820) {
+              this.textsCanvas.context.font = '5pt "Inconsolata"';
+              offset = 6.5
+            } else {
+              this.textsCanvas.context.font = '10pt "Inconsolata"';
+              offset = 11;
+            }
+            this.textsCanvas.translate(this.centx, this.centy);
+            for(var i = 0; i < this.textsArray[this.textsIndex].length; i++) {
+              var xw = - this.textsCanvas.measureText(this.textsArray[this.textsIndex][i]).width/2;
+              this.textsCanvas.scale(this.textsScale, this.textsScale);
+
+              this.textsCanvas.fillText(this.textsArray[this.textsIndex][i], xw + offset/6*i,  offset * (i - 2));  
+            }
+          } else {
+            
+            var xw = this.centx - this.textsCanvas.measureText(this.textsArray[this.textsIndex]).width;
+            this.textsCanvas.context.font = '16pt "Noto Sans"';
+            this.textsCanvas.fillText(this.textsArray[this.textsIndex], xw, this.centy);
+          }
+
+          this.textsCanvas.globalAlpha(1);
+          this.textsCanvas.restore();
+          ctx.drawImage(this.textsCanvas.canvas, 0, 0, window.innerWidth, window.innerHeight);
+      },
+
+
       switchClear: function(color, mono) {
         
-        _.extend(this, {})
+        // _.extend(this, {})
 
-        var page = UI.CurrentPage;
+        // var page = UI.CurrentPage;
 
-        UI.renderCanvas.shiftHsl(1, null, null);
+        // UI.renderCanvas.shiftHsl(1, null, null);
       },
 
       getPixels: function(image) {
@@ -183,7 +232,7 @@ define(['utils'], function(Utils) {
         this.renderCanvas.canvas.height = this.buffer.height = window.innerHeight;
 
         var _this = this;
-        if(!UI.isHandheld || /Chrome|Chromium/i.test(navigator.userAgent)) {
+        if(!UI.isHandheld || /Chrome|Chromium|Safari/i.test(navigator.userAgent)) {
         
           this.renderCanvas.onRender(function (delta) {
             _this.render(_this.buffer, delta);
@@ -211,28 +260,32 @@ define(['utils'], function(Utils) {
         if(UI.CurrentPage === 'asterisk') {
           // for(var i=0;i<this.n;i++){
           if(this.fadeOutTexts) {   
-            this.textsOpacity -= 0.0075;
+            this.textsOpacity -= this.textsFadeSpeed;
+            this.textsScale += 0.05;
             if(this.textsOpacity <= 0) {
+              this.textsScale = 0;
               this.textsOpacity = 0;
-              this.textsScale.x = 0.5;
-              this.textsScale.y = 0.5;
               this.fadeOutTexts = false;
               this.textsIndex++;
               if(this.textsIndex > this.textsArray.length - 1) {
                 this.textsIndex = 0;
               }
               var _this = this;
-              setTimeout(function() { if(UI.CurrentPage === 'asterisk') _this.fadeInTexts = true; }, 250);
+              setTimeout(function() { if(UI.CurrentPage === 'asterisk') _this.fadeInTexts = true; }, this.textsInterval/6);
             }
           }
           if(this.fadeInTexts) {
-            this.textsOpacity += 0.0075;
+            this.textsOpacity +=  this.textsFadeSpeed;
+            this.textsScale += 0.01;
+            if(this.textsScale >= 1) {
+              this.textsScale = 1;
+            }
             if(this.textsOpacity >= 1){
+              
               this.textsOpacity = 1;
               this.fadeInTexts = false;
-              
               var _this = this;
-              setTimeout(function() { if(UI.CurrentPage === 'asterisk') _this.fadeOutTexts = true; }, 1500);
+              setTimeout(function() { if(UI.CurrentPage === 'asterisk') _this.fadeOutTexts = true; }, this.textsInterval);
             }
           }
           // }
@@ -328,13 +381,13 @@ define(['utils'], function(Utils) {
           // end CODEF
 
           //text/greets
-
+          
           ctx.globalAlpha(this.textsOpacity);
           ctx.fillStyle('#fff');
 
-          
-          
 
+          ctx.translate(this.centx, this.centy);
+          //cw.translate(this.centx, this.centy);//cw.translate(this.centx/2, this.centy/2);
           if(this.textsArray[this.textsIndex] instanceof Array) {
             var offset;
             
@@ -348,19 +401,57 @@ define(['utils'], function(Utils) {
               ctx.context.font = '10pt "Inconsolata"';
               offset = 11;
             }
+            
             for(var i = 0; i < this.textsArray[this.textsIndex].length; i++) {
-              var xw = this.centx - ctx.measureText(this.textsArray[this.textsIndex][i]).width/2;
-              ctx.fillText(this.textsArray[this.textsIndex][i], xw + offset/6*i, this.centy + offset * (i - 2));  
+              var xw = - ctx.measureText(this.textsArray[this.textsIndex][i]).width/2;
+              
+              ctx.scale(this.textsScale, this.textsScale);
+
+              ctx.fillText(this.textsArray[this.textsIndex][i], xw + offset/6*i,  offset * (i - 2));  
             }
           } else {
             
             var xw = this.centx - ctx.measureText(this.textsArray[this.textsIndex]).width;
             ctx.context.font = '16pt "Noto Sans"';
+            ctx.scale(this.textsScale, this.textsScale);
             ctx.fillText(this.textsArray[this.textsIndex], xw, this.centy);
           }
 
-
           ctx.globalAlpha(1);
+
+          //this.drawTexts(ctx);
+          // ctx.globalAlpha(this.textsOpacity);
+          // ctx.fillStyle('#fff');
+
+          
+          
+
+          // if(this.textsArray[this.textsIndex] instanceof Array) {
+          //   var offset;
+            
+          //   if (window.innerWidth < 440) {
+          //     ctx.context.font = '3.5pt "Inconsolata"';
+          //     offset = 4;
+          //   } else if(window.innerWidth < 820) {
+          //     ctx.context.font = '5pt "Inconsolata"';
+          //     offset = 6.5
+          //   } else {
+          //     ctx.context.font = '10pt "Inconsolata"';
+          //     offset = 11;
+          //   }
+          //   for(var i = 0; i < this.textsArray[this.textsIndex].length; i++) {
+          //     var xw = this.centx - ctx.measureText(this.textsArray[this.textsIndex][i]).width/2;
+          //     ctx.fillText(this.textsArray[this.textsIndex][i], xw + offset/6*i, this.centy + offset * (i - 2));  
+          //   }
+          // } else {
+            
+          //   var xw = this.centx - ctx.measureText(this.textsArray[this.textsIndex]).width;
+          //   ctx.context.font = '16pt "Noto Sans"';
+          //   ctx.fillText(this.textsArray[this.textsIndex], xw, this.centy);
+          // }
+
+
+          // ctx.globalAlpha(1);
          
 
         } else {
@@ -381,11 +472,11 @@ define(['utils'], function(Utils) {
         // if(window.innerHeight < 200 && !$('body').hasClass('bad')) {
         //  UI.Controllers.Bad.render('!!!', 'you mad? noone does that.');
         // } 
-
-        UI.Background.renderCanvas.canvas.width = UI.Background.buffer.canvas.width = UI.Background.w = window.innerWidth;
-        UI.Background.renderCanvas.canvas.height = UI.Background.buffer.canvas.height = UI.Background.h = window.innerHeight;
         UI.Background.centx = window.innerWidth/2;
-        UI.Background.centy = window.innerHeight/2;       
+        UI.Background.centy = window.innerHeight/2;  
+        UI.Background.renderCanvas.canvas.width = UI.Background.buffer.canvas.width = UI.Background.textsCanvas.width = UI.Background.w = window.innerWidth;
+        UI.Background.renderCanvas.canvas.height = UI.Background.buffer.canvas.height = UI.Background.textsCanvas.height = UI.Background.h = window.innerHeight;
+     
 
         for(var i=0;i<UI.Background.n;i++){
           UI.Background.star[i]=new Array(5);
@@ -397,6 +488,8 @@ define(['utils'], function(Utils) {
         }
         UI.Background.x = Math.round(UI.Background.w/2);
         UI.Background.y = Math.round(UI.Background.h/2);
+
+
       }
     }
 

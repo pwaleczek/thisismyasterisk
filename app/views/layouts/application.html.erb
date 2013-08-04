@@ -24,6 +24,32 @@
     </script>
   </head>
   <body>
-  	<%= yield %>
+  	<canvas id="background"></canvas>
+    <div class="canvasCover"></div>
+    <ul>
+      <li class="header"><header>paweł waleczek</header></li>
+      <li><a id="timber">log</a></li>
+      <li><a id="about">about</a></li>
+      <li><a id="lab">lab</a></li>
+      <li><a id="work">work</a></li>
+      <li><a id="asterisk">*</a></li>
+    </ul>
+    <section class="contents">
+      <%= yield %>
+    </section>
+    <footer><p>&copy; 2013, paweł waleczek</p></footer>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23939407-1']);
+      _gaq.push(['_trackPageview', location.pathname + location.search + location.hash]);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
   </body>
 </html>
